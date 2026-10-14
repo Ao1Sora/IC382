@@ -1,0 +1,11 @@
+{
+    "version": "1.0",
+    "file_records": [
+        {
+            "source_url": "/home/student/dev/final_senior_diff_robot.usd",
+            "source_hash": "e0a4da91908f8912a244d950e9f4c928cbdb1b40",
+            "target_url": "./final_senior_diff_robot.usd",
+            "target_hash": "55e45acc65a023d76a44c43b2b50de50b3b64009"
+        }
+    ]
+}
