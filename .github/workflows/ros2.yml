@@ -1,0 +1,41 @@
+name: Robot ROS2
+on:
+  push:
+    branches: [codex/robot-ros2]
+  pull_request:
+    branches: [codex/robot-ros2]
+permissions:
+  contents: read
+jobs:
+  humble:
+    runs-on: ubuntu-22.04
+    container: ros:humble-ros-base-jammy
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install build dependencies
+        shell: bash
+        run: |
+          apt-get update
+          apt-get install -y python3-colcon-common-extensions python3-rosdep python3-pytest
+          rosdep update --rosdistro humble
+          rosdep install --from-paths ros2_ws/src --ignore-src -r -y --rosdistro humble
+      - name: Build and test
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon build
+          source install/setup.bash
+          colcon test --return-code-on-test-failure
+          colcon test-result --verbose
+      - name: Save test results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ros2-test-results
+          path: ros2_ws/build/**/test_results/
+          if-no-files-found: ignore
+

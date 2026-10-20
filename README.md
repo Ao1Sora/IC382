@@ -1,84 +1,47 @@
-# IC382
+# IC382 机器人 ROS2 代码
 
-Remote development and Isaac Sim workspace on the PolyU HPC.
+独立协作分支：**codex/robot-ros2**，用于感知、导航、任务决策和接口包。
+仿真环境仍在 [hpc-isaac-sim-env](https://github.com/Ao1Sora/IC382/tree/hpc-isaac-sim-env)。
+本分支不存 Isaac Sim 安装程序、场景资产、模型权重或数据集。
 
-GitHub repository: https://github.com/Ao1Sora/IC382 (private).
-Initial development branch: `codex/setup`.
-
-Project path: `~/Desktop/IC382` (shared home storage, persistent across GPU jobs).
-
-## Environment
-
-- Host: Rocky Linux 8.10, glibc 2.28.
-- Allocated GPU verified on 2026-10-01: RTX 3080 Ti, 12 GB VRAM, driver 550.54.14.
-- Simulator: NVIDIA Isaac Sim 4.5.0 standalone Linux x86_64.
-- Runtime: native Rocky Linux; bundled Python 3.10.15. The isolated Ubuntu fallback was prepared but is not used by the launchers.
-- Downloads and runtime are stored in `tools/`, `downloads/`, and `cache/`, excluded from Git.
-- No host OS or GPU driver changes were required.
-
-## Start GUI
-
-Use the existing `hpc/Connect-Gui.cmd` on the local Windows computer to open the allocated GPU desktop. In the desktop terminal:
+## 队友开始开发
 
 ```bash
-cd ~/Desktop/IC382
-./scripts/isaac-desktop.sh
+git clone --depth 1 --single-branch --branch codex/robot-ros2 https://github.com/Ao1Sora/IC382.git IC382-robot
+cd IC382-robot
+git switch -c feature/your-module
 ```
 
-The launcher requires an existing Slurm GPU allocation. Do not run on the login node.
-
-Or double-click `IC382 Isaac Sim 4.5` on the server Desktop. When the streaming
-client opens, enter `10.238.38.1` and click **Connect**. The user confirmed that
-the interface is visible and interactive on 2026-10-01. Startup takes about two
-minutes with the existing cache. Closing the client stops its render process.
-
-This uses a private network and project-local C++ libraries to avoid the
-native VNC/NVIDIA EGL crash. Online assets and external ROS 2 networking are
-unavailable in this mode; use local project files. See [DESKTOP-REPAIR.md](DESKTOP-REPAIR.md).
-
-## Run Python or the smoke test
-
-Use `hpc/Connect-Hpc.cmd` locally to open a shell inside the GPU allocation:
+在 ros2_ws/src/ 新建自己的 ROS2 package。统一使用 **Ubuntu 22.04 / ROS2 Humble / Python 3.10**。
+Python、C++ 包均可；依赖写入 package.xml，Python 第三方依赖另写明确版本的 requirements 文件。
 
 ```bash
-cd ~/Desktop/IC382
-./scripts/isaac-python.sh scripts/smoke-test.py
+source /opt/ros/humble/setup.bash
+cd ros2_ws
+rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
+colcon build --symlink-install
+colcon test --return-code-on-test-failure
+colcon test-result --verbose
+source install/setup.bash
+ros2 launch ic382_bringup team.launch.py
 ```
 
-Pass absolute paths for scripts outside the simulator directory:
+在 ic382_bringup/config/team-nodes.json 登记要启动的节点，默认清单为空。
+节点使用仿真时间；例子见 CONTRIBUTING.md。
 
-```bash
-./scripts/isaac-python.sh "$PWD/scripts/smoke-test.py"
-```
+提交后创建 **base = codex/robot-ros2** 的 Pull Request。GitHub 自动检查 ROS2 编译及测试。
+合并到机器人分支后，后续可交给服务器的 Isaac Sim 联调；ROS2 节点运行期间通过话题实时交互。
+GitHub 提交本身不会自动同步到正在运行的节点。
 
-A successful test prints `IC382_SMOKE_TEST_PASSED` after rendering and simulating a falling cube for 60 steps.
+## 仿真测试入口
 
-## Layout
+bash scripts/check-simulation.sh 在已配置好的 ROS2 终端检查 /clock、/odom、/scan 是否持续到达、
+激光数据是否有效，以及 /cmd_vel 是否有订阅者。它不发送运动指令，不启动 Isaac Sim。
+报告写入 results/bridge.json，包含测试提交号。
 
-- `scripts/`: project launchers, installation helpers, smoke test.
-- `scenes/`: simulation scenes.
-- `robots/`: robot descriptions and models.
-- `ros2_ws/`: ROS 2 workspace (reserved; ROS 2 has not been installed).
-- `logs/`: installation, native compatibility, and smoke-test results.
+目前只完成代码侧准备；**尚未安装服务器 runner，也未启用 GPU 自动测试**。本次未修改服务器。
+HPC 现有运行时使用特殊容器/网络命名空间，接入要求见 [服务器接入说明](docs/SERVER_INTEGRATION.md)。
 
-## Installation sources
+- [贡献流程](CONTRIBUTING.md)
+- [ROS2 接口约定](docs/ROS_CONTRACT.md)
 
-The server directly downloaded the official 7,208,817,125-byte archive:
-https://download.isaacsim.omniverse.nvidia.com/isaac-sim-standalone-4.5.0-linux-x86_64.zip
-
-Archive integrity is checked using `unzip -tq`; its local SHA-256 is recorded in `logs/isaacsim-archive.sha256` (a local fingerprint, not an independently published vendor checksum).
-
-Current NVIDIA installation documentation:
-https://docs.isaacsim.omniverse.nvidia.com/latest/installation/requirements.html
-
-Current releases require newer drivers and larger GPU memory than this allocation. Version 4.5 is chosen for this older workstation and validated separately.
-
-Project sources and collaboration context were checked live on 2026-10-01:
-https://chatgpt.com/g/g-p-6a97d97945a48191821db914294c8a89-ic382/project
-https://chatgpt.com/g/g-p-6a97d97945a48191821db914294c8a89/c/6abcd66a-97e8-83ee-8775-73cdde44180b
-
-The live Sources list displayed `IC382 2026 -2027 Rulebook V2.4.pdf`; the local Windows `chatgpt-sync` mirror dated 2026-09-23 is an older snapshot.
-
-## Verified result
-
-See [INSTALLATION.md](INSTALLATION.md) for the passed native GPU/render/physics test and first-start timing.
