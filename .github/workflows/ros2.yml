@@ -1,9 +1,9 @@
 name: Robot ROS2
 on:
   push:
-    branches: [codex/robot-ros2]
+    branches: [robot-ros2]
   pull_request:
-    branches: [codex/robot-ros2]
+    branches: [robot-ros2]
 permissions:
   contents: read
 jobs:

@@ -1,19 +1,20 @@
-# IC382 机器人 ROS2 代码
+# IC382 Robot ROS2 Workspace
 
-独立协作分支：**codex/robot-ros2**，用于感知、导航、任务决策和接口包。
-仿真环境仍在 [hpc-isaac-sim-env](https://github.com/Ao1Sora/IC382/tree/hpc-isaac-sim-env)。
-本分支不存 Isaac Sim 安装程序、场景资产、模型权重或数据集。
+The **robot-ros2** branch is the team's workspace for perception, navigation, mission logic, and interface packages.
+The simulation environment is maintained separately on [hpc-isaac-sim-env](https://github.com/Ao1Sora/IC382/tree/hpc-isaac-sim-env).
+Keep Isaac Sim installers, scene assets, model weights, and datasets outside this branch.
 
-## 队友开始开发
+## Getting started
 
 ```bash
-git clone --depth 1 --single-branch --branch codex/robot-ros2 https://github.com/Ao1Sora/IC382.git IC382-robot
+git clone --depth 1 --single-branch --branch robot-ros2 https://github.com/Ao1Sora/IC382.git IC382-robot
 cd IC382-robot
 git switch -c feature/your-module
 ```
 
-在 ros2_ws/src/ 新建自己的 ROS2 package。统一使用 **Ubuntu 22.04 / ROS2 Humble / Python 3.10**。
-Python、C++ 包均可；依赖写入 package.xml，Python 第三方依赖另写明确版本的 requirements 文件。
+Create your ROS2 packages under `ros2_ws/src/`. Use **Ubuntu 22.04 / ROS2 Humble / Python 3.10**.
+Both Python and C++ packages are supported. Declare ROS dependencies in `package.xml`;
+list third-party Python dependencies with explicit versions in a requirements file.
 
 ```bash
 source /opt/ros/humble/setup.bash
@@ -26,22 +27,24 @@ source install/setup.bash
 ros2 launch ic382_bringup team.launch.py
 ```
 
-在 ic382_bringup/config/team-nodes.json 登记要启动的节点，默认清单为空。
-节点使用仿真时间；例子见 CONTRIBUTING.md。
+Register the nodes you want to launch in `ic382_bringup/config/team-nodes.json`.
+The default manifest is empty. Nodes use simulation time; see [CONTRIBUTING.md](CONTRIBUTING.md) for an example.
 
-提交后创建 **base = codex/robot-ros2** 的 Pull Request。GitHub 自动检查 ROS2 编译及测试。
-合并到机器人分支后，后续可交给服务器的 Isaac Sim 联调；ROS2 节点运行期间通过话题实时交互。
-GitHub 提交本身不会自动同步到正在运行的节点。
+Push your feature branch and open a pull request with **base = robot-ros2**.
+GitHub runs ROS2 build and test checks automatically.
+After merging, the code can be tested with Isaac Sim once server integration is available.
+Running ROS2 nodes communicate with the simulator through topics; a GitHub push does not update running nodes automatically.
 
-## 仿真测试入口
+## Simulation bridge check
 
-bash scripts/check-simulation.sh 在已配置好的 ROS2 终端检查 /clock、/odom、/scan 是否持续到达、
-激光数据是否有效，以及 /cmd_vel 是否有订阅者。它不发送运动指令，不启动 Isaac Sim。
-报告写入 results/bridge.json，包含测试提交号。
+Run `bash scripts/check-simulation.sh` from a configured ROS2 terminal.
+It checks that /clock, /odom, and /scan messages keep arriving, that scan data contains valid ranges,
+and that /cmd_vel has a subscriber. It does not send movement commands or start Isaac Sim.
+The report is saved to `results/bridge.json` and includes the tested commit SHA.
 
-目前只完成代码侧准备；**尚未安装服务器 runner，也未启用 GPU 自动测试**。本次未修改服务器。
-HPC 现有运行时使用特殊容器/网络命名空间，接入要求见 [服务器接入说明](docs/SERVER_INTEGRATION.md)。
+**The server runner has not been installed, and automatic GPU testing is not enabled.**
+No server changes were made during this setup. The existing HPC runtime uses a container and isolated network namespace;
+see [Server integration](docs/SERVER_INTEGRATION.md) for the remaining setup.
 
-- [贡献流程](CONTRIBUTING.md)
-- [ROS2 接口约定](docs/ROS_CONTRACT.md)
-
+- [Contribution guide](CONTRIBUTING.md)
+- [ROS2 interface contract](docs/ROS_CONTRACT.md)

@@ -1,11 +1,13 @@
-## 改动
-说明模块和行为。
+## Changes
 
-## ROS2 接口
-输入/输出话题、消息类型及启动命令。
+Describe the module and its behavior.
 
-## 验证
+## ROS2 interfaces
+
+List input/output topics, message types, and the launch command.
+
+## Validation
+
 - [ ] colcon build
 - [ ] colcon test / test-result
-- [ ] 仿真测试证据（未测请注明）
-
+- [ ] Simulation test evidence (state explicitly if not tested)

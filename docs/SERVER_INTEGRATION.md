@@ -1,26 +1,35 @@
-# 服务器后续接入
+# Server Integration
 
-状态：代码已准备；服务器未修改，GPU runner 未安装、未启用。
+Status: the code is prepared. The server has not been modified, and no GPU runner is installed or enabled.
 
-先恢复 HPC 访问并满足 ITS 的磁盘要求，再安排接入。已有 Isaac Sim 场景和安装目录保留独立，
-机器人代码按 README 用 depth=1 单分支克隆到另一个目录，避免拉取大量历史仿真资产。
+Restore HPC access and meet the ITS storage requirements before setting up integration.
+Keep the existing Isaac Sim scenes and installation separate.
+Clone this robot branch into another directory using the shallow, single-branch command in the README
+to avoid downloading large historical simulation assets.
 
-## 手动联调
+## Manual integration
 
-1. 按仿真环境分支的流程申请 GPU 并启动课程场景，确认 bridge 和 Play 正常。
-2. 进入与 Isaac Sim **相同的 ROS2 网络/用户命名空间**；现有 course601 使用隔离命名空间，
-   仅设置 ROS_DOMAIN_ID 并不足够。需为独立机器人 checkout 增加容器绑定目录。
-3. 在其中 source ROS2 Humble，构建机器人工作空间，source install/setup.bash。
-4. 执行 bash scripts/check-simulation.sh，查看报告中的提交 SHA、消息计数和结果。
-5. 启动 team.launch.py 运行队友节点，并单独记录任务完成情况。
+1. Allocate a GPU and start the course scene using the simulation environment's launch procedure.
+   Confirm that the bridge is enabled and the simulation is playing.
+2. Enter the **same ROS2 network and user namespace** as Isaac Sim.
+   The current course601 environment uses an isolated namespace; setting ROS_DOMAIN_ID alone is insufficient.
+   The independent robot checkout also needs to be mounted into the container.
+3. Source ROS2 Humble, build the robot workspace, and source install/setup.bash inside that environment.
+4. Run `bash scripts/check-simulation.sh`. Check the commit SHA, message counts, and result in its report.
+5. Launch `team.launch.py` to run team nodes and separately record mission-level test results.
 
-现有 HPC 的 Ubuntu 根目录容器只绑定了仿真项目；本分支不提供未经验证的自动 nsenter/bwrap 命令。
-不要在宿主机直接 source 容器内的 /opt/ros/humble。此适配需在服务器恢复后验证。
+The existing HPC Ubuntu root container only mounts the simulation project.
+This branch does not provide unverified automatic nsenter/bwrap commands.
+Do not source the container's /opt/ros/humble directly on the host.
+Validate the namespace and mount adaptation once server access is restored.
 
-## 未来自动联调
+## Future automated integration
 
-GitHub 的 ROS2 CI 已与 GPU 分离。后续在 GPU 分配有效、网络命名空间和挂载已验证的环境中注册专用 runner，
-先检出指定提交、运行 CPU 检查，再串行执行构建、桥接检查及任务测试，上传带 SHA 的结果。
-仅让可信合并提交进入共享 GPU 队列，并避免两个任务同时控制同一场景。
-目前没有配置会挂起等待服务器的 GPU workflow，也不会因提交自动修改现有仿真运行时。
+GitHub ROS2 CI is separate from GPU testing.
+Once GPU allocation, namespaces, and mounts have been verified, register a dedicated runner.
+Check out an exact commit, run CPU checks, then build and run bridge and mission tests serially.
+Upload results tagged with the commit SHA.
 
+Only trusted merged commits should enter the shared GPU queue.
+Avoid allowing two jobs to control the same scene.
+There is currently no GPU workflow waiting for the server, and a push does not modify the existing simulation runtime.
