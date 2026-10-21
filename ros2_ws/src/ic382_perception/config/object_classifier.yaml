@@ -1,0 +1,18 @@
+object_classifier:
+  ros__parameters:
+    use_sim_time: true
+    image_topic: /camera/image_raw
+    depth_topic: /camera/depth/image_raw
+    camera_info_topic: /camera/camera_info
+    tagging_cmd_topic: /tagging_cmd
+    porter_cmd_topic: /porter_cmd
+    detector_mode: ultralytics   # "ultralytics" | "mock"
+    model_path: ""               # path to best.pt; set on the Jetson
+    conf_threshold: 0.5
+    valid_class_ids: [0, 1, 2]
+    camera_frame: camera_color_optical_frame   # TODO confirm in the running scene
+    base_frame: base_link                       # TODO confirm in the running scene
+    use_tf: true
+    depth_scale: 0.001           # 16UC1 millimetres -> metres; 1.0 for 32FC1
+    table_id: "unknown"          # placeholder until desk mapping is defined
+    log_path: results/decision_log.jsonl

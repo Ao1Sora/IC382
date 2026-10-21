@@ -1,4 +1,11 @@
 {
-  "nodes": []
+  "nodes": [
+    {
+      "name": "object_classifier",
+      "package": "ic382_perception",
+      "executable": "object_classifier",
+      "enabled": true,
+      "arguments": []
+    }
+  ]
 }
-
