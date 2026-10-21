@@ -1,0 +1,14 @@
+schema_version: 1
+frame_id: map
+calibrated: true
+scene_scale: 10.0
+purpose: "Simulation demo stops beside the teacher scene tables; not final assessment desk IDs"
+coordinate_source: "Teacher USD table geometry and exported scene_map; see test evidence for reachability"
+rounds: 2
+inspection_seconds: 3.0
+tagging_seconds: 3.0
+waypoints:
+  - {id: DEMO_A, x: -234.0, y: 54.0, yaw: 0.0}
+  - {id: DEMO_B, x: -234.0, y: 86.0, yaw: 0.0}
+  - {id: DEMO_C, x: -188.0, y: 86.0, yaw: 3.141592653589793}
+  - {id: DEMO_D, x: -188.0, y: 54.0, yaw: 3.141592653589793}

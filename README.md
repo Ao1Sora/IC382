@@ -28,11 +28,12 @@ ros2 launch ic382_bringup team.launch.py
 ```
 
 Register the nodes you want to launch in `ic382_bringup/config/team-nodes.json`.
-The default manifest is empty. Nodes use simulation time; see [CONTRIBUTING.md](CONTRIBUTING.md) for an example.
+Nodes use simulation time; see [CONTRIBUTING.md](CONTRIBUTING.md) for an example.
 
 Push your feature branch and open a pull request with **base = robot-ros2**.
 GitHub runs ROS2 build and test checks automatically.
-After merging, the code can be tested with Isaac Sim once server integration is available.
+Use the dedicated navigation launch described in [Navigation MVP](docs/NAVIGATION_MVP.md)
+to run Nav2, the mission sequence, timed inspection/tagging placeholders, and durable logs.
 Running ROS2 nodes communicate with the simulator through topics; a GitHub push does not update running nodes automatically.
 
 ## Simulation bridge check
@@ -42,9 +43,9 @@ It checks that /clock, /odom, and /scan messages keep arriving, that scan data c
 and that /cmd_vel has a subscriber. It does not send movement commands or start Isaac Sim.
 The report is saved to `results/bridge.json` and includes the tested commit SHA.
 
-**The server runner has not been installed, and automatic GPU testing is not enabled.**
-No server changes were made during this setup. The existing HPC runtime uses a container and isolated network namespace;
-see [Server integration](docs/SERVER_INTEGRATION.md) for the remaining setup.
+The navigation scripts support manual tests in the existing HPC Isaac container and isolated
+network namespace. Automatic GPU testing on GitHub pushes is not enabled.
+See [Navigation MVP](docs/NAVIGATION_MVP.md) and [Server integration](docs/SERVER_INTEGRATION.md).
 
 - [Contribution guide](CONTRIBUTING.md)
 - [ROS2 interface contract](docs/ROS_CONTRACT.md)

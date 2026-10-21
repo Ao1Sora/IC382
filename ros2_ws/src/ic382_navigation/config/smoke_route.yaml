@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "frame_id": "map",
+  "calibrated": true,
+  "scene_scale": 10.0,
+  "purpose": "short simulation smoke test, not a desk location",
+  "rounds": 1,
+  "inspection_seconds": 3.0,
+  "tagging_seconds": 3.0,
+  "waypoints": [
+    {
+      "id": "SMOKE_FORWARD",
+      "x": -273.8378461029534,
+      "y": 34.058973213693996,
+      "yaw": 0.2884853398194782
+    }
+  ]
+}

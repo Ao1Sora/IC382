@@ -1,0 +1,11 @@
+schema_version: 1
+frame_id: map
+calibrated: false
+scene_scale: 10.0
+rounds: 2
+inspection_seconds: 3.0
+tagging_seconds: 3.0
+# Record actual map-frame desk parking poses with record_waypoint.
+# Example coordinates deliberately cannot be launched until calibrated.
+waypoints:
+  - {id: DESK_A, x: 0.0, y: 0.0, yaw: 0.0}

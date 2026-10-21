@@ -1,8 +1,9 @@
 # Server Integration
 
-Status: the code is prepared. The server has not been modified, and no GPU runner is installed or enabled.
+Manual navigation integration now uses the existing HPC allocation, course601 namespace,
+and Ubuntu Humble root. See [Navigation MVP](NAVIGATION_MVP.md) for launch commands and evidence.
+No automatic GPU runner is enabled.
 
-Restore HPC access and meet the ITS storage requirements before setting up integration.
 Keep the existing Isaac Sim scenes and installation separate.
 Clone this robot branch into another directory using the shallow, single-branch command in the README
 to avoid downloading large historical simulation assets.
@@ -16,12 +17,14 @@ to avoid downloading large historical simulation assets.
    The independent robot checkout also needs to be mounted into the container.
 3. Source ROS2 Humble, build the robot workspace, and source install/setup.bash inside that environment.
 4. Run `bash scripts/check-simulation.sh`. Check the commit SHA, message counts, and result in its report.
-5. Launch `team.launch.py` to run team nodes and separately record mission-level test results.
+5. Use `scripts/hpc-patrol.sh start` for the dedicated navigation MVP; start the mission with its
+   service only after localization and Nav2 lifecycle readiness. `team.launch.py` is a separate
+   entry point for nodes selected in the team manifest.
 
 The existing HPC Ubuntu root container only mounts the simulation project.
-This branch does not provide unverified automatic nsenter/bwrap commands.
+`scripts/hpc-ros.sh` enters the verified running desktop namespace and existing container wrapper.
 Do not source the container's /opt/ros/humble directly on the host.
-Validate the namespace and mount adaptation once server access is restored.
+Revalidate namespace and mounts if the simulation environment's layout changes.
 
 ## Future automated integration
 
