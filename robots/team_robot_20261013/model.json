@@ -1,0 +1,345 @@
+{
+  "source_zip": "建模第二版10.13(1).zip",
+  "source_sha256": "bc2b8985e0a248d907f4e568270351a1509e3f644faa344c5ff9e7ed2ec4ffdf",
+  "units": "meters",
+  "axes": "X forward (CAD +Y), Y left (CAD -X), Z up",
+  "wheel_radius_m": 0.063,
+  "wheel_track_m": 0.349,
+  "mass_note": "Provisional 12 kg chassis + 0.5 kg per wheel; inertia estimates, not measured mass properties",
+  "mechanisms_note": "Lift, tag magazine and pusher retain CAD assembly pose, rigidly attached; no actuator control yet",
+  "collision_note": "Compound box chassis/mechanism collision, cylindrical drive wheels and low-friction spherical caster approximation",
+  "sensor_note": "Course RTX lidar retained at a provisional clear mounting point; CAD camera anchor is not a calibrated ROS camera",
+  "components": [
+    {
+      "component": "cam-1",
+      "source_triangles": 948,
+      "triangles": 948
+    },
+    {
+      "component": "Case-1",
+      "source_triangles": 51182,
+      "triangles": 6108
+    },
+    {
+      "component": "Case-2",
+      "source_triangles": 51182,
+      "triangles": 6124
+    },
+    {
+      "component": "fixed platform-1",
+      "source_triangles": 4532,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-1 Coupler_A.stp-1",
+      "source_triangles": 13540,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-1 Coupler_B.stp-1",
+      "source_triangles": 13750,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-1 Dampener.stp-1",
+      "source_triangles": 10042,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-1 M3x12_Screw.stp-1",
+      "source_triangles": 19858,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-1 M3x12_Screw.stp-2",
+      "source_triangles": 19858,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-2 Coupler_A.stp-1",
+      "source_triangles": 13540,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-2 Coupler_B.stp-1",
+      "source_triangles": 13750,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-2 Dampener.stp-1",
+      "source_triangles": 10042,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-2 M3x12_Screw.stp-1",
+      "source_triangles": 19858,
+      "triangles": 3500
+    },
+    {
+      "component": "L30xD25 CouplerASM 5to12.stp-2 M3x12_Screw.stp-2",
+      "source_triangles": 19858,
+      "triangles": 3500
+    },
+    {
+      "component": "left_wheel",
+      "source_triangles": 245476,
+      "triangles": 27814
+    },
+    {
+      "component": "right_wheel",
+      "source_triangles": 245640,
+      "triangles": 28198
+    },
+    {
+      "component": "Wheeltec car Drawing-1",
+      "source_triangles": 420810,
+      "triangles": 136921
+    },
+    {
+      "component": "丝杠_固定端-1",
+      "source_triangles": 932,
+      "triangles": 932
+    },
+    {
+      "component": "丝杠_固定端-2",
+      "source_triangles": 932,
+      "triangles": 932
+    },
+    {
+      "component": "丝杠_固定端-3",
+      "source_triangles": 932,
+      "triangles": 932
+    },
+    {
+      "component": "丝杠_固定端-4",
+      "source_triangles": 932,
+      "triangles": 932
+    },
+    {
+      "component": "丝杠_滑台-1",
+      "source_triangles": 948,
+      "triangles": 948
+    },
+    {
+      "component": "丝杠_滑台-2",
+      "source_triangles": 948,
+      "triangles": 948
+    },
+    {
+      "component": "丝杠固定件上-1",
+      "source_triangles": 792,
+      "triangles": 792
+    },
+    {
+      "component": "丝杠固定件上-2",
+      "source_triangles": 792,
+      "triangles": 792
+    },
+    {
+      "component": "丝杠本体-1",
+      "source_triangles": 81642,
+      "triangles": 3500
+    },
+    {
+      "component": "丝杠本体-2",
+      "source_triangles": 81642,
+      "triangles": 3500
+    },
+    {
+      "component": "丝杠电机-1",
+      "source_triangles": 1270,
+      "triangles": 1270
+    },
+    {
+      "component": "主齿圈(1)-1",
+      "source_triangles": 6582,
+      "triangles": 3500
+    },
+    {
+      "component": "伸长杆-1",
+      "source_triangles": 1948,
+      "triangles": 1948
+    },
+    {
+      "component": "升降板-1",
+      "source_triangles": 676,
+      "triangles": 676
+    },
+    {
+      "component": "同步带轮-1",
+      "source_triangles": 4504,
+      "triangles": 3898
+    },
+    {
+      "component": "同步带轮-2",
+      "source_triangles": 4504,
+      "triangles": 3898
+    },
+    {
+      "component": "小丝杆滑台_底座-1",
+      "source_triangles": 496,
+      "triangles": 496
+    },
+    {
+      "component": "小丝杠滑台_滑台-1",
+      "source_triangles": 744,
+      "triangles": 744
+    },
+    {
+      "component": "底盘固定长螺栓-1",
+      "source_triangles": 360,
+      "triangles": 360
+    },
+    {
+      "component": "底盘固定长螺栓-2",
+      "source_triangles": 360,
+      "triangles": 360
+    },
+    {
+      "component": "底盘固定长螺栓-3",
+      "source_triangles": 360,
+      "triangles": 360
+    },
+    {
+      "component": "底盘固定长螺栓-4",
+      "source_triangles": 360,
+      "triangles": 360
+    },
+    {
+      "component": "底盘固定长螺栓-5",
+      "source_triangles": 360,
+      "triangles": 360
+    },
+    {
+      "component": "底盘固定长螺栓-6",
+      "source_triangles": 360,
+      "triangles": 360
+    },
+    {
+      "component": "换料盘驱动齿轮-1",
+      "source_triangles": 1544,
+      "triangles": 1544
+    },
+    {
+      "component": "支撑铝型材110mm1-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材110mm1-2",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材72.3mm-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材72.3mm-2",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材72.3mm-3",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材72.3mm-4",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材72.3mm-5",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "支撑铝型材72.3mm-6",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "标签-1",
+      "source_triangles": 164,
+      "triangles": 164
+    },
+    {
+      "component": "标签-7",
+      "source_triangles": 164,
+      "triangles": 164
+    },
+    {
+      "component": "标签-8",
+      "source_triangles": 164,
+      "triangles": 164
+    },
+    {
+      "component": "标签仓-1",
+      "source_triangles": 520,
+      "triangles": 520
+    },
+    {
+      "component": "标签仓-2",
+      "source_triangles": 520,
+      "triangles": 520
+    },
+    {
+      "component": "标签仓-3",
+      "source_triangles": 520,
+      "triangles": 520
+    },
+    {
+      "component": "标签推杆-1",
+      "source_triangles": 312,
+      "triangles": 312
+    },
+    {
+      "component": "电机支撑件-1",
+      "source_triangles": 1412,
+      "triangles": 1412
+    },
+    {
+      "component": "选料盘底板(1)-2",
+      "source_triangles": 3024,
+      "triangles": 3024
+    },
+    {
+      "component": "铝型材142.5mm-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "铝型材254mm-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "铝型材下方横梁一232mm-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "铝型材下方横梁二236mm-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "铝型材丝杠支撑-1",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "铝型材丝杠支撑-2",
+      "source_triangles": 628,
+      "triangles": 628
+    },
+    {
+      "component": "铝型材丝杠支撑-5",
+      "source_triangles": 628,
+      "triangles": 628
+    }
+  ],
+  "triangles": 295175
+}

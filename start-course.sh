@@ -7,4 +7,4 @@ if [[ -z "${SLURM_JOB_ID:-}" ]];then
  [[ -n "$job" ]] || { echo 'Connect-Hpc.cmd: allocate your GPU job first.';exit 1; }
  exec srun --jobid="$job" --overlap -N1 -n1 "$0"
 fi
-exec ./scripts/week06-stream-desktop.sh
+exec ./scripts/course601-desktop.sh

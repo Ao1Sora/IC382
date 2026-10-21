@@ -1,0 +1,1698 @@
+{
+  "created_utc": "2026-10-21T08:49:43Z",
+  "source_root": "/World/IC_building_scene",
+  "stage_meters_per_unit": 1.0,
+  "source_layers": [
+    "anon:0x5651cb808380:World1-session.usda",
+    "/workspace/robots/team_robot_20261013/team_robot_scene.usdc",
+    "anon:0x5651b770ec10:World1.usd",
+    "/workspace/dev/Collected_final_wheeltec_with_scene/final_wheeltec_hpc45_clean.usdc"
+  ],
+  "method": "world-space mesh triangle XY projection clipped to robot-height slab",
+  "map_type": "model-derived; not SLAM; not localization-validated",
+  "teacher_scene_scale": 10.0,
+  "resolution_scene_units": 0.25,
+  "equivalent_physical_resolution_m": 0.025,
+  "origin_scene_xy": [
+    -392.0,
+    -80.0
+  ],
+  "bounds_scene_xy": [
+    -392.0,
+    -80.0,
+    -136.0,
+    194.0
+  ],
+  "floor_z_scene": 42.38880421693543,
+  "height_above_floor_scene": [
+    0.2,
+    15.0
+  ],
+  "width": 1024,
+  "height": 1096,
+  "obstacle_pixels": 39469,
+  "triangles_drawn": 4566410,
+  "meshes": [
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/BUILDING/_4F_AIR_lab/Geometry/Walls/Basic_Wall/Generic___100mm__White/Walls_1033980/WHITE_497081",
+      "minimum": [
+        -309.32970331849833,
+        -69.20830286686994,
+        42.00000000000003
+      ],
+      "maximum": [
+        -308.32969464006203,
+        11.891678822583188,
+        74.00000000000003
+      ],
+      "triangles": 18
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/BUILDING/_4F_AIR_lab/Geometry/Walls/Basic_Wall/Generic___100mm__White/Walls_1138001/WHITE_497081",
+      "minimum": [
+        -314.4297033184983,
+        110.7916910296145,
+        42.00000000000002
+      ],
+      "maximum": [
+        -313.429694640062,
+        175.99217320734888,
+        82.00000000000003
+      ],
+      "triangles": 22
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/BUILDING/_4F_AIR_lab/Geometry/Walls/Basic_Wall/Generic___100mm__White/Walls_1137914/WHITE_497081",
+      "minimum": [
+        -308.3296928757645,
+        102.29164639765642,
+        42.00000000000003
+      ],
+      "maximum": [
+        -225.32970508279575,
+        103.29163190180682,
+        82.00000000000006
+      ],
+      "triangles": 16
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp/light",
+      "minimum": [
+        -309.23418470086335,
+        100.25447952145663,
+        42.2482071086327
+      ],
+      "maximum": [
+        -308.4741847104001,
+        101.05447952145664,
+        69.98820649828114
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp/light1",
+      "minimum": [
+        -309.2304216656158,
+        21.99599585693822,
+        42.24820710863273
+      ],
+      "maximum": [
+        -308.4704216751525,
+        22.795995856938223,
+        69.98820649828116
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp/Wall_stand",
+      "minimum": [
+        -309.3523037735264,
+        21.001492732892117,
+        42.24034762056547
+      ],
+      "maximum": [
+        -308.352303010587,
+        102.04898418797026,
+        71.24034762056549
+      ],
+      "triangles": 108
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp3/light",
+      "minimum": [
+        -314.38629055804387,
+        100.25447952145663,
+        42.2482071086327
+      ],
+      "maximum": [
+        -313.6262905675806,
+        101.05447952145664,
+        69.98820649828114
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp3/Wall_stand",
+      "minimum": [
+        -314.5044096307069,
+        21.001492732892117,
+        42.24034762056547
+      ],
+      "maximum": [
+        -313.5044088677675,
+        102.04898418797026,
+        71.24034762056549
+      ],
+      "triangles": 108
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp4/light",
+      "minimum": [
+        -317.3943200722631,
+        100.25447952145663,
+        42.2482071086327
+      ],
+      "maximum": [
+        -316.63432008179984,
+        101.05447952145664,
+        69.98820649828114
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp4/light1",
+      "minimum": [
+        -317.3905570370155,
+        21.99599585693822,
+        42.24820710863273
+      ],
+      "maximum": [
+        -316.63055704655227,
+        22.795995856938223,
+        69.98820649828116
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/Wall_stand/Wall_stand_lgp/wall_stand_gp4/Wall_stand",
+      "minimum": [
+        -317.51243914492613,
+        21.001492732892117,
+        42.24034762056547
+      ],
+      "maximum": [
+        -316.5124383819867,
+        102.04898418797026,
+        71.24034762056549
+      ],
+      "triangles": 108
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/rebuild_window5_merge/merged_3",
+      "minimum": [
+        -326.0005080935237,
+        165.40865890481606,
+        52.899993896484474
+      ],
+      "maximum": [
+        -313.75925538508864,
+        172.0358866880192,
+        54.899993896484474
+      ],
+      "triangles": 2256
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/rebuild_window5_merge/merged_4",
+      "minimum": [
+        -326.37172009913894,
+        111.70257980325357,
+        42.04999389648448
+      ],
+      "maximum": [
+        -313.19616143672437,
+        173.8225810239567,
+        67.02999420166027
+      ],
+      "triangles": 320
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/rebuild_window5_merge/merged_5",
+      "minimum": [
+        -325.87172009913894,
+        165.65096694924966,
+        43.09999389648448
+      ],
+      "maximum": [
+        -313.77171990840407,
+        171.812549896027,
+        64.49999389648448
+      ],
+      "triangles": 40
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/rebuild_window5_merge/merged_6",
+      "minimum": [
+        -325.560919165301,
+        165.39228927590983,
+        53.62311401367198
+      ],
+      "maximum": [
+        -314.1617929217097,
+        172.13507186868327,
+        54.168572998046976
+      ],
+      "triangles": 1712
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/details_high/rebuild_windowdoor_merge3/Wall",
+      "minimum": [
+        -309.38311848629957,
+        -68.67252100651834,
+        42.263742154010174
+      ],
+      "maximum": [
+        -308.38311848629957,
+        -8.672521006518323,
+        67.05728158272113
+      ],
+      "triangles": 34
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/details_high/rebuild_windowdoor_merge3/Glass",
+      "minimum": [
+        -317.763466691866,
+        -60.472521006518335,
+        42.86374215401017
+      ],
+      "maximum": [
+        -308.64303770054823,
+        11.150721180981677,
+        66.26374215401019
+      ],
+      "triangles": 60
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/details_high/rebuild_windowdoor_merge3/Door",
+      "minimum": [
+        -318.563466691866,
+        -61.09751185124489,
+        42.063742154010164
+      ],
+      "maximum": [
+        -308.38311848629957,
+        11.638166249341054,
+        67.16374215401018
+      ],
+      "triangles": 7352
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Walls_1137789/WHITE_497081",
+      "minimum": [
+        -218.32971423806904,
+        102.29164639765631,
+        41.99999999999991
+      ],
+      "maximum": [
+        -196.3297081345534,
+        103.29163190180671,
+        81.99999999999991
+      ],
+      "triangles": 16
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Walls_1140385/WHITE_497081",
+      "minimum": [
+        -224.82969111146713,
+        -69.20830591862781,
+        41.39999999999975
+      ],
+      "maximum": [
+        -223.82968243303083,
+        11.79168187434093,
+        47.39999999999975
+      ],
+      "triangles": 10
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Walls_1140385/WHITE_497082",
+      "minimum": [
+        -224.82969111146718,
+        -69.2083059186277,
+        47.49999999999992
+      ],
+      "maximum": [
+        -223.82968243303088,
+        11.791681874341045,
+        81.49999999999991
+      ],
+      "triangles": 10
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Celling_Wall_stand_merge/Wall_stand_gp",
+      "minimum": [
+        -191.98878817387924,
+        20.8673108527086,
+        42.0323248509133
+      ],
+      "maximum": [
+        -190.98878741093978,
+        101.91480230778674,
+        71.03232485091331
+      ],
+      "triangles": 124
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Celling_Wall_stand_merge/Wall_stand_gp_01",
+      "minimum": [
+        -197.07037756578322,
+        20.8673108527086,
+        42.0323248509133
+      ],
+      "maximum": [
+        -196.07037680284375,
+        101.91480230778674,
+        71.03232485091331
+      ],
+      "triangles": 124
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Celling_Wall_stand_merge/Wall_stand_gp_02",
+      "minimum": [
+        -188.93889594057362,
+        20.8673108527086,
+        42.0323248509133
+      ],
+      "maximum": [
+        -187.93889517763415,
+        101.91480230778674,
+        71.03232485091331
+      ],
+      "triangles": 124
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Celling_Wall_stand_merge/Wall_stand_gp_03",
+      "minimum": [
+        -219.32691310150975,
+        20.8673108527086,
+        42.0323248509133
+      ],
+      "maximum": [
+        -218.32691233857028,
+        101.91480230778674,
+        71.03232485091331
+      ],
+      "triangles": 124
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Celling_Wall_stand_merge/Wall_stand_gp_04",
+      "minimum": [
+        -222.709520851176,
+        20.8673108527086,
+        42.0323248509133
+      ],
+      "maximum": [
+        -221.70952008823653,
+        101.91480230778674,
+        71.03232485091331
+      ],
+      "triangles": 124
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Celling_Wall_stand_merge/Wall_stand_gp_05",
+      "minimum": [
+        -225.37124498206092,
+        20.8673108527086,
+        42.0323248509133
+      ],
+      "maximum": [
+        -224.37124421912145,
+        101.91480230778674,
+        71.03232485091331
+      ],
+      "triangles": 124
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/rebuild_window6_merge/Glass",
+      "minimum": [
+        -214.93760022798756,
+        102.34038527967228,
+        43.100004577636845
+      ],
+      "maximum": [
+        -199.2847254721282,
+        102.54038375379338,
+        64.50000610351576
+      ],
+      "triangles": 20
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/rebuild_window6_merge/Door",
+      "minimum": [
+        -217.26303739229422,
+        101.67932590009464,
+        42.05000457763685
+      ],
+      "maximum": [
+        -197.23731565157155,
+        103.47932618619694,
+        67.03000640869153
+      ],
+      "triangles": 4156
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Walls_1140386/WHITE_497081",
+      "minimum": [
+        -196.02969068231369,
+        -69.20830591862781,
+        41.39999999999975
+      ],
+      "maximum": [
+        -195.02968200387738,
+        11.79168187434093,
+        47.39999999999975
+      ],
+      "triangles": 10
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/wall_group_aircafe/Group/Walls_1140386/WHITE_497082",
+      "minimum": [
+        -196.02969068231374,
+        -69.2083059186277,
+        47.49999999999992
+      ],
+      "maximum": [
+        -195.02968200387744,
+        11.791681874341045,
+        81.49999999999991
+      ],
+      "triangles": 10
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/column_01/Columns_311963/Woodfold___Vinyl_Laminated_Panel___Chalk",
+      "minimum": [
+        -317.26793413700767,
+        11.26634267146074,
+        38.87000118419495
+      ],
+      "maximum": [
+        -308.267925363204,
+        21.066330388135544,
+        80.87000118419495
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/column_02/Columns_311963/Woodfold___Vinyl_Laminated_Panel___Chalk",
+      "minimum": [
+        -318.4409452332797,
+        102.14751184183184,
+        38.87000118419496
+      ],
+      "maximum": [
+        -309.440936459476,
+        111.94749955850664,
+        80.87000118419496
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/column_03/Columns_311963/Woodfold___Vinyl_Laminated_Panel___Chalk",
+      "minimum": [
+        -197.24793279560583,
+        101.69633475492141,
+        41.40575904396526
+      ],
+      "maximum": [
+        -186.44792210610868,
+        111.4963224715962,
+        83.40575904396526
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/column_04/Columns_311963/Woodfold___Vinyl_Laminated_Panel___Chalk",
+      "minimum": [
+        -227.80832999843744,
+        101.69633475492141,
+        41.405759043965276
+      ],
+      "maximum": [
+        -217.0083193089403,
+        111.4963224715962,
+        83.40575904396528
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/column_05/Columns_311963/Woodfold___Vinyl_Laminated_Panel___Chalk",
+      "minimum": [
+        -197.24793279560575,
+        10.758595808984095,
+        41.40575904396529
+      ],
+      "maximum": [
+        -186.4479221061086,
+        20.5585835256589,
+        83.40575904396529
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/_F_AIR_LAB_building/column_06/Columns_311963/Woodfold___Vinyl_Laminated_Panel___Chalk",
+      "minimum": [
+        -227.80832999843727,
+        11.160595801266373,
+        41.40575904396529
+      ],
+      "maximum": [
+        -217.00831930894012,
+        20.960583517941178,
+        83.40575904396529
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold/ROOT/tripo_part_3/meshes_3_",
+      "minimum": [
+        -242.32093266778307,
+        62.73393176940963,
+        42.567590526470354
+      ],
+      "maximum": [
+        -241.71036747313806,
+        63.32884143737838,
+        44.762813962158724
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold/ROOT/tripo_part_3_001/meshes_3__001",
+      "minimum": [
+        -242.32093266778307,
+        58.53060878662154,
+        42.567590526470354
+      ],
+      "maximum": [
+        -241.71036747313806,
+        59.12551826385543,
+        44.762813962158724
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold/ROOT/tripo_part_3_002/meshes_3__003",
+      "minimum": [
+        -246.9141235016078,
+        62.73393176940963,
+        42.567590526470354
+      ],
+      "maximum": [
+        -246.3035583069628,
+        63.32884143737838,
+        44.762813962158724
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold/ROOT/tripo_part_3_003/meshes_3__004",
+      "minimum": [
+        -246.9141235016078,
+        58.53060878662154,
+        42.567590526470354
+      ],
+      "maximum": [
+        -246.3035583069628,
+        59.12551826385543,
+        44.762813962158724
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold/ROOT_001/tripo_part_0_001/meshes_0__001",
+      "minimum": [
+        -247.30275141760822,
+        58.08376767293312,
+        44.1760001177447
+      ],
+      "maximum": [
+        -241.30275075680586,
+        64.0837678019213,
+        46.776000104193955
+      ],
+      "triangles": 2153
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold_01/ROOT/tripo_part_3/meshes_3_",
+      "minimum": [
+        -253.21890896843777,
+        71.91559879590473,
+        42.56759052824053
+      ],
+      "maximum": [
+        -252.6083437828909,
+        72.51050846387348,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold_01/ROOT/tripo_part_3_001/meshes_3__001",
+      "minimum": [
+        -253.21890896843777,
+        67.71227581311663,
+        42.56759052824053
+      ],
+      "maximum": [
+        -252.6083437828909,
+        68.30718529035052,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold_01/ROOT/tripo_part_3_002/meshes_3__003",
+      "minimum": [
+        -257.8120997338186,
+        71.91559879590473,
+        42.56759052824053
+      ],
+      "maximum": [
+        -257.20153454827175,
+        72.51050846387348,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold_01/ROOT/tripo_part_3_003/meshes_3__004",
+      "minimum": [
+        -257.8120997338186,
+        67.71227581311663,
+        42.56759052824053
+      ],
+      "maximum": [
+        -257.20153454827175,
+        68.30718529035052,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gold_01/ROOT_001/tripo_part_0_001/meshes_0__001",
+      "minimum": [
+        -258.200727644028,
+        67.26543469942821,
+        44.1760000955477
+      ],
+      "maximum": [
+        -252.20072707263265,
+        73.26543482841639,
+        46.77600004325394
+      ],
+      "triangles": 2153
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray/tripo_part_0/meshes_0_",
+      "minimum": [
+        -236.26538078094677,
+        61.111881131330406,
+        44.16275034498248
+      ],
+      "maximum": [
+        -230.26538039947707,
+        67.11188151280014,
+        46.76275034498247
+      ],
+      "triangles": 2153
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray/tripo_part_3/meshes_3_",
+      "minimum": [
+        -231.28356220031935,
+        65.7620453540477,
+        42.56759052824053
+      ],
+      "maximum": [
+        -230.67299701477248,
+        66.35695502201645,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray/tripo_part_3_001/meshes_3__001",
+      "minimum": [
+        -231.28356220031935,
+        61.558722371259606,
+        42.56759052824053
+      ],
+      "maximum": [
+        -230.67299701477248,
+        62.1536318484935,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray/tripo_part_3_002/meshes_3__003",
+      "minimum": [
+        -235.8767529657002,
+        65.7620453540477,
+        42.56759052824053
+      ],
+      "maximum": [
+        -235.26618778015333,
+        66.35695502201645,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray/tripo_part_3_003/meshes_3__004",
+      "minimum": [
+        -235.8767529657002,
+        61.558722371259606,
+        42.56759052824053
+      ],
+      "maximum": [
+        -235.26618778015333,
+        62.1536318484935,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray_01/tripo_part_0/meshes_0_",
+      "minimum": [
+        -234.83428975507982,
+        71.12657091380437,
+        44.16275034498248
+      ],
+      "maximum": [
+        -228.83428937361012,
+        77.1265712952741,
+        46.76275034498247
+      ],
+      "triangles": 2153
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray_01/tripo_part_3/meshes_3_",
+      "minimum": [
+        -229.8524711744524,
+        75.77673513652167,
+        42.56759052824053
+      ],
+      "maximum": [
+        -229.24190598890553,
+        76.37164480449042,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray_01/tripo_part_3_001/meshes_3__001",
+      "minimum": [
+        -229.8524711744524,
+        71.57341215373357,
+        42.56759052824053
+      ],
+      "maximum": [
+        -229.24190598890553,
+        72.16832163096745,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray_01/tripo_part_3_002/meshes_3__003",
+      "minimum": [
+        -234.44566193983326,
+        75.77673513652167,
+        42.56759052824053
+      ],
+      "maximum": [
+        -233.83509675428638,
+        76.37164480449042,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/couch_gray_01/tripo_part_3_003/meshes_3__004",
+      "minimum": [
+        -234.44566193983326,
+        71.57341215373357,
+        42.56759052824053
+      ],
+      "maximum": [
+        -233.83509675428638,
+        72.16832163096745,
+        44.76281393121752
+      ],
+      "triangles": 520
+    },
+    {
+      "path": "/World/IC_building_scene/objects/toolbox/ROOT/tripo_part_6/meshes_6_",
+      "minimum": [
+        -274.27309796928097,
+        49.79297998764326,
+        42.428987081993476
+      ],
+      "maximum": [
+        -269.27309796934827,
+        55.49298003444185,
+        49.128987133134224
+      ],
+      "triangles": 629414
+    },
+    {
+      "path": "/World/IC_building_scene/objects/toolbox_01/ROOT/tripo_part_6/meshes_6_",
+      "minimum": [
+        -274.2730979692808,
+        55.8191536143049,
+        42.42898708199348
+      ],
+      "maximum": [
+        -269.2730979693481,
+        61.519153661103495,
+        49.12898713313423
+      ],
+      "triangles": 629414
+    },
+    {
+      "path": "/World/IC_building_scene/objects/toolbox_02/ROOT/tripo_part_6/meshes_6_",
+      "minimum": [
+        -292.17004817949436,
+        75.06344247721393,
+        42.428987081993476
+      ],
+      "maximum": [
+        -287.17004817956166,
+        80.76344252401253,
+        49.128987133134224
+      ],
+      "triangles": 629414
+    },
+    {
+      "path": "/World/IC_building_scene/objects/toolbox_03/ROOT/tripo_part_6/meshes_6_",
+      "minimum": [
+        -292.17004817949197,
+        81.08961610387564,
+        42.42898708199348
+      ],
+      "maximum": [
+        -287.1700481795593,
+        86.78961615067425,
+        49.12898713313423
+      ],
+      "triangles": 629414
+    },
+    {
+      "path": "/World/IC_building_scene/objects/sofa_v5/ROOT/tripo_part_10_017/meshes_10__017",
+      "minimum": [
+        -249.4688009597015,
+        77.60665690449414,
+        42.49294145118016
+      ],
+      "maximum": [
+        -236.76880036514515,
+        84.20665726510225,
+        51.49294097434299
+      ],
+      "triangles": 1937240
+    },
+    {
+      "path": "/World/IC_building_scene/objects/box_v7/box_v7/Cube_003/Mesh",
+      "minimum": [
+        -246.27653857909598,
+        70.56944852130974,
+        42.50129375210162
+      ],
+      "maximum": [
+        -240.24695651261496,
+        74.58424722796943,
+        45.429019666881
+      ],
+      "triangles": 4935
+    },
+    {
+      "path": "/World/IC_building_scene/objects/box_v7_01/box_v7/Cube_003/Mesh",
+      "minimum": [
+        -246.27653857909593,
+        66.04906482266846,
+        42.50129375210161
+      ],
+      "maximum": [
+        -240.2469565126149,
+        70.06386352932815,
+        45.42901966688099
+      ],
+      "triangles": 4935
+    },
+    {
+      "path": "/World/IC_building_scene/objects/red_metal__platform/meshes_0_/meshes_0_",
+      "minimum": [
+        -248.24451633229728,
+        64.93766074991534,
+        45.40980927513945
+      ],
+      "maximum": [
+        -238.24939757369884,
+        74.9327795085138,
+        46.00980925958659
+      ],
+      "triangles": 3622
+    },
+    {
+      "path": "/World/IC_building_scene/Cube_02",
+      "minimum": [
+        -143.38132053655818,
+        -76.5146393166522,
+        42.38883697411495
+      ],
+      "maximum": [
+        -138.36019557672307,
+        188.4997238503436,
+        80.53113067725224
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/Cube_03",
+      "minimum": [
+        -391.25883008870943,
+        188.49999999999994,
+        41.04999999999998
+      ],
+      "maximum": [
+        -138.25883008870943,
+        192.49999999999994,
+        81.04999999999998
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/Cube_04",
+      "minimum": [
+        -390.17883417270053,
+        -73.05955071485758,
+        40.64145260188684
+      ],
+      "maximum": [
+        -385.1788341727004,
+        191.94044928514242,
+        80.64145260188684
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/Cube_05",
+      "minimum": [
+        -390.2000380435995,
+        -78.40416109806732,
+        42.02999971657984
+      ],
+      "maximum": [
+        -137.20003804359948,
+        -73.40416109806732,
+        80.07000028342001
+      ],
+      "triangles": 8
+    },
+    {
+      "path": "/World/IC_building_scene/window/rebuild_window3_merge/Glass",
+      "minimum": [
+        -384.9813255514832,
+        109.16758922865375,
+        43.86239906264308
+      ],
+      "maximum": [
+        -384.78132707736216,
+        184.51704906752096,
+        65.262400588522
+      ],
+      "triangles": 60
+    },
+    {
+      "path": "/World/IC_building_scene/window/rebuild_window3_merge/Door",
+      "minimum": [
+        -385.7288343634339,
+        106.94125561048969,
+        42.81239906264308
+      ],
+      "maximum": [
+        -383.92883417269906,
+        186.7662586622475,
+        67.79240089369779
+      ],
+      "triangles": 12560
+    },
+    {
+      "path": "/World/IC_building_scene/window/Plane",
+      "minimum": [
+        -384.9537595475161,
+        106.71471950799412,
+        42.23175150971309
+      ],
+      "maximum": [
+        -384.9537595475161,
+        186.82472317010348,
+        68.34175212006465
+      ],
+      "triangles": 2
+    },
+    {
+      "path": "/World/IC_building_scene/window_01/rebuild_window3_merge/Glass",
+      "minimum": [
+        -384.9813255514846,
+        21.366330853104756,
+        43.86239906264317
+      ],
+      "maximum": [
+        -384.7813270773635,
+        96.71579069197196,
+        65.2624005885221
+      ],
+      "triangles": 60
+    },
+    {
+      "path": "/World/IC_building_scene/window_01/rebuild_window3_merge/Door",
+      "minimum": [
+        -385.7288343634353,
+        19.139997234940694,
+        42.81239906264317
+      ],
+      "maximum": [
+        -383.9288341727004,
+        98.96500028669851,
+        67.79240089369787
+      ],
+      "triangles": 12560
+    },
+    {
+      "path": "/World/IC_building_scene/window_01/Plane_01",
+      "minimum": [
+        -384.95375954751745,
+        19.384999054670523,
+        42.23175150971309
+      ],
+      "maximum": [
+        -384.95375954751745,
+        99.49500271677991,
+        68.34175212006465
+      ],
+      "triangles": 2
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_05/aircafetable/table_plate",
+      "minimum": [
+        -219.68538925825527,
+        66.83153439762972,
+        51.53214797139005
+      ],
+      "maximum": [
+        -212.04332933603695,
+        90.83153535130404,
+        52.13214859127836
+      ],
+      "triangles": 300
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_05/aircafetable/body_005",
+      "minimum": [
+        -219.31984917103222,
+        90.01875449421786,
+        42.83553823590116
+      ],
+      "maximum": [
+        -212.15462938724926,
+        90.547705185441,
+        51.8236182606204
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_05/aircafetable/body_001",
+      "minimum": [
+        -219.31984917103222,
+        67.0439951539316,
+        42.83553823590116
+      ],
+      "maximum": [
+        -212.15462938724926,
+        67.57293511631869,
+        51.8236182606204
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_06/aircafetable/table_plate",
+      "minimum": [
+        -219.68538925825527,
+        42.84335110967106,
+        51.53214797139016
+      ],
+      "maximum": [
+        -212.04332933603695,
+        66.84335206334538,
+        52.132148591278465
+      ],
+      "triangles": 300
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_06/aircafetable/body_005",
+      "minimum": [
+        -219.31984917103222,
+        66.0305712062592,
+        42.83553823590127
+      ],
+      "maximum": [
+        -212.15462938724926,
+        66.55952189748234,
+        51.823618260620506
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_06/aircafetable/body_001",
+      "minimum": [
+        -219.31984917103222,
+        43.05581186597294,
+        42.83553823590127
+      ],
+      "maximum": [
+        -212.15462938724926,
+        43.58475182836003,
+        51.823618260620506
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_07/aircafetable/table_plate",
+      "minimum": [
+        -211.27062412983983,
+        42.84335110967106,
+        51.53214797139016
+      ],
+      "maximum": [
+        -203.6285642076215,
+        66.84335206334538,
+        52.132148591278465
+      ],
+      "triangles": 300
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_07/aircafetable/body_005",
+      "minimum": [
+        -210.90508404261678,
+        66.0305712062592,
+        42.83553823590127
+      ],
+      "maximum": [
+        -203.73986425883382,
+        66.55952189748234,
+        51.823618260620506
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_07/aircafetable/body_001",
+      "minimum": [
+        -210.90508404261678,
+        43.05581186597294,
+        42.83553823590127
+      ],
+      "maximum": [
+        -203.73986425883382,
+        43.58475182836003,
+        51.823618260620506
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_08/aircafetable/table_plate",
+      "minimum": [
+        -211.27062412983983,
+        66.86650670195516,
+        51.53214797139007
+      ],
+      "maximum": [
+        -203.6285642076215,
+        90.86650765562948,
+        52.13214859127837
+      ],
+      "triangles": 300
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_08/aircafetable/body_005",
+      "minimum": [
+        -210.90508404261678,
+        90.0537267985433,
+        42.835538235901176
+      ],
+      "maximum": [
+        -203.73986425883382,
+        90.58267748976644,
+        51.823618260620414
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafe_table_08/aircafetable/body_001",
+      "minimum": [
+        -210.90508404261678,
+        67.07896745825704,
+        42.835538235901176
+      ],
+      "maximum": [
+        -203.73986425883382,
+        67.60790742064412,
+        51.823618260620414
+      ],
+      "triangles": 80
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair/ParentNode/Mesh_0/Mesh_0",
+      "minimum": [
+        -227.25775551277127,
+        76.92165765784053,
+        50.197180570706124
+      ],
+      "maximum": [
+        -222.2270847507092,
+        80.82165751525955,
+        51.79718050233112
+      ],
+      "triangles": 2454
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair/ParentNode/Mesh_4/Mesh_4",
+      "minimum": [
+        -224.8385246865722,
+        78.87562147403665,
+        42.38787358697169
+      ],
+      "maximum": [
+        -222.03807868289675,
+        81.44665098811097,
+        50.443903264362746
+      ],
+      "triangles": 714
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair/ParentNode/Mesh_2/Mesh_2",
+      "minimum": [
+        -226.944389718053,
+        76.4643866039493,
+        45.562762376625464
+      ],
+      "maximum": [
+        -222.17220284270968,
+        81.29394652616762,
+        45.73917305167429
+      ],
+      "triangles": 829
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair/ParentNode/Mesh_1/Mesh_1",
+      "minimum": [
+        -227.1008267648789,
+        76.28506935263582,
+        42.38828485902064
+      ],
+      "maximum": [
+        -222.03185629325833,
+        78.9439902367682,
+        50.438211616833144
+      ],
+      "triangles": 1367
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair/ParentNode/Mesh_3/Mesh_3",
+      "minimum": [
+        -227.09168471622195,
+        78.65618697429605,
+        42.38678699429744
+      ],
+      "maximum": [
+        -224.36173476505007,
+        81.44793546820588,
+        50.40711170132869
+      ],
+      "triangles": 695
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_01/ParentNode/Mesh_0/Mesh_0",
+      "minimum": [
+        -227.25775551277144,
+        63.46884425339961,
+        50.07789014807371
+      ],
+      "maximum": [
+        -222.22708475070937,
+        67.36884411081863,
+        51.67789007969871
+      ],
+      "triangles": 2454
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_01/ParentNode/Mesh_4/Mesh_4",
+      "minimum": [
+        -224.83852468657238,
+        65.42280806959573,
+        42.26858316433929
+      ],
+      "maximum": [
+        -222.03807868289692,
+        67.99383758367006,
+        50.32461284173034
+      ],
+      "triangles": 710
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_01/ParentNode/Mesh_2/Mesh_2",
+      "minimum": [
+        -226.94438971805317,
+        63.011573199508376,
+        45.443471953993054
+      ],
+      "maximum": [
+        -222.17220284270985,
+        67.8411331217267,
+        45.61988262904188
+      ],
+      "triangles": 829
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_01/ParentNode/Mesh_1/Mesh_1",
+      "minimum": [
+        -227.10082676487906,
+        62.8322559481949,
+        42.268994436388226
+      ],
+      "maximum": [
+        -222.0318562932585,
+        65.49117683232727,
+        50.31892119420073
+      ],
+      "triangles": 1333
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_01/ParentNode/Mesh_3/Mesh_3",
+      "minimum": [
+        -227.09168471622212,
+        65.20337356985513,
+        42.26749657166503
+      ],
+      "maximum": [
+        -224.36173476505024,
+        67.99512206376497,
+        50.28782127869628
+      ],
+      "triangles": 687
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_02/ParentNode/Mesh_0/Mesh_0",
+      "minimum": [
+        -227.25775551277178,
+        52.76338510308399,
+        50.077890148073756
+      ],
+      "maximum": [
+        -222.2270847507097,
+        56.66338496050301,
+        51.677890079698756
+      ],
+      "triangles": 2454
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_02/ParentNode/Mesh_4/Mesh_4",
+      "minimum": [
+        -224.83852468657273,
+        54.7173489192801,
+        42.26858316433933
+      ],
+      "maximum": [
+        -222.03807868289726,
+        57.28837843335443,
+        50.324612841730385
+      ],
+      "triangles": 710
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_02/ParentNode/Mesh_2/Mesh_2",
+      "minimum": [
+        -226.94438971805351,
+        52.30611404919275,
+        45.4434719539931
+      ],
+      "maximum": [
+        -222.1722028427102,
+        57.13567397141107,
+        45.619882629041925
+      ],
+      "triangles": 829
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_02/ParentNode/Mesh_1/Mesh_1",
+      "minimum": [
+        -227.1008267648794,
+        52.12679679787927,
+        42.26899443638827
+      ],
+      "maximum": [
+        -222.03185629325884,
+        54.78571768201165,
+        50.318921194200776
+      ],
+      "triangles": 1333
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_02/ParentNode/Mesh_3/Mesh_3",
+      "minimum": [
+        -227.09168471622246,
+        54.4979144195395,
+        42.26749657166507
+      ],
+      "maximum": [
+        -224.36173476505058,
+        57.28966291344934,
+        50.28782127869632
+      ],
+      "triangles": 687
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_03/ParentNode/Mesh_0/Mesh_0",
+      "minimum": [
+        -201.69307275645326,
+        52.753084287568775,
+        50.967933248783275
+      ],
+      "maximum": [
+        -196.6624019943912,
+        56.6530841449878,
+        52.56793318040828
+      ],
+      "triangles": 2454
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_03/ParentNode/Mesh_4/Mesh_4",
+      "minimum": [
+        -201.8820788242657,
+        52.12809081471736,
+        43.15862626504885
+      ],
+      "maximum": [
+        -199.08163282059024,
+        54.699120328791686,
+        51.214655942439904
+      ],
+      "triangles": 767
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_03/ParentNode/Mesh_2/Mesh_2",
+      "minimum": [
+        -201.74795466445278,
+        52.28079527666072,
+        46.33351505470263
+      ],
+      "maximum": [
+        -196.97576778910945,
+        57.11035519887904,
+        46.50992572975146
+      ],
+      "triangles": 829
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_03/ParentNode/Mesh_1/Mesh_1",
+      "minimum": [
+        -201.88830121390413,
+        54.630751566060134,
+        43.1590375370978
+      ],
+      "maximum": [
+        -196.81933074228357,
+        57.28967245019252,
+        51.2089642949103
+      ],
+      "triangles": 1443
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_03/ParentNode/Mesh_3/Mesh_3",
+      "minimum": [
+        -199.55842274211238,
+        52.12680633462245,
+        43.1575396723746
+      ],
+      "maximum": [
+        -196.8284727909405,
+        54.91855482853229,
+        51.17786437940585
+      ],
+      "triangles": 728
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_04/ParentNode/Mesh_0/Mesh_0",
+      "minimum": [
+        -201.69307275645542,
+        68.51995592965473,
+        50.96793324878328
+      ],
+      "maximum": [
+        -196.66240199439335,
+        72.41995578707375,
+        52.56793318040829
+      ],
+      "triangles": 2454
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_04/ParentNode/Mesh_4/Mesh_4",
+      "minimum": [
+        -201.88207882426786,
+        67.89496245680331,
+        43.15862626504886
+      ],
+      "maximum": [
+        -199.0816328205924,
+        70.46599197087764,
+        51.21465594243991
+      ],
+      "triangles": 767
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_04/ParentNode/Mesh_2/Mesh_2",
+      "minimum": [
+        -201.74795466445494,
+        68.04766691874667,
+        46.33351505470264
+      ],
+      "maximum": [
+        -196.97576778911161,
+        72.877226840965,
+        46.509925729751465
+      ],
+      "triangles": 829
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_04/ParentNode/Mesh_1/Mesh_1",
+      "minimum": [
+        -201.8883012139063,
+        70.39762320814609,
+        43.15903753709781
+      ],
+      "maximum": [
+        -196.81933074228573,
+        73.05654409227847,
+        51.20896429491031
+      ],
+      "triangles": 1443
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_04/ParentNode/Mesh_3/Mesh_3",
+      "minimum": [
+        -199.55842274211454,
+        67.8936779767084,
+        43.1575396723746
+      ],
+      "maximum": [
+        -196.82847279094267,
+        70.68542647061824,
+        51.17786437940585
+      ],
+      "triangles": 728
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_05/ParentNode/Mesh_0/Mesh_0",
+      "minimum": [
+        -201.69307275645542,
+        80.61754821786761,
+        50.96793324878301
+      ],
+      "maximum": [
+        -196.66240199439335,
+        84.51754807528663,
+        52.56793318040802
+      ],
+      "triangles": 2454
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_05/ParentNode/Mesh_4/Mesh_4",
+      "minimum": [
+        -201.88207882426786,
+        79.99255474501621,
+        43.15862626504859
+      ],
+      "maximum": [
+        -199.0816328205924,
+        82.56358425909053,
+        51.21465594243964
+      ],
+      "triangles": 767
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_05/ParentNode/Mesh_2/Mesh_2",
+      "minimum": [
+        -201.74795466445494,
+        80.14525920695957,
+        46.33351505470237
+      ],
+      "maximum": [
+        -196.97576778911161,
+        84.97481912917789,
+        46.509925729751195
+      ],
+      "triangles": 829
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_05/ParentNode/Mesh_1/Mesh_1",
+      "minimum": [
+        -201.8883012139063,
+        82.49521549635898,
+        43.15903753709754
+      ],
+      "maximum": [
+        -196.81933074228573,
+        85.15413638049137,
+        51.20896429491004
+      ],
+      "triangles": 1443
+    },
+    {
+      "path": "/World/IC_building_scene/background/airCafe_table/aircafechair_05/ParentNode/Mesh_3/Mesh_3",
+      "minimum": [
+        -199.55842274211454,
+        79.9912702649213,
+        43.15753967237433
+      ],
+      "maximum": [
+        -196.82847279094267,
+        82.78301875883113,
+        51.17786437940558
+      ],
+      "triangles": 728
+    },
+    {
+      "path": "/World/IC_building_scene/Cube_06",
+      "minimum": [
+        -193.60932605165814,
+        14.7967736373995,
+        42.02999971657984
+      ],
+      "maximum": [
+        -143.60932605165814,
+        19.7967736373995,
+        80.07000028342001
+      ],
+      "triangles": 8
+    }
+  ],
+  "elapsed_seconds": 148.41396522521973,
+  "limitations": [
+    "Scene-derived geometry, not measured reality; verify with lidar and AMCL.",
+    "No robot-footprint inflation is baked in; Nav2 must set footprint and inflation.",
+    "Walls/furniture intersecting 0.02-1.5 physical metres are projected.",
+    "Map uses original 10x scene coordinates, not physical-world coordinates.",
+    "All visible supplied meshes in the height slab are treated as solid obstacles.",
+    "Robot and item-tagging mechanisms are excluded from the static map."
+  ]
+}

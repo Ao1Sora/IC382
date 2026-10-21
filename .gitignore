@@ -2,11 +2,11 @@
 /downloads/
 /logs/
 /cache/
+/navigation-mvp/
 __pycache__/
-*.pyc
-/ros2_ws/build/
-/ros2_ws/install/
-/ros2_ws/log/
+*.py[cod]
+*.etli
 .env
 .env.*
-!.env.example
+*.pem
+*.key

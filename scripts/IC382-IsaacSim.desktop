@@ -1,8 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=IC382 Isaac Sim 4.5
-Comment=Open Isaac Sim through the isolated desktop streaming client
-Exec=bash -lc '/puhome/24110598d/Desktop/IC382/scripts/isaac-desktop.sh'
-Path=/puhome/24110598d/Desktop/IC382
+Name=IC382 Isaac Sim 6.0.1
+Comment=Team CAD robot with original RTX lidar and ROS2 Humble
+Exec=bash -lc "cd \"$HOME/Desktop/IC382\" && exec ./start-course.sh"
 Terminal=true
 Categories=Development;Science;

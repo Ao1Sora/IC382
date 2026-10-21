@@ -19,9 +19,9 @@ try:
   drive(0.,0.,1.)
  else:
   for label,v,w,duration in [('Forward 2 m',.5,0.,4.),('Backward 2 m',-.5,0.,4.),('Turn left 90 degrees',0.,.5,3.14),('Turn right 90 degrees',0.,-.5,3.14)]:
-   before=json.loads(Path('/workspace/logs/week06-live.json').read_text())
+   before=json.loads(Path('/workspace/logs/course601-live.json').read_text())
    print(label,flush=True);drive(v,w,duration);drive(0.,0.,1.2)
-   after=json.loads(Path('/workspace/logs/week06-live.json').read_text())
+   after=json.loads(Path('/workspace/logs/course601-live.json').read_text())
    distance=math.dist(before['world_pose'][:2],after['world_pose'][:2])
    def yaw(q):
     w,x,y,z=q;return math.atan2(2*(w*z+x*y),1-2*(y*y+z*z))
