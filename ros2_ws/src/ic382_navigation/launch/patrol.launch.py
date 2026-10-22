@@ -26,7 +26,8 @@ def setup(context):
                           'use_sim_time': value('use_sim_time'), 'autostart': 'true',
                           'use_composition': 'False', 'slam': 'False'}.items())
     return [
-        GroupAction([SetRemap(src='cmd_vel', dst='nav2_cmd_vel'), nav]),
+        GroupAction([SetRemap(src='behavior_server:cmd_vel', dst='nav2_cmd_vel'),
+                     SetRemap(src='cmd_vel_smoothed', dst='nav2_cmd_vel'), nav]),
         Node(package='ic382_navigation', executable='scan_filter', output='screen',
              parameters=[common, {'max_range': float(value('max_range'))}]),
         Node(package='ic382_navigation', executable='journal', output='screen',

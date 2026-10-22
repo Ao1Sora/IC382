@@ -25,6 +25,9 @@ case "${1:-status}" in
       sleep 3
       # The launch parent can exit before its component/container children.
       kill -TERM -- "-$group" 2>/dev/null || true
+      sleep 2
+      # A lifecycle component can hang during shutdown after its parent exits.
+      kill -KILL -- "-$group" 2>/dev/null || true
     done
     ;;
   start)
