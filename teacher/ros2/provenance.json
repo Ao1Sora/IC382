@@ -1,0 +1,26 @@
+{
+  "verified_date": "2026-10-22",
+  "course_url": "https://canvas.polyu.edu.hk/courses/3487",
+  "archive_source": "HPC downloads/week06-canvas-assets.zip; source archive copied previously, its current module listing verified live",
+  "lidar_script_source": "downloaded live from authenticated Canvas file 286509 on 2026-10-22",
+  "files": [
+    {
+      "path": "config/custom_nav2_params.yaml",
+      "bytes": 13645,
+      "sha256": "fd50817f337a30fac957b49d2fb29a8001496ed1962e2e0ee20a1a244b0a553f",
+      "canvas_file_id": 286508
+    },
+    {
+      "path": "config/custom_slam_params.yaml",
+      "bytes": 2525,
+      "sha256": "18ce804329106cfeab00b9ca11d6ebe30836892cce23c01e035c5436c016c0e6",
+      "canvas_file_id": 286508
+    },
+    {
+      "path": "scripts/setup_new_wheeltec_lidar.sh",
+      "bytes": 3252,
+      "sha256": "e1a56fcff5ec7551ce9f385db1336a55be4e2002e3d824880f98789e9c0f459c",
+      "canvas_file_id": 286509
+    }
+  ]
+}

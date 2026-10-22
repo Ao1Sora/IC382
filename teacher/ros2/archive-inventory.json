@@ -1,0 +1,2074 @@
+{
+  "source": "HPC ~/Desktop/IC382/downloads/week06-canvas-assets.zip; previously downloaded from Canvas file 286508",
+  "verified": "2026-10-21",
+  "files": [
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_senior_diff_robot/.collect.mapping.json",
+      "bytes": 348
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_senior_diff_robot/final_senior_diff_robot.usd",
+      "bytes": 8593923
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/.collect.mapping.json",
+      "bytes": 311725
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/final_wheeltec_with_scene.usd",
+      "bytes": 513255079
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_12000K.mdl",
+      "bytes": 1326
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R85.mdl",
+      "bytes": 576
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_BaseColor.png",
+      "bytes": 16904
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_N.png",
+      "bytes": 7519899
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_ORM.png",
+      "bytes": 5988267
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein.mdl",
+      "bytes": 2069
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_BaseColor.png",
+      "bytes": 9678535
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_N.png",
+      "bytes": 18832058
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_ORM.png",
+      "bytes": 4258824
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon.mdl",
+      "bytes": 1746
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_BaseColor.png",
+      "bytes": 16902
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_N.png",
+      "bytes": 2272406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_ORM.png",
+      "bytes": 779615
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless.mdl",
+      "bytes": 2019
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Templates/GlassUtils.mdl",
+      "bytes": 2417
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Templates/GlassWithVolume.mdl",
+      "bytes": 4906
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum/Gypsum_BaseColor.png",
+      "bytes": 4956768
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum/Gypsum_N.png",
+      "bytes": 8147428
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum/Gypsum_ORM.png",
+      "bytes": 5104444
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum.mdl",
+      "bytes": 1574
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_N.png",
+      "bytes": 6663591
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_ORM.png",
+      "bytes": 4196284
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster.mdl",
+      "bytes": 1963
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_Normal.png",
+      "bytes": 3321558
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_ORM.png",
+      "bytes": 637843
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized_Black.mdl",
+      "bytes": 1600
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak/Oak_BaseColor.png",
+      "bytes": 5383545
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak/Oak_N.png",
+      "bytes": 2939899
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak/Oak_ORM.png",
+      "bytes": 1171706
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak.mdl",
+      "bytes": 1935
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Paint_Eggshell.mdl",
+      "bytes": 49992
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Laminate_Oak.mdl",
+      "bytes": 22504
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/textures/laminate_oak_diffuse.jpg",
+      "bytes": 2467433
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/textures/laminate_oak_multi_R_rough_G_aniso.jpg",
+      "bytes": 10480809
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/textures/laminate_oak_normal.jpg",
+      "bytes": 5397470
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/senior_diff_robot_scaled.usd",
+      "bytes": 8592036
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Glass/Tinted_Glass_R85.mdl",
+      "bytes": 576
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_BaseColor.png",
+      "bytes": 16904
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_N.png",
+      "bytes": 7519899
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_ORM.png",
+      "bytes": 5988267
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Cast_Metal_Silver_Vein.mdl",
+      "bytes": 2069
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Carbon/Steel_Carbon_BaseColor.png",
+      "bytes": 9678535
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Carbon/Steel_Carbon_N.png",
+      "bytes": 18832058
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Carbon/Steel_Carbon_ORM.png",
+      "bytes": 4258824
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Carbon.mdl",
+      "bytes": 1746
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Stainless/Steel_Stainless_BaseColor.png",
+      "bytes": 16902
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Stainless/Steel_Stainless_N.png",
+      "bytes": 2272406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Stainless/Steel_Stainless_ORM.png",
+      "bytes": 779615
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Metals/Steel_Stainless.mdl",
+      "bytes": 2019
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Templates/GlassUtils.mdl",
+      "bytes": 2417
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Collected_rebuild_window3_merge/texture/Templates/GlassWithVolume.mdl",
+      "bytes": 4906
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/couch_gold/textures/gray_couch_tripo_part_3_basecolor.jpg",
+      "bytes": 18279
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/couch_gold/textures/padded+ottoman+3d+model_Clone1_Clone1_Clone1_tripo_part_0_basecolor.jpg",
+      "bytes": 4350023
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_blackPlastic_A.png",
+      "bytes": 231020
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_blackPlastic_N.png",
+      "bytes": 231019
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_blackPlastic_R.png",
+      "bytes": 82712
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_fabric_A.png",
+      "bytes": 11090697
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_fabric_N.png",
+      "bytes": 15167286
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_fabric_R.png",
+      "bytes": 82713
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_net_A.png",
+      "bytes": 231020
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_net_N.png",
+      "bytes": 1679275
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_net_O.png",
+      "bytes": 668523
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_net_R.png",
+      "bytes": 82713
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_steel_A.png",
+      "bytes": 231020
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_steel_M.png",
+      "bytes": 82712
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_steel_N.png",
+      "bytes": 231019
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/office_chair/Textures/Steelbook_steel_R.png",
+      "bytes": 82713
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/concrete/ic_concrete_ground.png",
+      "bytes": 73161322
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/default.mdl",
+      "bytes": 1341
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/forest_green.mdl",
+      "bytes": 1346
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/glossy_black.mdl",
+      "bytes": 1348
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/hitachi_logo_color3.iff",
+      "bytes": 314480
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/light_red_orange.mdl",
+      "bytes": 1350
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/neutral_gray.mdl",
+      "bytes": 1346
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/orange.mdl",
+      "bytes": 1340
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/phase_temporary.mdl",
+      "bytes": 1351
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/red.mdl",
+      "bytes": 1337
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/render_material_0_0_255.mdl",
+      "bytes": 1357
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/render_material_0_255_0.mdl",
+      "bytes": 1357
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/render_material_0_255_255.mdl",
+      "bytes": 1359
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/render_material_255_0_0.mdl",
+      "bytes": 1357
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/render_material_255_0_255.mdl",
+      "bytes": 1359
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/render_material_255_63_0.mdl",
+      "bytes": 1358
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/semi_polished.mdl",
+      "bytes": 1347
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/stainless_polished.mdl",
+      "bytes": 1354
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/stainless_satin.mdl",
+      "bytes": 1351
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/raw/white.mdl",
+      "bytes": 1339
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/automatic_door_sign.jpg",
+      "bytes": 102767
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/beam_stand_stainless.jpg",
+      "bytes": 25849
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/deskinroomuv2.jpg",
+      "bytes": 47242
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/diffusecolortex.png",
+      "bytes": 8544
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/exit.jpg",
+      "bytes": 126888
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/export3dcoat_color.tga",
+      "bytes": 67108882
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/export3dcoat_nmap.tga",
+      "bytes": 67108882
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/hitachi_logo.jpg",
+      "bytes": 73676
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/metal.jpg",
+      "bytes": 16093
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/metal_seamed.jpg",
+      "bytes": 920
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/normaltex.png",
+      "bytes": 8544
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/roughnesstex.png",
+      "bytes": 8544
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/screw_thread.jpg",
+      "bytes": 42685
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/steel_cast_basecolor.png",
+      "bytes": 20161303
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/_100_0878a.jpg",
+      "bytes": 57284
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/_100_0881.jpg",
+      "bytes": 52491
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/export_airlab/export_airlab/textures/_100_0883.jpg",
+      "bytes": 78866
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/GRASS/Poliigon_GrassPatchyGround_4585_BaseColor.jpg",
+      "bytes": 18831915
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/GRASS/Poliigon_GrassPatchyGround_4585_Metallic.jpg",
+      "bytes": 66663
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/GRASS/Poliigon_GrassPatchyGround_4585_Normal.png",
+      "bytes": 42619559
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/Omniverse/kit-app-template/_build/windows-x86_64/release/_assets/_assets/GRASS/Poliigon_GrassPatchyGround_4585_Roughness.jpg",
+      "bytes": 9187928
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/ArtsPages_BaseColor.png",
+      "bytes": 2044320
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/ArtsPages_N.png",
+      "bytes": 2295385
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/ArtsPages_R.png",
+      "bytes": 25578
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookHardcover48_A.png",
+      "bytes": 18319873
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookHardcover62_A.png",
+      "bytes": 8477609
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookHardcover80_A.png",
+      "bytes": 16559213
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookHardcover_N.png",
+      "bytes": 9713509
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookHardcover_R.png",
+      "bytes": 2318676
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover45_A.png",
+      "bytes": 6457275
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover46_A.png",
+      "bytes": 9729479
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover52_A.png",
+      "bytes": 5897670
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover58_A.png",
+      "bytes": 6395920
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover63_A.png",
+      "bytes": 5165647
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover81_A.png",
+      "bytes": 7149658
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover86_A.png",
+      "bytes": 12169587
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover_N.png",
+      "bytes": 9115323
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/BookSoftcover_R.png",
+      "bytes": 2274498
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueHardcover44_A.png",
+      "bytes": 10127438
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueHardcover55_A.png",
+      "bytes": 11182021
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueHardcover60_A.png",
+      "bytes": 9011145
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueHardcover_N.png",
+      "bytes": 7845380
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueHardcover_R.png",
+      "bytes": 2290956
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueSoftcover26_A.png",
+      "bytes": 9352119
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueSoftcover57_A.png",
+      "bytes": 5309160
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueSoftcover_N.png",
+      "bytes": 7765278
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/CatalogueSoftcover_R.png",
+      "bytes": 2281562
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/Omni2016Cover_N.png",
+      "bytes": 22825681
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/Omni2016Cover_R.png",
+      "bytes": 7548081
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/ArchVis/Residential/Decor/Books/Textures/Omni2017Cover_BaseColor.png",
+      "bytes": 10177754
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Chrome_A.mdl",
+      "bytes": 1587
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Metal_Glossy_A.mdl",
+      "bytes": 915
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Metal_Rough_A.mdl",
+      "bytes": 876
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/Chrome_BaseColor.png",
+      "bytes": 1055421
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/Chrome_N.png",
+      "bytes": 6278335
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/Chrome_ORM.png",
+      "bytes": 3647903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/T_Metal_Glossy_A_Albedo.png",
+      "bytes": 17018568
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/T_Metal_Glossy_A_Normal.png",
+      "bytes": 4969669
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/T_Metal_Glossy_A_ORM.png",
+      "bytes": 14112974
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/T_Metal_Rough_A_Albedo.png",
+      "bytes": 37876965
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/T_Metal_Rough_A_Normal.png",
+      "bytes": 19619769
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Metals/Textures/T_Metal_Rough_A_ORM.png",
+      "bytes": 14732222
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Natural_Plastic_E.mdl",
+      "bytes": 8882
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_B.mdl",
+      "bytes": 1893
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Black_A.mdl",
+      "bytes": 1973
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Blue_A.mdl",
+      "bytes": 1967
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Glossy_White_A.mdl",
+      "bytes": 1469
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Gray_A.mdl",
+      "bytes": 1968
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Green_A.mdl",
+      "bytes": 1973
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Orange_A.mdl",
+      "bytes": 1979
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Red_A.mdl",
+      "bytes": 1961
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Violet_A.mdl",
+      "bytes": 1979
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_White_A.mdl",
+      "bytes": 1973
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Yellow_A.mdl",
+      "bytes": 1979
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Black_A_ORM.png",
+      "bytes": 3861820
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Blue_A_ORM.png",
+      "bytes": 3156387
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Gray_A_ORM.png",
+      "bytes": 3257454
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Green_A_ORM.png",
+      "bytes": 3214833
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Normal_1k.png",
+      "bytes": 4152274
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Orange_A_ORM.png",
+      "bytes": 3275073
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_ORM_1k.png",
+      "bytes": 901654
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Red_A_Albedo.png",
+      "bytes": 3348057
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Red_A_Normal.png",
+      "bytes": 19456849
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Red_A_ORM.png",
+      "bytes": 3378298
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Violet_A_ORM.png",
+      "bytes": 3274868
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_White_A_ORM.png",
+      "bytes": 3056779
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/DigitalTwin/Materials/Base/Plastics/Textures/T_Plastic_Yellow_A_ORM.png",
+      "bytes": 3403092
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Ceiling_Tiles/Ceiling_Tiles_BaseColor.png",
+      "bytes": 17222
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Ceiling_Tiles/Ceiling_Tiles_Normal.png",
+      "bytes": 6053004
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Ceiling_Tiles/Ceiling_Tiles_ORM.png",
+      "bytes": 2241938
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Architecture/Ceiling_Tiles.mdl",
+      "bytes": 1859
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Berber_Multi/Carpet_Berber_Multi_BaseColor.png",
+      "bytes": 3989551
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Berber_Multi/Carpet_Berber_Multi_Normal.png",
+      "bytes": 8295994
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Berber_Multi/Carpet_Berber_Multi_ORM.png",
+      "bytes": 1310373
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Berber_Multi.mdl",
+      "bytes": 1505
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Charcoal/Carpet_Charcoal_BaseColor.png",
+      "bytes": 1038458
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Charcoal/Carpet_Charcoal_Normal.png",
+      "bytes": 12036161
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Charcoal/Carpet_Charcoal_ORM.png",
+      "bytes": 16901
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Carpet/Carpet_Charcoal.mdl",
+      "bytes": 1532
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Emissives/Light_12000K.mdl",
+      "bytes": 1326
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Blue_Glass.mdl",
+      "bytes": 566
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Clear_Glass.mdl",
+      "bytes": 1177
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Red_Glass.mdl",
+      "bytes": 565
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass.mdl",
+      "bytes": 572
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R25.mdl",
+      "bytes": 576
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Glass/Tinted_Glass_R85.mdl",
+      "bytes": 576
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Wall_Red/Brick_Wall_Red_BaseColor.png",
+      "bytes": 5001030
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Wall_Red/Brick_Wall_Red_N.png",
+      "bytes": 8659449
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Wall_Red/Brick_Wall_Red_ORM.png",
+      "bytes": 4930407
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Brick_Wall_Red.mdl",
+      "bytes": 2012
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Smooth/Concrete_Smooth_BaseColor.png",
+      "bytes": 5871529
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Smooth/Concrete_Smooth_Normal.png",
+      "bytes": 9269027
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Smooth/Concrete_Smooth_ORM.png",
+      "bytes": 2289864
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Masonry/Concrete_Smooth.mdl",
+      "bytes": 1529
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_Normal.png",
+      "bytes": 3321558
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_ORM.png",
+      "bytes": 637843
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized.mdl",
+      "bytes": 1586
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized_Black.mdl",
+      "bytes": 1600
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized_Charcoal.mdl",
+      "bytes": 1600
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast/Aluminum_Cast_BaseColor.png",
+      "bytes": 1154931
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast/Aluminum_Cast_N.png",
+      "bytes": 6557833
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast/Aluminum_Cast_ORM.png",
+      "bytes": 4198310
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast.mdl",
+      "bytes": 2006
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished/Aluminum_Polished_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished/Aluminum_Polished_BaseColor_1.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished/Aluminum_Polished_Normal.png",
+      "bytes": 2272406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished/Aluminum_Polished_Normal_1.png",
+      "bytes": 2272406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished/Aluminum_Polished_ORM.png",
+      "bytes": 643206
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished/Aluminum_Polished_ORM_1.png",
+      "bytes": 643206
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished.mdl",
+      "bytes": 1586
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Polished_1.mdl",
+      "bytes": 1592
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_N.png",
+      "bytes": 7519899
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein/Cast_Metal_Silver_Vein_ORM.png",
+      "bytes": 5988267
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Cast_Metal_Silver_Vein.mdl",
+      "bytes": 2069
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/CorrugatedMetal/CorrugatedMetal_BaseColor.png",
+      "bytes": 32529485
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/CorrugatedMetal/CorrugatedMetal_N.png",
+      "bytes": 4015125
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/CorrugatedMetal/CorrugatedMetal_ORM.png",
+      "bytes": 16576860
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/CorrugatedMetal.mdl",
+      "bytes": 1637
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Iron/Iron_BaseColor.png",
+      "bytes": 6191967
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Iron/Iron_N.png",
+      "bytes": 24544686
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Iron/Iron_ORM.png",
+      "bytes": 13004040
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Iron.mdl",
+      "bytes": 1943
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Door/Metal_Door_Normal.png",
+      "bytes": 6720425
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Door.mdl",
+      "bytes": 1504
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Seamed_Roof/Metal_Seamed_Roof_BaseColor.png",
+      "bytes": 382813
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Seamed_Roof/Metal_Seamed_Roof_Normal.png",
+      "bytes": 3328539
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Seamed_Roof/Metal_Seamed_Roof_ORM.png",
+      "bytes": 1942288
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Metal_Seamed_Roof.mdl",
+      "bytes": 1588
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Blued/Steel_Blued_BaseColor.png",
+      "bytes": 280172
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Blued/Steel_Blued_N.png",
+      "bytes": 2429152
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Blued/Steel_Blued_ORM.png",
+      "bytes": 1981178
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Blued.mdl",
+      "bytes": 1992
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_BaseColor.png",
+      "bytes": 9678535
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_BaseColor_1.png",
+      "bytes": 9678535
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_N.png",
+      "bytes": 18832058
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_N_1.png",
+      "bytes": 18832058
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_ORM.png",
+      "bytes": 4258824
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon/Steel_Carbon_ORM_1.png",
+      "bytes": 4258824
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon.mdl",
+      "bytes": 1752
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Carbon_1.mdl",
+      "bytes": 1746
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Cast/Steel_Cast_BaseColor.png",
+      "bytes": 20161303
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Cast/Steel_Cast_N.png",
+      "bytes": 26819193
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Cast/Steel_Cast_ORM.png",
+      "bytes": 4235243
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Cast.mdl",
+      "bytes": 1732
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_BaseColor.png",
+      "bytes": 16902
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_BaseColor_1.png",
+      "bytes": 16902
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_N.png",
+      "bytes": 2272406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_N_1.png",
+      "bytes": 2272406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_ORM.png",
+      "bytes": 779615
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless/Steel_Stainless_ORM_1.png",
+      "bytes": 779615
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless.mdl",
+      "bytes": 2025
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Steel_Stainless_1.mdl",
+      "bytes": 2019
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Satin/Paint_Satin_Finish_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Satin/Paint_Satin_Finish_N.png",
+      "bytes": 5545003
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Satin/Paint_Satin_Finish_ORM.png",
+      "bytes": 1574747
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Miscellaneous/Paint_Satin.mdl",
+      "bytes": 1629
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic.mdl",
+      "bytes": 1511
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_1.mdl",
+      "bytes": 1511
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_ABS.mdl",
+      "bytes": 1522
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_Acrylic_1.mdl",
+      "bytes": 571
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Smooth/Rubber_Smooth_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Smooth/Rubber_Smooth_Normal.png",
+      "bytes": 4277464
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Smooth/Rubber_Smooth_ORM.png",
+      "bytes": 1569979
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Smooth.mdl",
+      "bytes": 1558
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Textured/Rubber_Textured_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Textured/Rubber_Textured_Normal.png",
+      "bytes": 5161841
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Textured/Rubber_Textured_ORM.png",
+      "bytes": 1155371
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Rubber_Textured.mdl",
+      "bytes": 1572
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Veneer_OU_Walnut/Veneer_OU_Walnut_BaseColor.png",
+      "bytes": 3143008
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Veneer_OU_Walnut/Veneer_OU_Walnut_Normal.png",
+      "bytes": 8489522
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Veneer_Z5_Maple.mdl",
+      "bytes": 1508
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Vinyl.mdl",
+      "bytes": 1477
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Smooth/Porcelain_Smooth_BaseColor.png",
+      "bytes": 154429
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Smooth/Porcelain_Smooth_N.png",
+      "bytes": 6680282
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Smooth/Porcelain_Smooth_ORM.png",
+      "bytes": 1845944
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Stone/Porcelain_Smooth.mdl",
+      "bytes": 2026
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Templates/GlassUtils.mdl",
+      "bytes": 2417
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Templates/GlassWithVolume.mdl",
+      "bytes": 4906
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum/Gypsum_BaseColor_1.png",
+      "bytes": 4956768
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum/Gypsum_N_1.png",
+      "bytes": 8147428
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum/Gypsum_ORM_1.png",
+      "bytes": 5104444
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Gypsum_1.mdl",
+      "bytes": 1580
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_BaseColor_1.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_N.png",
+      "bytes": 6663591
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_N_1.png",
+      "bytes": 6663591
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_ORM.png",
+      "bytes": 4196284
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster/Plaster_ORM_1.png",
+      "bytes": 4196284
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster.mdl",
+      "bytes": 1963
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wall_Board/Plaster_1.mdl",
+      "bytes": 1969
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Ash/Ash_BaseColor.png",
+      "bytes": 6691777
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Ash/Ash_Normal.png",
+      "bytes": 5932653
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Ash/Ash_ORM.png",
+      "bytes": 1129426
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Ash.mdl",
+      "bytes": 1488
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Bamboo/Bamboo_BaseColor.png",
+      "bytes": 1688699
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Bamboo/Bamboo_N.png",
+      "bytes": 1486668
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Bamboo/Bamboo_ORM.png",
+      "bytes": 550125
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Bamboo.mdl",
+      "bytes": 1955
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Birch_Planks/Birch_Planks_BaseColor.png",
+      "bytes": 3754657
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Birch_Planks/Birch_Planks_N.png",
+      "bytes": 3819761
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Birch_Planks/Birch_Planks_ORM.png",
+      "bytes": 1203358
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Birch_Planks.mdl",
+      "bytes": 1997
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cherry/Cherry_BaseColor.png",
+      "bytes": 2903459
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cherry/Cherry_N.png",
+      "bytes": 3170706
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cherry/Cherry_ORM.png",
+      "bytes": 1636382
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Cherry.mdl",
+      "bytes": 1955
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Oak/Oak_BaseColor.png",
+      "bytes": 5383545
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Oak/Oak_N.png",
+      "bytes": 2939899
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Oak/Oak_ORM.png",
+      "bytes": 1171706
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Oak.mdl",
+      "bytes": 1935
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Timber/Timber_BaseColor.png",
+      "bytes": 2891549
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Timber/Timber_Normal.png",
+      "bytes": 7681085
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Timber/Timber_ORM.png",
+      "bytes": 923119
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Wood/Timber.mdl",
+      "bytes": 1830
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Automotive/Metal/Metal_Black_Paint.mdl",
+      "bytes": 8146
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Automotive/Surfacing/ov_metal_a_01/ov_metal_a_01_normal.png",
+      "bytes": 22463078
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Automotive/Surfacing/ov_metal_a_01/ov_metal_a_01_orm.png",
+      "bytes": 11787191
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Automotive/Templates/OmniUber_Automotive.mdl",
+      "bytes": 104897
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_BaseColor.png",
+      "bytes": 16903
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_Normal.png",
+      "bytes": 3321558
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized/Aluminum_Anodized_ORM.png",
+      "bytes": 637843
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Metals/Aluminum_Anodized_Black.mdl",
+      "bytes": 1600
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak/Oak_BaseColor.png",
+      "bytes": 5383545
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak/Oak_N.png",
+      "bytes": 2939899
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak/Oak_ORM.png",
+      "bytes": 1171706
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Base/Wood/Oak.mdl",
+      "bytes": 1935
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/Concrete_Polished.mdl",
+      "bytes": 22113
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/Concrete_Rough.mdl",
+      "bytes": 35373
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/concrete_rough_diff.jpg",
+      "bytes": 1441663
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/concrete_rough_norm.jpg",
+      "bytes": 1381045
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/concrete_rough_ORM.jpg",
+      "bytes": 2086875
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/conrete_polished_diff.jpg",
+      "bytes": 380583
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/conrete_polished_norm.jpg",
+      "bytes": 518141
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/conrete_polished_ORM.jpg",
+      "bytes": 1516401
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/moss_diff.jpg",
+      "bytes": 990554
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Concrete/textures/moss_norm.jpg",
+      "bytes": 1231076
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Fabric/Cashmere_Wool_Suiting.mdl",
+      "bytes": 55370
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Fabric/textures/cashmere_wool_suiting_norm.jpg",
+      "bytes": 1484447
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Fabric/textures/cashmere_wool_suiting_R_diff.jpg",
+      "bytes": 1060148
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Fabric/textures/fibers.jpg",
+      "bytes": 519681
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Fabric/textures/french_terry_fabric_warp.png",
+      "bytes": 197484
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/ABS_Hard_Leather.mdl",
+      "bytes": 34999
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/ABS_Woven_Leather.mdl",
+      "bytes": 33189
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/Aniline_Leather.mdl",
+      "bytes": 52930
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/textures/abs_hard_leather_norm.jpg",
+      "bytes": 2190580
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/textures/abs_woven_leather_norm.jpg",
+      "bytes": 1199314
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/textures/aniline_back_albedo.jpg",
+      "bytes": 2042376
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/textures/aniline_back_normal.jpg",
+      "bytes": 963050
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/textures/aniline_front_albedo.jpg",
+      "bytes": 1369958
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Leather/textures/aniline_front_normal.jpg",
+      "bytes": 2478492
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Metal/Blued_Steel_Cold.mdl",
+      "bytes": 26046
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Metal/Metal_Cast.mdl",
+      "bytes": 48258
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Metal/textures/blued_steel_diff.jpg",
+      "bytes": 2510845
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Metal/textures/blued_steel_norm.jpg",
+      "bytes": 538520
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Metal/textures/cast_metal_norm.jpg",
+      "bytes": 2449107
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Wood/Laminate_Oak.mdl",
+      "bytes": 22503
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Wood/textures/laminate_oak_diffuse.jpg",
+      "bytes": 2467433
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/vMaterials_2/Wood/textures/laminate_oak_normal.jpg",
+      "bytes": 5397470
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Carpet/Carpet_Woven.mdl",
+      "bytes": 19522
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Carpet/textures/carpet_rough_woven_diff.jpg",
+      "bytes": 2250464
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Carpet/textures/carpet_rough_woven_norm.jpg",
+      "bytes": 4368264
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/Carbon_Fiber.mdl",
+      "bytes": 45344
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/textures/carbon_fiber_fibers_norm.jpg",
+      "bytes": 2873884
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/textures/carbon_fiber_weaving_norm.png",
+      "bytes": 59261
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/textures/generic_surface_rough.jpg",
+      "bytes": 2071242
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Composite/textures/surface_damages_norm.jpg",
+      "bytes": 1307147
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Brushed.mdl",
+      "bytes": 18536
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Foil.mdl",
+      "bytes": 28955
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Aluminum_Sheet.mdl",
+      "bytes": 61632
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Foil.mdl",
+      "bytes": 28861
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Chromium_Scratched.mdl",
+      "bytes": 48272
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Copper_Antique_Brushed_Patinated.mdl",
+      "bytes": 21313
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Iron_Scratched.mdl",
+      "bytes": 48271
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Platinum_Scratched.mdl",
+      "bytes": 48327
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Scratched.mdl",
+      "bytes": 48426
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Silver_Sheet.mdl",
+      "bytes": 60814
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/atlas_02_norm_dist.png",
+      "bytes": 1576300
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/brushed_antique_copper_diff.jpg",
+      "bytes": 1418954
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/brushed_antique_copper_norm.jpg",
+      "bytes": 824545
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/brushed_antique_copper_ref.jpg",
+      "bytes": 719606
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/brushed_antique_copper_rough.jpg",
+      "bytes": 2729601
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/brushed_antique_copper_smudge_map.jpg",
+      "bytes": 3096394
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/brushed_metal_linear_norm.jpg",
+      "bytes": 5404672
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/copper_patina_diff.jpg",
+      "bytes": 2505139
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/copper_patina_norm.jpg",
+      "bytes": 5627717
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/foil_crumpled_norm.jpg",
+      "bytes": 1257236
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/foil_crumpled_R_rough1_G_rough2_G_ao.jpg",
+      "bytes": 2459224
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/foil_crumpled_R_smudge_G_splotch.jpg",
+      "bytes": 6000999
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/metal_scratched_scratch_norm.jpg",
+      "bytes": 3254868
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/sheet_metal_multi_rough.jpg",
+      "bytes": 7088427
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/sheet_metal_norm.jpg",
+      "bytes": 3633863
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/textures/sheet_metal_R_rough_G_ao_B_streaks.jpg",
+      "bytes": 4451500
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Titanium_Scratched.mdl",
+      "bytes": 48328
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Metal/Tungsten_Scratched.mdl",
+      "bytes": 48327
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/Carpaint_Metallic.mdl",
+      "bytes": 59254
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Carpaint/textures/smudges_scratches_A_rough.jpg",
+      "bytes": 2669524
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Chalk_Paint.mdl",
+      "bytes": 32028
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Chalk_Paint_Pebbles.mdl",
+      "bytes": 33651
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/Paint_Eggshell.mdl",
+      "bytes": 49992
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/textures/Chalk_Paint_Pebbles_norm.jpg",
+      "bytes": 2527304
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Paint/textures/Chalk_Paint_Strokes_norm.jpg",
+      "bytes": 4648796
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Plastic_Thick_Translucent.mdl",
+      "bytes": 30015
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polycarbonate_Opaque.mdl",
+      "bytes": 38998
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polyethylene_Clear.mdl",
+      "bytes": 19503
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polyethylene_Cloudy.mdl",
+      "bytes": 25863
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polyethylene_Opaque.mdl",
+      "bytes": 41237
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/Polypropylene_Cloudy.mdl",
+      "bytes": 25862
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Plastic/textures/plastic_smudges.jpg",
+      "bytes": 4078041
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/Laminate_Oak.mdl",
+      "bytes": 22504
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/textures/laminate_oak_diffuse.jpg",
+      "bytes": 2467433
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/textures/laminate_oak_multi_R_rough_G_aniso.jpg",
+      "bytes": 10480809
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/vMaterials_2/Wood/textures/laminate_oak_normal.jpg",
+      "bytes": 5397470
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/red_metal_platform/textures/color_0C0C0C.exr",
+      "bytes": 461
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/red_metal_platform/textures/edited_platform+3d+model_Clone1_basecolor.jpg",
+      "bytes": 1091484
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/edited_window.png",
+      "bytes": 587328
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/edited_window2.png",
+      "bytes": 541940
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/gray_couch_tripo_part_0_basecolor.jpg",
+      "bytes": 1142884
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/gray_couch_tripo_part_3_basecolor.jpg",
+      "bytes": 18279
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_0_basecolor.jpg",
+      "bytes": 190368
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_0_normal.jpg",
+      "bytes": 114299
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_0_rm.png",
+      "bytes": 583856
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_10_basecolor.jpg",
+      "bytes": 3818
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_10_normal.jpg",
+      "bytes": 2290
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_10_rm.png",
+      "bytes": 16395
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_11_basecolor.jpg",
+      "bytes": 13406
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_11_normal.jpg",
+      "bytes": 8398
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_11_rm.png",
+      "bytes": 36867
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_1_basecolor.jpg",
+      "bytes": 63415
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_1_normal.jpg",
+      "bytes": 39546
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_1_rm.png",
+      "bytes": 208547
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_2_basecolor.jpg",
+      "bytes": 192462
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_2_normal.jpg",
+      "bytes": 80534
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_2_rm.png",
+      "bytes": 441925
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_3_basecolor.jpg",
+      "bytes": 61558
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_3_normal.jpg",
+      "bytes": 40114
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_3_rm.png",
+      "bytes": 196019
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_4_basecolor.jpg",
+      "bytes": 57567
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_4_normal.jpg",
+      "bytes": 33702
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_4_rm.png",
+      "bytes": 173777
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_5_basecolor.jpg",
+      "bytes": 70269
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_5_normal.jpg",
+      "bytes": 43536
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_5_rm.png",
+      "bytes": 159305
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_6_basecolor.jpg",
+      "bytes": 44208
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_6_normal.jpg",
+      "bytes": 30250
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_6_rm.png",
+      "bytes": 131491
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_7_basecolor.jpg",
+      "bytes": 41847
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_7_normal.jpg",
+      "bytes": 31109
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_7_rm.png",
+      "bytes": 115930
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_8_basecolor.jpg",
+      "bytes": 55710
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_8_normal.jpg",
+      "bytes": 25944
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/sofa_tripo_part_8_rm.png",
+      "bytes": 134671
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_0_basecolor.jpg",
+      "bytes": 74118
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_0_normal.jpg",
+      "bytes": 75075
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_0_rm.png",
+      "bytes": 970711
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_10_basecolor.jpg",
+      "bytes": 13846
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_10_normal.jpg",
+      "bytes": 4634
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_10_rm.png",
+      "bytes": 65814
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_11_basecolor.jpg",
+      "bytes": 12174
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_11_normal.jpg",
+      "bytes": 5020
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_11_rm.png",
+      "bytes": 79916
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_12_basecolor.jpg",
+      "bytes": 25385
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_12_normal.jpg",
+      "bytes": 7549
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_12_rm.png",
+      "bytes": 87613
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_4_basecolor.jpg",
+      "bytes": 23231
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_4_normal.jpg",
+      "bytes": 11367
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_4_rm.png",
+      "bytes": 83947
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_5_basecolor.jpg",
+      "bytes": 21485
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_5_normal.jpg",
+      "bytes": 12100
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_5_rm.png",
+      "bytes": 81251
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_6_basecolor.jpg",
+      "bytes": 21539
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_6_normal.jpg",
+      "bytes": 10942
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_6_rm.png",
+      "bytes": 79856
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_7_basecolor.jpg",
+      "bytes": 21808
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_7_normal.jpg",
+      "bytes": 9376
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_7_rm.png",
+      "bytes": 84659
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_8_basecolor.jpg",
+      "bytes": 64995
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_8_normal.jpg",
+      "bytes": 23379
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_8_rm.png",
+      "bytes": 286823
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_9_basecolor.jpg",
+      "bytes": 58795
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_9_normal.jpg",
+      "bytes": 23052
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/tool_cabinet_segment_tripo_part_9_rm.png",
+      "bytes": 266769
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_0_basecolor.JPEG",
+      "bytes": 215699
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_0_metallic.JPEG",
+      "bytes": 109586
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_0_normal.JPEG",
+      "bytes": 141713
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_0_roughness.JPEG",
+      "bytes": 110162
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_1_basecolor.JPEG",
+      "bytes": 228229
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_1_metallic.JPEG",
+      "bytes": 113375
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_1_normal.JPEG",
+      "bytes": 153658
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_1_roughness.JPEG",
+      "bytes": 123876
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_2_basecolor.JPEG",
+      "bytes": 45051
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_2_metallic.JPEG",
+      "bytes": 84003
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_2_normal.JPEG",
+      "bytes": 18548
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_2_roughness.JPEG",
+      "bytes": 67410
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_3_basecolor.JPEG",
+      "bytes": 69363
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_3_metallic.JPEG",
+      "bytes": 32043
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_3_normal.JPEG",
+      "bytes": 49876
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_3_roughness.JPEG",
+      "bytes": 35674
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_4_basecolor.JPEG",
+      "bytes": 66438
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_4_metallic.JPEG",
+      "bytes": 31615
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_4_normal.JPEG",
+      "bytes": 41253
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/textures/wooden_stool_3d_model_tripo_part_4_roughness.JPEG",
+      "bytes": 35895
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/custom_nav2_params.yaml",
+      "bytes": 13645
+    },
+    {
+      "path": "ROS2 Isaac_Sim Materials/custom_slam_params.yaml",
+      "bytes": 2525
+    }
+  ]
+}

@@ -45,8 +45,10 @@ def setup(context):
 
 
 def generate_launch_description():
+    share = Path(get_package_share_directory('ic382_navigation'))
     return LaunchDescription([
-        DeclareLaunchArgument('map'), DeclareLaunchArgument('params_file'),
+        DeclareLaunchArgument('map', default_value=str(share/'maps/course/scene_map.yaml')),
+        DeclareLaunchArgument('params_file'),
         DeclareLaunchArgument('route'),
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         DeclareLaunchArgument('autostart', default_value='false'),

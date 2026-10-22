@@ -8,6 +8,7 @@ setup(
         ('share/ic382_navigation', ['package.xml']),
         ('share/ic382_navigation/launch', glob('launch/*.launch.py')),
         ('share/ic382_navigation/config', glob('config/*.yaml')),
+        ('share/ic382_navigation/maps/course', glob('maps/course/*')),
     ],
     install_requires=['setuptools'], zip_safe=True,
     maintainer='IC382 team', maintainer_email='maintainers@example.com',

@@ -11,7 +11,8 @@ set +u
 source "$checkout/ros2_ws/install/setup.bash"
 set -u
 python3 "$checkout/scripts/configure-course-navigation.py" --environment "$environment" --output "$params"
+map=$(python3 -c 'from ament_index_python.packages import get_package_share_directory; print(get_package_share_directory("ic382_navigation") + "/maps/course/scene_map.yaml")')
 exec ros2 launch ic382_navigation patrol.launch.py \
-  map:="$environment/output/maps/teacher-scene-20261021/scene_map.yaml" \
+  map:="$map" \
   params_file:="$params" route:="$route" \
   log_directory:="$checkout/results/journal" max_linear:=2.0 autostart:=false

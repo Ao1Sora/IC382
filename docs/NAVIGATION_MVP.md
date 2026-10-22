@@ -50,7 +50,7 @@ ros2 topic echo /ic382/mission_status
 
 ## 二维地图和目标点
 
-现有 scene_map.pgm + scene_map.yaml 由老师场景几何导出，覆盖整个场景房间。
+当前使用的 scene_map.pgm + scene_map.yaml 由老师场景几何导出，随 ic382_navigation 包安装在 maps/course/，默认从本地 robot-ros2 仓库对应的安装目录加载。老师原始配置保存在 teacher/ros2/，不覆盖当前团队导航参数。
 原始老师场景为 10 倍尺寸；地图分辨率 0.25 场景单位等价于实物 0.025 m。
 必须在同一套场景坐标下设置 AMCL、速度、footprint 和目标点。
 不要把这套 10 倍参数部署到实体机器人。
