@@ -1,57 +1,49 @@
 #!/usr/bin/env python3
-"""Initialize the repository's team Nav2 profile for the current 10x scene."""
+"""Resolve teacher Nav2 parameters plus team overrides and optional sim spawn."""
 import argparse
+import hashlib
 import json
 import math
 from pathlib import Path
+import sys
 import yaml
 
-p = argparse.ArgumentParser()
-p.add_argument('--environment', default='/workspace')
-p.add_argument('--output', required=True)
-p.add_argument('--base-params', default=str(Path(__file__).resolve().parents[1] /
-    'ros2_ws/src/ic382_navigation/config/nav2_course.yaml'))
-p.add_argument('--footprint', default='[[-1.3,-2.6],[-1.3,2.1],[5.05,2.1],[5.05,-2.6]]')
-args = p.parse_args()
-env = Path(args.environment)
-data = yaml.safe_load(Path(args.base_params).read_text())
-live = json.loads((env/'logs/course601-live.json').read_text())
-q = live['world_orientation']
-yaw = math.atan2(2*(q[0]*q[3]+q[1]*q[2]), 1-2*(q[2]**2+q[3]**2))
-amcl = data['amcl']['ros__parameters']
-amcl.update(scan_topic='scan_nav', laser_max_range=200.0, laser_min_range=1.0,
-            laser_likelihood_max_dist=4.0, sigma_hit=0.75, max_beams=120,
-            update_min_d=0.15, update_min_a=0.10, transform_tolerance=2.0,
-            set_initial_pose=True, always_reset_initial_pose=True,
-            initial_pose={'x': live['world_pose'][0], 'y': live['world_pose'][1],
-                          'z': 0.0, 'yaw': yaw})
-controller = data['controller_server']['ros__parameters']
-controller.update(controller_frequency=10.0, failure_tolerance=1.0)
-controller['progress_checker'].update(required_movement_radius=0.10, movement_time_allowance=30.0)
-controller['general_goal_checker'].update(xy_goal_tolerance=0.5, yaw_goal_tolerance=0.2)
-controller['FollowPath'].update(max_vel_x=2.0, max_speed_xy=2.0, max_vel_theta=0.3,
-    min_speed_xy=0.0, min_speed_theta=0.05, acc_lim_theta=0.5, decel_lim_theta=-0.5,
-    xy_goal_tolerance=0.5, trans_stopped_velocity=0.05,
-    vx_samples=20, vtheta_samples=20, sim_time=2.0, transform_tolerance=1.0)
-for kind in ('local_costmap', 'global_costmap'):
-    params = data[kind][kind]['ros__parameters']
-    params.update(footprint=args.footprint, footprint_padding=0.15, resolution=0.25,
-                  transform_tolerance=2.0, update_frequency=3.0, publish_frequency=1.0)
-    if kind == 'local_costmap':
-        params.update(width=30, height=30)
-    layer = params['obstacle_layer']['scan']
-    layer.update(topic='/scan_nav', min_obstacle_height=-10.0, max_obstacle_height=20.0,
-                 inf_is_valid=True, raytrace_max_range=100.0, obstacle_max_range=80.0,
-                 raytrace_min_range=1.0, obstacle_min_range=1.0)
-    params['inflation_layer'].update(inflation_radius=3.5, cost_scaling_factor=1.0)
-data['planner_server']['ros__parameters']['GridBased'].update(allow_unknown=False, tolerance=0.5)
-data['behavior_server']['ros__parameters'].update(max_rotational_vel=0.3,
-    min_rotational_vel=0.05, rotational_acc_lim=0.5, transform_tolerance=2.0)
-data['velocity_smoother']['ros__parameters'].update(
-    max_velocity=[2.0, 0.0, 0.3], min_velocity=[-0.5, 0.0, -0.3],
-    max_accel=[1.0, 0.0, 0.5], max_decel=[-1.0, 0.0, -0.5], velocity_timeout=1.0)
-out = Path(args.output)
-out.parent.mkdir(parents=True, exist_ok=True)
-out.write_text(yaml.safe_dump(data, sort_keys=False), encoding='utf-8')
-print(json.dumps({'params': str(out), 'initial_pose': amcl['initial_pose'],
-                  'scene_scale': 10.0, 'footprint': json.loads(args.footprint)}, indent=2))
+repo = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(repo/'ros2_ws/src/ic382_navigation'))
+from ic382_navigation.profiles import build_profile
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--environment', default='/workspace')
+    parser.add_argument('--output', required=True)
+    parser.add_argument('--teacher-params', '--base-params', dest='teacher_params',
+                        default=str(repo/'teacher/ros2/config/custom_nav2_params.yaml'))
+    parser.add_argument('--overrides', default=str(repo/
+        'ros2_ws/src/ic382_navigation/config/nav2_team_overrides.yaml'))
+    parser.add_argument('--static', action='store_true',
+                        help='Generate without a simulator-specific initial pose')
+    parser.add_argument('--footprint', default=None)
+    args = parser.parse_args()
+    baseline, overrides = Path(args.teacher_params), Path(args.overrides)
+    pose = None
+    if not args.static:
+        live = json.loads((Path(args.environment)/'logs/course601-live.json').read_text())
+        q = live['world_orientation']
+        yaw = math.atan2(2*(q[0]*q[3]+q[1]*q[2]), 1-2*(q[2]**2+q[3]**2))
+        pose = dict(x=live['world_pose'][0], y=live['world_pose'][1], z=0.0, yaw=yaw)
+    data = build_profile(yaml.safe_load(baseline.read_text()),
+                         yaml.safe_load(overrides.read_text()), pose, args.footprint)
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(yaml.safe_dump(data, sort_keys=False), encoding='utf-8')
+    provenance = {'teacher_sha256': hashlib.sha256(baseline.read_bytes()).hexdigest(),
+                  'overrides_sha256': hashlib.sha256(overrides.read_bytes()).hexdigest(),
+                  'initial_pose': pose, 'scene_scale': 10.0}
+    if not args.static:
+        out.with_suffix('.sources.json').write_text(json.dumps(provenance, indent=2))
+    print(json.dumps({'params': str(out), **provenance}, indent=2))
+
+
+if __name__ == '__main__':
+    main()

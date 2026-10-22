@@ -64,10 +64,15 @@ def event(msg):
         live = json.loads(Path('/workspace/logs/course601-live.json').read_text())
         goal = goals[details['desk_id']]
         true_xy = live['world_pose'][:2]
+        q = live['world_orientation']
+        true_yaw = math.atan2(2*(q[0]*q[3]+q[1]*q[2]), 1-2*(q[2]**2+q[3]**2))
         data['arrivals'].append({
             'desk_id': details['desk_id'], 'round': details['round'], 'goal': goal,
             'world_xy': true_xy, 'amcl': dict(amcl),
-            'true_position_error_scene': math.hypot(true_xy[0]-goal['x'], true_xy[1]-goal['y'])})
+            'true_position_error_scene': math.hypot(true_xy[0]-goal['x'], true_xy[1]-goal['y']),
+            'world_yaw': true_yaw,
+            'true_yaw_error_rad': math.atan2(math.sin(true_yaw-goal['yaw']),
+                                           math.cos(true_yaw-goal['yaw']))})
 
 
 def command(msg):

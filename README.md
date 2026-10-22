@@ -11,9 +11,11 @@ with source links, archive inventory and SHA-256 checksums. These include the or
 Nav2/SLAM YAML files and the Jetson lidar setup script. Packages referenced by the lectures
 are listed as dependencies; their source was not included in the supplied scene archive.
 
-The active navigation uses `ic382_navigation`, our team profile and the new scene-derived
+The active navigation uses `ic382_navigation`, a profile derived from the teacher baseline
+with explicit [team adaptations](docs/NAVIGATION_TEACHER_ALIGNMENT.md), and the new scene-derived
 map packaged in `ros2_ws/src/ic382_navigation/maps/course/`. The original teacher navigation
-parameters are retained for reference and are not loaded by the default team launcher.
+parameters remain unchanged; the launcher merges them with the team overrides rather than
+launching the original configuration directly.
 The existing perception package remains available; the navigation MVP uses timed
 inspection/tagging placeholders.
 
