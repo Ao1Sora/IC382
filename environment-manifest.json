@@ -3295,7 +3295,7 @@
   "robot_workspace": {
     "path": "robot-ros2",
     "branch": "robot-ros2",
-    "verified_commit": "636d579",
+    "verified_commit": "d74f672",
     "runtime_entry": "scripts/run-course-navigation.sh"
   }
 }
