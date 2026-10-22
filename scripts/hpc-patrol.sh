@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Manage only this MVP's Nav2 process groups, leaving Isaac and its desktop intact.
 set -euo pipefail
-environment=${IC382_ENV_ROOT:-"$HOME/Desktop/IC382"}
-checkout=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+environment=$(realpath "${IC382_ENV_ROOT:-$HOME/Desktop/IC382}")
+checkout=$(realpath "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)")
 relative=${checkout#"$environment/"}
 [[ "$relative" != "$checkout" && "$relative" != ../* ]] || { echo 'Robot checkout must be inside the simulation project'; exit 1; }
 container_checkout="/workspace/$relative"
