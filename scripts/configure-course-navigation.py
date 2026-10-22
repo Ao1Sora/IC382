@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Adapt teacher Nav2 params to the measured team robot and exported 10x map."""
+"""Initialize the repository's team Nav2 profile for the current 10x scene."""
 import argparse
 import json
 import math
@@ -9,10 +9,12 @@ import yaml
 p = argparse.ArgumentParser()
 p.add_argument('--environment', default='/workspace')
 p.add_argument('--output', required=True)
+p.add_argument('--base-params', default=str(Path(__file__).resolve().parents[1] /
+    'ros2_ws/src/ic382_navigation/config/nav2_course.yaml'))
 p.add_argument('--footprint', default='[[-1.3,-2.6],[-1.3,2.1],[5.05,2.1],[5.05,-2.6]]')
 args = p.parse_args()
 env = Path(args.environment)
-data = yaml.safe_load((env/'dev/custom_nav2_params.yaml').read_text())
+data = yaml.safe_load(Path(args.base_params).read_text())
 live = json.loads((env/'logs/course601-live.json').read_text())
 q = live['world_orientation']
 yaw = math.atan2(2*(q[0]*q[3]+q[1]*q[2]), 1-2*(q[2]**2+q[3]**2))

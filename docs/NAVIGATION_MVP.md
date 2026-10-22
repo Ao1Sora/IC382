@@ -71,26 +71,24 @@ scan_topic 应设置为 /scan_nav。建图与固定地图 AMCL 导航分开运�
 
 ## HPC
 
-代码置于 `~/Desktop/IC382/navigation-mvp`，通过既有 /workspace 挂载访问，
+代码置于 `~/Desktop/IC382/robot-ros2`，通过既有 /workspace 挂载访问，
 与 Isaac 安装、场景和环境分支分开保存。`scripts/hpc-ros.sh` 会进入当前
 course601 的同一个网络命名空间和既有 ROS2 Ubuntu 容器：
 
 ```bash
 cd ~/Desktop/IC382
-./navigation-mvp/scripts/hpc-patrol.sh start
-./navigation-mvp/scripts/hpc-ros.sh bash -c \
-  'source /workspace/navigation-mvp/ros2_ws/install/setup.bash; ros2 service call /ic382/start_mission std_srvs/srv/Trigger "{}"'
-./navigation-mvp/scripts/hpc-ros.sh bash -c \
-  'source /workspace/navigation-mvp/ros2_ws/install/setup.bash; ros2 topic echo /ic382/mission_status'
+./robot-ros2/scripts/hpc-patrol.sh start
+./robot-ros2/scripts/hpc-ros.sh bash -c \
+  'source /workspace/robot-ros2/ros2_ws/install/setup.bash; ros2 service call /ic382/start_mission std_srvs/srv/Trigger "{}"'
+./robot-ros2/scripts/hpc-ros.sh bash -c \
+  'source /workspace/robot-ros2/ros2_ws/install/setup.bash; ros2 topic echo /ic382/mission_status'
 ```
 
 `hpc-patrol.sh start` 使用当前场景位置生成 AMCL 初始位姿，再启动导航；运行后没有真值定位回传。
 `hpc-patrol.sh stop` 停止这一套 MVP 的进程组，保留 Isaac 桌面。需要新任务时先 stop 再 start。
 该脚本依赖环境中的既有 GPU 作业、course601 桌面、二维地图和 Ubuntu ROS2 容器。
 
-同一场景只能运行一套 Nav2/最终速度控制器。替换旧课程导航时只停止已核对的旧
-Nav2 进程组，不停止 Isaac 或修改桌面启动脚本。桌面重新启动后，课程原来的
-启动方式仍然启动旧导航；新 MVP 需要单独启动。
+默认仿真桌面通过环境分支的 scripts/start-robot-navigation.sh 加载项目内的 robot-ros2 本地 Git 仓库。启动会打印分支和提交号，不自动 git pull，也不自动运动。手动 hpc-patrol.sh start 仅用于尚未运行导航时；同一场景只启动一套。
 
 ## 测试与证据
 

@@ -2,7 +2,10 @@
 # Manage only this MVP's Nav2 process groups, leaving Isaac and its desktop intact.
 set -euo pipefail
 environment=${IC382_ENV_ROOT:-"$HOME/Desktop/IC382"}
-checkout="$environment/navigation-mvp"
+checkout=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+relative=${checkout#"$environment/"}
+[[ "$relative" != "$checkout" && "$relative" != ../* ]] || { echo 'Robot checkout must be inside the simulation project'; exit 1; }
+container_checkout="/workspace/$relative"
 if [[ -z "${SLURM_JOB_ID:-}" && "${1:-status}" != start ]]; then
   job=$(squeue -h -u "$(id -un)" -n ic382-ssh-dev -t RUNNING -o '%i' | head -n1)
   [[ -n "$job" ]] || { echo 'No running course GPU job'; exit 1; }
@@ -26,19 +29,11 @@ case "${1:-status}" in
     ;;
   start)
     "$checkout/scripts/hpc-patrol.sh" check
-    route=${2:-/workspace/navigation-mvp/ros2_ws/src/ic382_navigation/config/course_demo_route.yaml}
+    route=${2:-"$container_checkout/ros2_ws/src/ic382_navigation/config/course_demo_route.yaml"}
     mkdir -p "$checkout/results"
     nohup setsid flock -n "$environment/cache/navigation-mvp.lock" \
-      "$checkout/scripts/hpc-ros.sh" bash -c '
-        python3 /workspace/navigation-mvp/scripts/configure-course-navigation.py \
-          --output /workspace/navigation-mvp/ros2_ws/src/ic382_navigation/config/nav2_course.yaml
-        source /workspace/navigation-mvp/ros2_ws/install/setup.bash
-        exec ros2 launch ic382_navigation patrol.launch.py \
-          map:=/workspace/output/maps/teacher-scene-20261021/scene_map.yaml \
-          params_file:=/workspace/navigation-mvp/ros2_ws/src/ic382_navigation/config/nav2_course.yaml \
-          route:="$1" log_directory:=/workspace/navigation-mvp/results/journal \
-          max_linear:=2.0 autostart:=false
-      ' -- "$route" >"$checkout/results/patrol-launch.log" 2>&1 </dev/null &
+      "$checkout/scripts/hpc-ros.sh" bash "$container_checkout/scripts/run-course-navigation.sh" \
+      "$route" >"$checkout/results/patrol-launch.log" 2>&1 </dev/null &
     echo "MVP launch started: $! (motion awaits start_mission)"
     ;;
   check)
