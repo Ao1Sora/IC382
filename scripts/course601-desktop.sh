@@ -30,7 +30,6 @@ trap 'exit 130' INT TERM
 launch(){ local name=$1;shift; setsid "$@" 9>&- >"logs/$name.log" 2>&1 & pids+=("$!");echo "Started $name ($!)"; }
 launch course601-stream-simulation ./scripts/isaac601-python-rtx.sh /workspace/scripts/team-robot-simulation.py
 server=${pids[0]}
-launch course601-stream-scan-adapter ./scripts/week06-ros.sh python3 /workspace/scripts/week06-scan-adapter.py
 launch course601-stream-loading bash -c 'while sleep 1; do echo "# 正在加载老师场景和 ROS2，请稍候……"; done | zenity --progress --pulsate --no-cancel --title="IC382 课程仿真启动中" --text="正在启动课程版本 Isaac Sim 6.0.1；首次编译可能较慢。" --width=420'
 loading=${pids[-1]}
 ready=0
@@ -42,9 +41,8 @@ for i in $(seq 1 1200);do
 done
 [[ "$ready" == 1 ]] || { echo 'Stream startup timed out';exit 1; }
 kill -TERM -- "-$loading" 2>/dev/null || true
-launch course601-stream-navigation ./scripts/week06-navigation.sh
-sleep 10
-./scripts/week06-ros.sh python3 /workspace/scripts/week06-initial-pose.py > logs/course601-stream-initial-pose.log 2>&1 9>&- || true
+./scripts/start-robot-navigation.sh --check
+launch course601-stream-navigation ./scripts/start-robot-navigation.sh
 echo "IC382_COURSE601_STREAM_READY DISPLAY=$DISPLAY SERVER=10.238.38.1"
 setsid ./scripts/isaac601-ubuntu.sh -c 'exec "/workspace/tools/webrtc-client-2.0.0/opt/Isaac Sim WebRTC Streaming Client/isaacsim-webrtc-streaming-client" --disable-setuid-sandbox --disable-gpu --disable-features=WebRtcHideLocalIpsWithMdns' > logs/course601-stream-client.log 2>&1 9>&- &
 client=$!;pids+=("$client")

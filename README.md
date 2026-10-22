@@ -16,8 +16,7 @@ cd ~/Desktop/IC382
 `10.238.38.1`。关闭客户端会清理该桌面会话启动的进程。
 `./demo.sh` 会发送演示运动指令，只能在没有其他底盘控制器运行时使用。
 
-当前桌面入口仍启动课程 Nav2；运行团队导航 MVP 前需要停止已核对的课程 Nav2
-进程组，避免两套导航控制同一场景。团队导航启动方法见 `robot-ros2` 分支。
+默认桌面从 `~/Desktop/IC382/robot-ros2` 本地 Git 仓库加载导航、任务主程序和日志，要求分支为 `robot-ros2`，不再启动课程 Nav2。启动日志打印实际提交号。启动只进入 IDLE，调用 `/ic382/start_mission` 后才运动。
 
 ## 必需的外部运行时
 
@@ -30,7 +29,7 @@ cd ~/Desktop/IC382
 - `tools/rtx-cuda-proxy.so`：由本分支 C/汇编源码构建的项目局部兼容库。
 
 重建兼容库：`./scripts/build-rtx-cuda-proxy.sh`。
-本分支是当前环境源码与资产快照，不包含 Ubuntu 根文件系统或完整离线软件镜像。
+本分支是环境源码与资产快照，不包含 Ubuntu 根文件系统或完整离线软件镜像。另需检出 `robot-ros2` 分支到项目内的 `robot-ros2/` 并编译 `ros2_ws`；运行时使用已检出的本地代码，不在启动时自动拉取或构建。
 不要在 HPC 登录节点运行 Isaac，也不要把容器 ROS 库直接 source 到 Rocky 主机。
 
 ## 文件布局
@@ -38,7 +37,7 @@ cd ~/Desktop/IC382
 - `scripts/course601-desktop.sh`：当前桌面、仿真、ROS2、客户端启动入口。
 - `scripts/team-robot-simulation.py`、`team-robot-loader.py`：CAD 机器人和 ROS2 桥接。
 - `scripts/isaac601-*-rtx.sh`、`rtx-cuda-*`：当前 Ubuntu/RTX 兼容链。
-- `scripts/week06-*.sh/py`：当前入口仍直接依赖的 ROS、雷达适配和课程导航组件；保留这些名称以保持现有路径兼容。
+- `scripts/week06-ros.sh`、`week06-ubuntu.sh`：进入既有 ROS2 容器的环境封装。导航、雷达适配和任务逻辑均从 `robot-ros2` 仓库启动。
 - `robots/team_robot_20261013/`：真实尺寸及场景 10 倍尺寸的团队 USD。
 - `dev/Collected_final_wheeltec_with_scene/`：运行中的 cleaned 场景、原始雷达定义及其收集材质。
 - `dev/map/` 和 `dev/custom_*`：课程默认导航地图与参数。

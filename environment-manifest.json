@@ -1,6 +1,6 @@
 {
   "source": "HPC ~/Desktop/IC382",
-  "snapshot_date": "2026-10-21",
+  "snapshot_date": "2026-10-22",
   "runtime": "Isaac Sim 6.0.1 / ROS2 Humble",
   "files": [
     {
@@ -3196,12 +3196,6 @@
       "sha256": "9bdae8b4880666aa3017d76350492dfdd53801aabacd71cd7262821070c3f873"
     },
     {
-      "path": "scripts/course601-desktop.sh",
-      "size": 3052,
-      "git_blob": "f413696a0209894649b0d4980f99bdec7835b585",
-      "sha256": "c06393b3742ce48b7f87b73a87a1ede7e2c392090f20c081dfbcd0fbbe9babcc"
-    },
-    {
       "path": "scripts/course601-original-lidar-probe.py",
       "size": 3680,
       "git_blob": "d4f312214bb03c02b8637d3185eae63146a13b23",
@@ -3262,28 +3256,10 @@
       "sha256": "273931645bb953c361b9447fadbe49df16b0a83ce17d1ed458f05c60c1d7c639"
     },
     {
-      "path": "scripts/week06-initial-pose.py",
-      "size": 1608,
-      "git_blob": "69aeb07621a2f009118f957debdaf708f8c434fb",
-      "sha256": "f9bd89e2ec7b7ec839139a7d09e428468052c9322d0860ca5bfab4f2e7b1fae7"
-    },
-    {
-      "path": "scripts/week06-navigation.sh",
-      "size": 383,
-      "git_blob": "e561866bed26471683f1a976cf91ac8fe778a13c",
-      "sha256": "109ae8a547cbf1799c00064bbbae9d8eaadcf3b50541c564e4f323e8d0a6f734"
-    },
-    {
       "path": "scripts/week06-ros.sh",
       "size": 251,
       "git_blob": "5f6822b116cedfef9e78b443832b6aeb6c7a6278",
       "sha256": "a8eff2bc7983101eb7425dec35b22ebafdc583a3f9e2bae503207627fdd2a248"
-    },
-    {
-      "path": "scripts/week06-scan-adapter.py",
-      "size": 845,
-      "git_blob": "186be6f03ed763491ceb9fc40e39b1053f1c4426",
-      "sha256": "0bc9dce03fe9a98f989b8b1f3606a932c1d52b76267693e195517e23ef97942f"
     },
     {
       "path": "scripts/week06-ubuntu.sh",
@@ -3302,6 +3278,24 @@
       "size": 395,
       "git_blob": "7e1209ed2fe0d9f47358a02e257c9152619d4581",
       "sha256": "7cf1dc0b2a693c92d0d0b6c1f511001f5a42b966b8d282348016fd90a1194421"
+    },
+    {
+      "path": "scripts/course601-desktop.sh",
+      "size": 2848,
+      "git_blob": "7df11c275a88e707ec0964381e48f455a0f212aa",
+      "sha256": "7500eef56c19a99d8ae4688b7b9855e06d8663f9c4146de81ad55471d112d857"
+    },
+    {
+      "path": "scripts/start-robot-navigation.sh",
+      "size": 996,
+      "git_blob": "c562b81d251e1170ef18e7a0819fad05ef1c5f2d",
+      "sha256": "b466570fd348bfa3dc9100c7a62d27dd97b339fcad66d56e2f3c3787b675cb86"
     }
-  ]
+  ],
+  "robot_workspace": {
+    "path": "robot-ros2",
+    "branch": "robot-ros2",
+    "verified_commit": "636d579",
+    "runtime_entry": "scripts/run-course-navigation.sh"
+  }
 }

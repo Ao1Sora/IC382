@@ -3,6 +3,7 @@
 /logs/
 /cache/
 /navigation-mvp/
+/robot-ros2/
 __pycache__/
 *.py[cod]
 *.etli
