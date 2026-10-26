@@ -1,6 +1,6 @@
 import os,time,traceback,json
 from isaacsim import SimulationApp
-app=SimulationApp({'headless':True,'hide_ui':False,'limit_cpu_threads':6,'width':1280,'height':720,'window_width':1280,'window_height':720,'extra_args':['--/rtx/verifyDriverVersion/enabled=false','--/exts/omni.kit.livestream.app/primaryStream/publicIp=10.238.38.1','--/app/extensions/registryEnabled=false','--/persistent/isaac/asset_root/default=/workspace/dev','--/plugins/carb.tasking.plugin/threadCount=6','--/plugins/omni.tbb.globalcontrol/maxThreadCount=6']},experience='/workspace/tools/isaacsim-6.0.1/apps/isaacsim.exp.full.streaming.kit')
+app=SimulationApp({'headless':True,'hide_ui':False,'limit_cpu_threads':6,'width':1920,'height':1080,'window_width':1920,'window_height':1080,'extra_args':['--/rtx/verifyDriverVersion/enabled=false','--/exts/omni.kit.livestream.app/primaryStream/publicIp=10.238.38.1','--/exts/omni.kit.livestream.app/primaryStream/allowDynamicResize=false','--/app/livestream/allowResize=false','--/app/extensions/registryEnabled=false','--/persistent/isaac/asset_root/default=/workspace/dev','--/plugins/carb.tasking.plugin/threadCount=6','--/plugins/omni.tbb.globalcontrol/maxThreadCount=6']},experience='/workspace/tools/isaacsim-6.0.1/apps/isaacsim.exp.full.streaming.kit')
 try:
     from isaacsim.core.utils.extensions import enable_extension
     app.set_setting('/app/window/drawMouse',True)
