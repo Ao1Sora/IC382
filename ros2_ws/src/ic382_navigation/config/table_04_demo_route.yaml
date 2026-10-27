@@ -1,0 +1,11 @@
+schema_version: 1
+frame_id: map
+calibrated: true
+scene_scale: 10.0
+purpose: "Single table-side simulation demonstration, not a full assessment patrol"
+coordinate_source: "/World/IC_building_scene/objects/table_04 bounds from teacher USD; goal is south of table and faces north"
+rounds: 1
+inspection_seconds: 3.0
+tagging_seconds: 3.0
+waypoints:
+  - {id: TABLE_04, x: -284.2022210429312, y: 40.5, yaw: 1.5707963267948966}

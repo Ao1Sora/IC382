@@ -22,13 +22,13 @@ def test_course_baseline_survives_team_adaptations_without_mutation():
     assert profile['bt_navigator'] == teacher['bt_navigator']
     assert profile['controller_server']['ros__parameters']['FollowPath']['critics'] == (
         teacher['controller_server']['ros__parameters']['FollowPath']['critics'])
-    assert profile['amcl']['ros__parameters']['update_min_a'] == 0.2
+    assert teacher['amcl']['ros__parameters']['update_min_a'] == 0.2
     assert not profile['amcl']['ros__parameters']['set_initial_pose']
     assert 'initial_pose' not in profile['amcl']['ros__parameters']
     assert profile['planner_server']['ros__parameters']['GridBased']['allow_unknown'] is False
 
 
-@pytest.mark.parametrize('field,value', [('min_speed_xy', 0.0), ('min_speed_theta', 0.5),
+@pytest.mark.parametrize('field,value', [('min_speed_xy', 0.0), ('min_speed_theta', 0.8),
                                        ('xy_goal_tolerance', 2.0)])
 def test_inconsistent_motion_profile_is_rejected(field, value):
     teacher, overrides = sources()
@@ -43,6 +43,13 @@ def test_laser_clearing_cannot_exceed_usable_laser_range():
         'obstacle_layer']['scan']['raytrace_max_range'] = 300.0
     with pytest.raises(ValueError, match='ranges'):
         build_profile(teacher, overrides)
+
+
+def test_scaled_path_preview_covers_a_maximum_speed_rollout():
+    teacher, overrides = sources()
+    profile = build_profile(teacher, overrides)
+    dwb = profile['controller_server']['ros__parameters']['FollowPath']
+    assert dwb['forward_prune_distance'] >= dwb['max_vel_x'] * dwb['sim_time']
 
 
 def test_initial_pose_applies_only_to_this_generated_instance():

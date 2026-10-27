@@ -15,4 +15,4 @@ map=$(python3 -c 'from ament_index_python.packages import get_package_share_dire
 exec ros2 launch ic382_navigation patrol.launch.py \
   map:="$map" \
   params_file:="$params" route:="$route" \
-  log_directory:="$checkout/results/journal" max_linear:=2.0 autostart:=false
+  log_directory:="$checkout/results/journal" max_linear:=3.5 max_angular:=0.6 autostart:=false
