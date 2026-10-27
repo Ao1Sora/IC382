@@ -35,6 +35,7 @@ try:
     original_base=base
     setup=runpy.run_path('/workspace/scripts/team-robot-loader.py')['install_team_robot'](stage,root,base)
     root=setup['root'];base=setup['base']
+    setup['contacts']=runpy.run_path('/workspace/scripts/robot-contact-profile.py')['configure_contacts'](stage,root)
     wheel_radius=setup['wheel_radius'];wheel_track=setup['wheel_track']
     # Coordinates and inertias are baked at scene_scale; preserve real-world
     # free-fall acceleration while keeping the existing map/ROS coordinates.
@@ -146,6 +147,7 @@ try:
         encoders.header.stamp.sec=int(encoder_time)
         encoders.header.stamp.nanosec=int((encoder_time-int(encoder_time))*1e9)
         encoders.name=['left_wheel_joint','right_wheel_joint']
+        encoders.position=[float(robot.get_joint_positions()[i]) for i in wheel_indices]
         encoders.velocity=[float(robot.get_joint_velocities()[i]) for i in wheel_indices]
         wheel_state_pub.publish(encoders)
         v=command['v'] if time.time()-command['received']<1.0 else 0.
