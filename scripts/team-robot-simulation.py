@@ -57,6 +57,14 @@ try:
     edges += [('Twist.outputs:execOut','Drive.inputs:execIn'),('Time.outputs:simulationTime','Clock.inputs:timeStamp'),('Twist.outputs:linearVelocity','Linear.inputs:tuple'),('Twist.outputs:angularVelocity','Angular.inputs:tuple'),('Linear.outputs:x','Drive.inputs:linearVelocity'),('Angular.outputs:z','Drive.inputs:angularVelocity'),('Drive.outputs:velocityCommand','Articulation.inputs:velocityCommand'),('Odom.outputs:execOut','OdomPub.inputs:execIn'),('Odom.outputs:execOut','OdomTF.inputs:execIn'),('Odom.outputs:position','OdomPub.inputs:position'),('Odom.outputs:orientation','OdomPub.inputs:orientation'),('Odom.outputs:linearVelocity','OdomPub.inputs:linearVelocity'),('Odom.outputs:angularVelocity','OdomPub.inputs:angularVelocity'),('Odom.outputs:position','OdomTF.inputs:translation'),('Odom.outputs:orientation','OdomTF.inputs:rotation'),('Time.outputs:simulationTime','OdomPub.inputs:timeStamp'),('Time.outputs:simulationTime','OdomTF.inputs:timeStamp'),('Time.outputs:simulationTime','SensorTF.inputs:timeStamp'),('LidarProduct.outputs:execOut','LidarPub.inputs:execIn'),('LidarProduct.outputs:renderProductPath','LidarPub.inputs:renderProductPath')]
     values=[('Context.inputs:domain_id',82),('Twist.inputs:topicName','cmd_vel'),('Drive.inputs:wheelRadius',wheel_radius),('Drive.inputs:wheelDistance',wheel_track),('Articulation.inputs:jointNames',['left_wheel_joint','right_wheel_joint']),('Articulation.inputs:targetPrim',[Sdf.Path(root)]),('Odom.inputs:chassisPrim',[Sdf.Path(base)]),('OdomPub.inputs:topicName','odom'),('OdomPub.inputs:odomFrameId','odom'),('OdomPub.inputs:chassisFrameId','base_link'),('OdomTF.inputs:parentFrameId','odom'),('OdomTF.inputs:childFrameId','base_link'),('SensorTF.inputs:parentPrim',[Sdf.Path(base)]),('SensorTF.inputs:targetPrims',[Sdf.Path(p) for p in setup['sensor_frames'] if p.endswith('_wheel_link')]),('LidarProduct.inputs:cameraPrim',[Sdf.Path(base+'/laser_link/Lidar')]),('LidarProduct.inputs:width',128),('LidarProduct.inputs:height',1),('LidarPub.inputs:topicName','scan'),('LidarPub.inputs:frameId','laser_link'),('LidarPub.inputs:type','laser_scan')]
     nodes=[n for n in nodes if n[0] not in ['Articulation','SensorTF']]
+    # Simulator truth is diagnostic only. Navigation consumes measured wheel
+    # velocities and supplies its own odom -> base_link transform.
+    diagnostic_values={'OdomPub.inputs:topicName':'sim/ground_truth_odom',
+                       'OdomPub.inputs:odomFrameId':'sim_ground_truth',
+                       'OdomPub.inputs:chassisFrameId':'sim_base_link',
+                       'OdomTF.inputs:parentFrameId':'sim_ground_truth',
+                       'OdomTF.inputs:childFrameId':'sim_base_link'}
+    values=[(key,diagnostic_values.get(key,value)) for key,value in values]
     edges=[e for e in edges if not any(v.startswith(('Articulation.','SensorTF.')) for v in e)]
     values=[v for v in values if not v[0].startswith(('Articulation.','SensorTF.'))]
     og.Controller.edit({'graph_path':'/World/IC382_ROS2','evaluator_name':'execution'},{keys.CREATE_NODES:nodes,keys.CONNECT:edges,keys.SET_VALUES:values})
@@ -113,6 +121,8 @@ try:
     def receive_twist(msg): command.update(v=msg.linear.x,w=msg.angular.z,received=time.time())
     cmd_sub=node.create_subscription(Twist,'/cmd_vel',receive_twist,10)
     wheel_indices=[robot.dof_names.index(n) for n in ['left_wheel_joint','right_wheel_joint']]
+    from sensor_msgs.msg import JointState
+    wheel_state_pub=node.create_publisher(JointState,'/joint_states',qos_profile_sensor_data)
     omni.timeline.get_timeline_interface().play()
     from pathlib import Path
     import math,numpy as np
@@ -131,6 +141,13 @@ try:
             try: exec(code,globals())
             except Exception: traceback.print_exc()
         for _ in range(6): team_executor.spin_once(timeout_sec=0.0)
+        encoder_time=float(og.Controller.attribute('/World/IC382_ROS2/Time.outputs:simulationTime').get())
+        encoders=JointState();encoders.header.frame_id='base_link'
+        encoders.header.stamp.sec=int(encoder_time)
+        encoders.header.stamp.nanosec=int((encoder_time-int(encoder_time))*1e9)
+        encoders.name=['left_wheel_joint','right_wheel_joint']
+        encoders.velocity=[float(robot.get_joint_velocities()[i]) for i in wheel_indices]
+        wheel_state_pub.publish(encoders)
         v=command['v'] if time.time()-command['received']<1.0 else 0.
         w=command['w'] if time.time()-command['received']<1.0 else 0.
         speeds=np.array([(v-wheel_track*w/2)/wheel_radius,(v+wheel_track*w/2)/wheel_radius])
