@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-27",
+  "scene_scale": 10,
+  "ground_truth_used_online": false,
+  "unit_tests_passed": 35,
+  "local_static_occupied_cells": 2021,
+  "local_static_cells_retained_as_lethal": 2021,
+  "baseline": {
+    "task_id": "62d40fab64824ddea68f2ae7c9cc077f",
+    "result": {
+      "status": 4,
+      "success": true,
+      "task_id": "62d40fab64824ddea68f2ae7c9cc077f",
+      "message": "Three inspection points completed and logged",
+      "visited_points": [
+        "T04-A",
+        "T04-C",
+        "T04-B"
+      ],
+      "planned_path_length": 97.49034961579568
+    },
+    "checkpoints": {
+      "T04-A": {
+        "target_position_error_m": 0.08162139157482036,
+        "odometry_position_error_m": 0.06313872381054071,
+        "target_yaw_error_rad": -0.2520105541129003,
+        "odometry_yaw_error_rad": 0.10595890916711738,
+        "actual_xy_scene": [
+          -258.4105224609375,
+          51.35832214355469
+        ]
+      },
+      "T04-C": {
+        "target_position_error_m": 0.3133546994416291,
+        "odometry_position_error_m": 0.33664028963501497,
+        "target_yaw_error_rad": 0.11178407487862563,
+        "odometry_yaw_error_rad": 0.033281237626608284,
+        "actual_xy_scene": [
+          -285.7268371582031,
+          34.08707809448242
+        ]
+      },
+      "T04-B": {
+        "target_position_error_m": 0.3750452332837617,
+        "odometry_position_error_m": 0.42411036865431706,
+        "target_yaw_error_rad": 0.17507218642576022,
+        "odometry_yaw_error_rad": -0.024140280013030257,
+        "actual_xy_scene": [
+          -304.8243103027344,
+          55.78678512573242
+        ]
+      }
+    },
+    "nonzero_commands_while_waiting": 0,
+    "final_cmd_vel": [
+      0.0,
+      0.0
+    ]
+  },
+  "independent_calibrated_run": {
+    "task_id": "db9431fde1414bc193ec80f36933aa90",
+    "result": {
+      "status": 4,
+      "success": true,
+      "task_id": "db9431fde1414bc193ec80f36933aa90",
+      "message": "Three inspection points completed and logged",
+      "visited_points": [
+        "T04-A",
+        "T04-C",
+        "T04-B"
+      ],
+      "planned_path_length": 97.49034961579568
+    },
+    "checkpoints": {
+      "T04-A": {
+        "target_position_error_m": 0.04626981095228719,
+        "odometry_position_error_m": 0.001773634220053537,
+        "target_yaw_error_rad": -0.15235340866442426,
+        "odometry_yaw_error_rad": 0.0008048388752421863,
+        "actual_xy_scene": [
+          -258.9151916503906,
+          51.738765716552734
+        ]
+      },
+      "T04-C": {
+        "target_position_error_m": 0.05372067717059679,
+        "odometry_position_error_m": 0.06724597797967324,
+        "target_yaw_error_rad": 0.14730202276782123,
+        "odometry_yaw_error_rad": 0.011210801466621012,
+        "actual_xy_scene": [
+          -284.1677551269531,
+          31.885540008544922
+        ]
+      },
+      "T04-B": {
+        "target_position_error_m": 0.04222909959204596,
+        "odometry_position_error_m": 0.09071818414221874,
+        "target_yaw_error_rad": 0.14273367783037352,
+        "odometry_yaw_error_rad": -0.0017215456205002533,
+        "actual_xy_scene": [
+          -304.1131896972656,
+          52.533668518066406
+        ]
+      }
+    },
+    "nonzero_commands_while_waiting": 0,
+    "final_cmd_vel": [
+      0.0,
+      0.0
+    ]
+  },
+  "configured_goal_tolerances": {
+    "position_m": 0.05,
+    "yaw_rad": 0.2
+  },
+  "observed_note": "Physical parking errors are measured separately from estimated-pose Nav2 success; C is about 5.4 cm.",
+  "limitations": [
+    "Only T04 was physically exercised in Isaac; other desk points remain candidates.",
+    "Camera and tagging operations were timed main-program placeholders.",
+    "Physical Jetson independent wheel feedback and external odometry mode remain unverified."
+  ],
+  "current_T04_points": [
+    {
+      "id": "T04-A",
+      "x": -258.671081,
+      "y": 52.13183,
+      "yaw": 3.14159265,
+      "outward_shift_scene": 4.0,
+      "turn_clearance_min_scene": 10.5
+    },
+    {
+      "id": "T04-B",
+      "x": -303.983361,
+      "y": 52.13183,
+      "yaw": 0.0,
+      "outward_shift_scene": 3.25,
+      "turn_clearance_min_scene": 10.5
+    },
+    {
+      "id": "T04-C",
+      "x": -284.202221,
+      "y": 31.34944,
+      "yaw": 1.57079633,
+      "outward_shift_scene": 4.5,
+      "turn_clearance_min_scene": 10.5
+    }
+  ],
+  "tested_source_sha256": {
+    "ros2_ws/src/ic382_navigation/ic382_navigation/wheel_odometry.py": "fc2efcedefc10f881f1929e47c21cb8aa68e2f1e97bc2041d1b6461226e6fbac",
+    "ros2_ws/src/ic382_navigation/ic382_navigation/inspection.py": "c5f0beab1917013a9267022b531650b934ba48caf11498187a7093d6583707f4",
+    "ros2_ws/src/ic382_navigation/config/nav2_team_overrides.yaml": "98aa758fcee0f9b5c462784fcb7c9a945d15e42e16d9e770f83bc633379c9b7b",
+    "ros2_ws/src/ic382_navigation/config/desk_inspection_points.yaml": "cf751692928cfef49b043652a9f53effc1fef239c287365ccc3e57dc31636e03"
+  },
+  "contact_profile_sha256": "922340af1a01aa5f85d89a2ed7040a0a39ce6b914b9e6067dadd7643839df711"
+}

@@ -11,7 +11,7 @@ The default navigation is now a **single-desk module**, described in
 the module chooses the shortest feasible order of its three inspection poses,
 navigates and stops at each, and waits for a correlated work-completion acknowledgement.
 The main program owns all outer loops and operations. Localization uses a configured
-known starting pose plus measured wheel-velocity integration, with no IMU or AMCL.
+known starting pose plus measured wheel-angle accumulation (velocity fallback), with no IMU or AMCL.
 
 Teacher-provided ROS2 originals are preserved under [teacher/ros2](teacher/ros2/README.md),
 with source links, archive inventory and SHA-256 checksums. These include the original

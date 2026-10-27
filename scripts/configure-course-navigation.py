@@ -40,8 +40,8 @@ def main():
     provenance = {'teacher_sha256': hashlib.sha256(baseline.read_bytes()).hexdigest(),
                   'overrides_sha256': hashlib.sha256(overrides.read_bytes()).hexdigest(),
                   'initial_pose': pose, 'scene_scale': 10.0}
-    if not args.static:
-        out.with_suffix('.sources.json').write_text(json.dumps(provenance, indent=2))
+    provenance['initial_pose_source'] = 'explicit_launch_configuration' if args.static else 'simulator_snapshot'
+    out.with_suffix('.sources.json').write_text(json.dumps(provenance, indent=2))
     print(json.dumps({'params': str(out), **provenance}, indent=2))
 
 

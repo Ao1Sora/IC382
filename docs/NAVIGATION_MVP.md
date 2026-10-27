@@ -1,5 +1,7 @@
 # 导航、主程序与日志 MVP
 
+> 本文记录旧版 AMCL 自动巡检 MVP。当前默认入口、软件里程计和主程序桌号接口见 [当前导航接口](DESK_NAVIGATION_API.md)。
+
 本实现复用 ROS2 Humble 的 Nav2（AMCL、NavFn、DWB、costmap、恢复行为）和
 SLAM Toolbox。我们编写任务编排、导航 Action 客户端、速度门控、日志及场景适配。
 识别和贴标签是 3 秒停留占位，日志明确写入 `simulated: true`；没有真实识别或标签动作。

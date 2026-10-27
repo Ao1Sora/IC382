@@ -45,6 +45,22 @@ def test_laser_clearing_cannot_exceed_usable_laser_range():
         build_profile(teacher, overrides)
 
 
+def test_local_controller_cannot_discard_table_tops_in_the_reviewed_map():
+    teacher, overrides = sources()
+    overrides['local_costmap']['local_costmap']['ros__parameters']['plugins'] = ['obstacle_layer','inflation_layer']
+    with pytest.raises(ValueError, match='static table/overhang'):
+        build_profile(teacher, overrides)
+
+
+def test_rotation_shim_retains_dwb_and_respects_motion_limits():
+    teacher, overrides = sources()
+    plugin=build_profile(teacher,overrides)['controller_server']['ros__parameters']['FollowPath']
+    assert plugin['primary_controller']=='dwb_core::DWBLocalPlanner'
+    overrides['controller_server']['ros__parameters']['FollowPath']['rotate_to_heading_angular_vel']=2.
+    with pytest.raises(ValueError, match='angular velocity'):
+        build_profile(teacher,overrides)
+
+
 def test_scaled_path_preview_covers_a_maximum_speed_rollout():
     teacher, overrides = sources()
     profile = build_profile(teacher, overrides)

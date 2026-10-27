@@ -17,8 +17,13 @@ def merge_profile(baseline, overrides):
 def validate_profile(profile):
     controller = profile['controller_server']['ros__parameters']
     dwb = controller['FollowPath']
-    if dwb['plugin'] != 'dwb_core::DWBLocalPlanner':
-        raise ValueError('The course-derived team profile requires plain DWB')
+    tracker = dwb['plugin']
+    if tracker == 'nav2_rotation_shim_controller::RotationShimController':
+        tracker = dwb.get('primary_controller')
+        if not 0 < dwb['rotate_to_heading_angular_vel'] <= dwb['max_vel_theta']:
+            raise ValueError('Rotation shim must respect the angular velocity limit')
+    if tracker != 'dwb_core::DWBLocalPlanner':
+        raise ValueError('The course-derived team profile requires the DWB tracker')
     if 'ObstacleFootprint' not in dwb['critics']:
         raise ValueError('DWB must check the full CAD footprint')
     if not 0 < dwb['min_speed_xy'] <= dwb['max_speed_xy']:
@@ -34,6 +39,8 @@ def validate_profile(profile):
     footprints = []
     for name in ('local_costmap', 'global_costmap'):
         costmap = profile[name][name]['ros__parameters']
+        if 'static_layer' not in costmap.get('plugins', []):
+            raise ValueError('Both costmaps must retain static table/overhang occupancy')
         if costmap['robot_base_frame'] != amcl['base_frame_id']:
             raise ValueError('Costmap and AMCL must use the same base frame')
         footprint = json.loads(costmap['footprint'])

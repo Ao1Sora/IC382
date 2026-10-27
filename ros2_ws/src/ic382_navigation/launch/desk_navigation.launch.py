@@ -13,6 +13,8 @@ def setup(context):
     value=lambda key:LaunchConfiguration(key).perform(context)
     sim=value('use_sim_time').lower()=='true'
     common={'use_sim_time':sim}
+    if value('odometry_source') not in ('wheels','external'):
+        raise ValueError('odometry_source must be wheels or external')
     for key in ('map','points','params_file'):
         if not Path(value(key)).is_file():raise ValueError('Missing '+key)
     if not sim and yaml.safe_load(Path(value('points')).read_text()).get('scene_scale',1.)!=1.:
@@ -29,9 +31,11 @@ def setup(context):
         Node(package='tf2_ros',executable='static_transform_publisher',name='known_start_map_origin',
              arguments=['--x',value('initial_x'),'--y',value('initial_y'),'--yaw',value('initial_yaw'),
                         '--frame-id','map','--child-frame-id','odom'],parameters=[common]),
-        Node(package='ic382_navigation',executable='wheel_odometry',output='screen',
+        *([Node(package='ic382_navigation',executable='wheel_odometry',output='screen',
              parameters=[common,{'wheel_radius':float(value('wheel_radius')),'wheel_track':float(value('wheel_track')),
-                                 'turn_track':float(value('turn_track')),'turn_blend_speed':float(value('turn_blend_speed'))}]),
+                                 'turn_track':float(value('turn_track')),'turn_blend_speed':float(value('turn_blend_speed')),
+                                 'base_height':float(value('base_height'))}])]
+          if value('odometry_source')=='wheels' else []),
         GroupAction([SetRemap(src='behavior_server:cmd_vel',dst='nav2_cmd_vel'),
                      SetRemap(src='cmd_vel_smoothed',dst='nav2_cmd_vel'),nav]),
         Node(package='ic382_navigation',executable='scan_filter',parameters=[common,{'max_range':200.}]),
@@ -47,7 +51,8 @@ def generate_launch_description():
     share=Path(get_package_share_directory('ic382_navigation'))
     defaults={'map':str(share/'maps/inspection/scene_map.yaml'),
               'points':str(share/'config/desk_inspection_points.yaml'),'params_file':'',
-              'use_sim_time':'true','initial_x':'-278.8637905602745','initial_y':'32.96996906027461',
-              'initial_yaw':'0.0','wheel_radius':'0.63','wheel_track':'3.49','turn_track':'3.49','turn_blend_speed':'0.5',
+              'use_sim_time':'true','odometry_source':'wheels','initial_x':'-278.8637905602745','initial_y':'32.96996906027461',
+              'initial_yaw':'0.0','wheel_radius':'0.630835','wheel_track':'3.611644','turn_track':'3.611644',
+              'turn_blend_speed':'0.5','base_height':'0.63',
               'log_directory':'~/.local/state/ic382/missions'}
     return LaunchDescription([DeclareLaunchArgument(k,default_value=v) for k,v in defaults.items()]+[OpaqueFunction(function=setup)])

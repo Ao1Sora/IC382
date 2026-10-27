@@ -2,20 +2,63 @@ schema_version: 1
 frame_id: map
 calibrated: false
 scene_scale: 10.0
-purpose: "12 candidate inspection poses for the four rulebook hot desks; review before execution"
+purpose: Desk-facing candidates; per-point turn clearance is recorded only where screened,
+  camera coverage remains unverified
 rounds: 1
 inspection_seconds: 3.0
 tagging_seconds: 3.0
 waypoints:
-  - {id: T01-A, x: -279.613539, y: 77.260432, yaw: 3.14159265}
-  - {id: T01-B, x: -317.675818, y: 77.260432, yaw: 0.00000000}
-  - {id: T01-C, x: -301.144679, y: 60.978042, yaw: 1.57079633}
-  - {id: T02-A, x: -279.798006, y: 84.919424, yaw: 3.14159265}
-  - {id: T02-B, x: -301.329145, y: 98.701815, yaw: -1.57079633}
-  - {id: T02-C, x: -317.860285, y: 84.919424, yaw: 0.00000000}
-  - {id: T03-A, x: -262.671081, y: 59.665859, yaw: 3.14159265}
-  - {id: T03-B, x: -266.292340, y: 77.575741, yaw: -2.35619449}
-  - {id: T03-C, x: -300.733361, y: 59.665859, yaw: 0.00000000}
-  - {id: T04-A, x: -262.671081, y: 52.131830, yaw: 3.14159265}
-  - {id: T04-B, x: -300.733361, y: 52.131830, yaw: 0.00000000}
-  - {id: T04-C, x: -284.202221, y: 35.849440, yaw: 1.57079633}
+- id: T01-A
+  x: -279.613539
+  y: 77.260432
+  yaw: 3.14159265
+- id: T01-B
+  x: -317.675818
+  y: 77.260432
+  yaw: 0.0
+- id: T01-C
+  x: -301.144679
+  y: 60.978042
+  yaw: 1.57079633
+- id: T02-A
+  x: -279.798006
+  y: 84.919424
+  yaw: 3.14159265
+- id: T02-B
+  x: -301.329145
+  y: 98.701815
+  yaw: -1.57079633
+- id: T02-C
+  x: -317.860285
+  y: 84.919424
+  yaw: 0.0
+- id: T03-A
+  x: -262.671081
+  y: 59.665859
+  yaw: 3.14159265
+- id: T03-B
+  x: -266.29234
+  y: 77.575741
+  yaw: -2.35619449
+- id: T03-C
+  x: -300.733361
+  y: 59.665859
+  yaw: 0.0
+- id: T04-A
+  x: -258.671081
+  y: 52.13183
+  yaw: 3.14159265
+  outward_shift_scene: 4.0
+  turn_clearance_min_scene: 10.5
+- id: T04-B
+  x: -303.983361
+  y: 52.13183
+  yaw: 0.0
+  outward_shift_scene: 3.25
+  turn_clearance_min_scene: 10.5
+- id: T04-C
+  x: -284.202221
+  y: 31.34944
+  yaw: 1.57079633
+  outward_shift_scene: 4.5
+  turn_clearance_min_scene: 10.5

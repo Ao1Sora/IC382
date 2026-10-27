@@ -49,6 +49,25 @@ def test_offline_scrub_calibration_applies_to_stationary_turns_not_rolling_curve
     assert rolling.update(0.,1.,3.)[4]==pytest.approx(1.)
 
 
+def test_angle_encoders_preserve_distance_through_wrap_and_stop():
+    odom=WheelIntegrator(.5,1.)
+    odom.update_positions(0.,math.pi-.1,math.pi-.1)
+    odom.update_positions(.2,-math.pi+.1,-math.pi+.1)
+    assert odom.x==pytest.approx(.1) and odom.y==0
+    assert odom.update_positions(.3,-math.pi+.1,-math.pi+.1)[3:]==(0.,0.)
+
+
+def test_angle_encoders_integrate_a_known_arc_and_reject_mode_or_clock_changes():
+    odom=WheelIntegrator(.5,1.);odom.update_positions(0.,0.,0.)
+    odom.update_positions(.5,0.,1.)
+    assert odom.x==pytest.approx(.5*math.sin(.5))
+    assert odom.y==pytest.approx(.5*(1-math.cos(.5)))
+    assert odom.yaw==pytest.approx(.5)
+    with pytest.raises(ValueError):odom.update(.6,0.,0.)
+    with pytest.raises(ValueError):odom.update_positions(.5,0.,1.)
+    with pytest.raises(ValueError):odom.update_positions(2.,0.,1.)
+
+
 def test_encoder_arc_and_clock_faults():
     odom=WheelIntegrator(1.,2.);odom.update(0.,0.,2.)
     odom.update(.5,0.,2.)

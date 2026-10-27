@@ -13,6 +13,38 @@ annotated map. T01–T04 each have three poses in `config/desk_inspection_points
 These were statically screened; camera visibility and all twelve poses have not
 been independently certified. The controller still checks the full robot footprint.
 
+Both global and local costmaps load this static map. The local static layer is
+essential: the low lidar can see table legs while missing the overhanging top.
+Without it, DWB can cut through the tabletop projection even when the global
+planner avoids it. Footprint padding is 0.75 scene units (7.5 cm physical);
+inflation radius is 8.0 with cost scaling 0.3 for the ten-times scene.
+
+The teacher-derived DWB tracker is wrapped by the upstream Humble
+`nav2_rotation_shim_controller::RotationShimController`. It first rotates into the
+new path's heading, avoiding the alternating turn commands observed when departing
+a desk facing away from the route. It also handles final desk-facing rotation.
+Rotations still use full-footprint collision checking; they never bypass the map.
+Slow reverse motion is allowed down to -0.5 scene units/s for clearance maneuvers.
+
+The old candidate T04-C was clear only at its final heading, but did not have
+enough room to rotate the padded robot. T04's three points now retain their east,
+west and south viewing directions and are shifted outward by 4.0, 3.25 and 4.5
+scene units respectively (40, 32.5 and 45 cm physical). Each has a statically free
+10.5-scene-unit turning circle, versus the padded footprint's roughly 6.7-unit
+maximum radius. Current coordinates are authoritative in the YAML; older annotated
+map images show the original candidates. Camera coverage remains unverified.
+Other desks remain candidates and have not received this same turning-circle
+certification. Screen them separately rather than assuming all twelve were tested.
+
+The reproducible geometry-screening command is:
+
+```bash
+python3 scripts/prepare-inspection-points.py \
+  --map ros2_ws/src/ic382_navigation/maps/inspection/scene_map.yaml \
+  --points ros2_ws/src/ic382_navigation/config/desk_inspection_points.yaml \
+  --output /tmp/screened-inspection-points.yaml --desk T04 --clearance 10.5
+```
+
 Known start pose is configured explicitly, not read from Isaac ground truth:
 
 ```bash
@@ -26,34 +58,65 @@ pose; do not restart it halfway through a run without supplying the current know
 pose. A simulation reset or backwards clock requires reinitialization.
 
 `map -> odom` is fixed at the configured start. `wheel_odometry` integrates the
-measured left/right wheel velocities from `/joint_states` into `/odom` and publishes
+measured left/right wheel angles from `/joint_states` into `/odom` and publishes
 `odom -> base_link`. There is no IMU and no AMCL/SLAM. Laser `/scan_nav` is used for
 obstacle avoidance only. No command-velocity integration or simulator absolute pose
 is used for localization. Encoder-only odometry accumulates slip and calibration
 error; the known starting position does not eliminate that drift.
 
-The default is standard differential-drive odometry: wheel radius `0.63` and both
-track parameters `3.49`. An experimental **effective stationary-turn** track of
-`4.316` scene units was measured offline on 2026-10-27:
-integrated differential wheel travel / independently measured body turn =
-8.83187 / 2.04672 = 4.31594. The geometric drive track remains `3.49`; it is not
-the same parameter as the empirical stationary-turn track. With constant `3.49`, the first trial
-completed T04-A but accumulated turn error and contacted a desk en route to T04-C;
-the task was canceled. The calibration uses simulator truth only offline, never
-as a live navigation input. This calibration is specific to this simulation model
-and floor/contact settings, and does not compensate wheel spin against an obstacle.
-Applying `4.316` to every rolling curve also produced substantial drift in a second
-trial. A third trial blended from `turn_track=4.316` at zero linear speed to
-`wheel_track=3.49` at `turn_blend_speed=0.5` scene units/second. It completed T04-A
-but also drifted and contacted a desk en route to T04-C. This empirical blend is
-available as an option but **disabled by default** by setting both tracks equal.
-It is not a validated slip estimator. Override `wheel_radius:=... wheel_track:=...
-turn_track:=... turn_blend_speed:=...` for a different model or physical robot.
+Angle increments are preferred over sampled velocity integration: they preserve
+the distance traveled between messages, including acceleration and periodic joint
+coordinate wrapping. Publishers must supply sufficiently frequent samples that
+each wheel moves less than pi radians between messages. If a publisher supplies
+only velocities, the older trapezoidal velocity integrator is used. Changing modes
+mid-run is rejected and requires localization reinitialization.
+
+These wheel samples are available in **Isaac**, not yet verified on the physical
+course chassis. Course materials reference `turn_on_wheeltec_robot` but do not
+include that driver's source. Before physical integration, inspect the actual
+Jetson driver and its `/odom`, wheel feedback and serial protocol; do not assume
+that independent wheel velocities or `/joint_states` are exposed. If the chassis
+already provides suitable odometry, select `odometry_source:=external`: this omits
+the simulator wheel-odometry node and consumes the external `/odom` and TF.
+There must be a single odometry/TF publisher and a continuous odom frame whose
+origin matches the configured known-start map anchor. This mode has not been
+verified on the physical chassis. Physical maps/points must use real metres;
+the default ten-times simulation points intentionally block `use_sim_time:=false`.
+
+The launch uses a constant differential-drive model with effective wheel radius
+`0.630835` and effective track `3.611644` scene units. Both track parameters are
+identical, so the optional scrub blend is disabled. Physical scene geometry remains
+radius `0.63` / track `3.49`; `base_height=0.63` is kept separate from the calibrated
+kinematic radius so the ground TF does not move when calibrating odometry.
+
+These constants were fitted **offline** from stopped T04-A and T04-C observations
+under the repaired contact profile. T04-B was held out: replay prediction reduced
+its odometry-position discrepancy from about 42 cm to 5.7 cm. A fresh physical
+simulation run then completed all three points: measured parking errors were
+4.6 / 5.4 / 4.2 cm for A / C / B, while final odometry discrepancy was about 9.1 cm.
+The physical C parking error is slightly above the configured 5 cm estimated-pose
+tolerance; estimated-pose action success is not a guarantee of physical accuracy.
+See [measured validation](validation/navigation-repair-20261027.json).
+Truth is used by the offline calibration/validation tools only, never by the live
+odometry node. Different contact settings or physical hardware need new calibration.
+Old `4.316` stationary-turn estimates predate the contact repair and must not be reused.
+
+`calibrate-wheel-odometry.py` requires the full estimated trajectory when the truth
+audit starts late; treating missed initial motion as one arc gives an invalid fit.
+It fits two checkpoints and reports a separately held-out checkpoint. A synthetic
+known-bias regression verifies the recovered constants and holdout prediction.
 
 The matching Isaac environment publishes measured wheel velocities and moves its
 truth output to `/sim/ground_truth_odom` / `sim_ground_truth -> sim_base_link` for
 diagnostics. It must not publish navigation's `/odom` or `odom -> base_link`.
 Keep the environment and robot branch versions matched.
+
+The matching contact profile explicitly binds the drive-wheel physics material
+(static/dynamic friction 1.2/0.9, max combine), makes the fixed-sphere caster
+approximation frictionless (min combine), and initializes articulation contact
+solver iterations to 64/16. Teacher/CAD assets and streamed resolution are unchanged.
+Earlier effective-track measurements predate this contact repair and must not be
+reused as calibration for the updated physics without revalidation.
 
 ## Main-program interface
 

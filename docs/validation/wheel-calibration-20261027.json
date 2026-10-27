@@ -1,0 +1,27 @@
+{
+  "offline_only": true,
+  "source_audit": "baseline completed T04 run 62d40fab64824ddea68f2ae7c9cc077f, see local evidence archive",
+  "wheel_radius": 0.6308352176297838,
+  "wheel_track": 3.6116441096739855,
+  "distance_gain": 1.001325742269498,
+  "angular_gain": 0.9676,
+  "training_score": 0.01925957988967522,
+  "checkpoints": {
+    "T04-A": {
+      "used_for_fitting": true,
+      "position_error_scene": 0.06479030875705151,
+      "yaw_error_rad": 0.008903380487051304
+    },
+    "T04-C": {
+      "used_for_fitting": true,
+      "position_error_scene": 0.08962335195456259,
+      "yaw_error_rad": -0.022312679486715892
+    },
+    "T04-B": {
+      "used_for_fitting": false,
+      "position_error_scene": 0.5740968136726601,
+      "yaw_error_rad": -0.0290304737808027
+    }
+  },
+  "model": "team_robot_20261013, scene_scale=10, repaired contact profile"
+}
