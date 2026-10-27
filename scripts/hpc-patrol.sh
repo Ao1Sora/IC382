@@ -13,7 +13,7 @@ if [[ -z "${SLURM_JOB_ID:-}" && "${1:-status}" != start ]]; then
 fi
 cd "$environment"
 patrol_pids() {
-  pgrep -u "$(id -u)" -f '^/usr/bin/python3 /opt/ros/humble/bin/ros2 launch ic382_navigation patrol.launch.py' || true
+  pgrep -u "$(id -u)" -f '^/usr/bin/python3 /opt/ros/humble/bin/ros2 launch ic382_navigation (patrol|desk_navigation).launch.py' || true
 }
 case "${1:-status}" in
   stop)
@@ -32,12 +32,12 @@ case "${1:-status}" in
     ;;
   start)
     "$checkout/scripts/hpc-patrol.sh" check
-    route=${2:-"$container_checkout/ros2_ws/src/ic382_navigation/config/course_demo_route.yaml"}
+    shift
     mkdir -p "$checkout/results"
     nohup setsid flock -n "$environment/cache/navigation-mvp.lock" \
       "$checkout/scripts/hpc-ros.sh" bash "$container_checkout/scripts/run-course-navigation.sh" \
-      "$route" >"$checkout/results/patrol-launch.log" 2>&1 </dev/null &
-    echo "MVP launch started: $! (motion awaits start_mission)"
+      "$@" >"$checkout/results/patrol-launch.log" 2>&1 </dev/null &
+    echo "Desk navigation started: $! (motion awaits /ic382/inspect_desk action)"
     ;;
   check)
     [[ -z "$(patrol_pids)" ]] || { echo 'MVP already running; use stop first'; exit 1; }
@@ -53,5 +53,5 @@ case "${1:-status}" in
   status)
     for pid in $(patrol_pids); do ps -p "$pid" -o pid,pgid,args | cut -c1-220; done
     ;;
-  *) echo 'Usage: hpc-patrol.sh start [CONTAINER_ROUTE_PATH] | stop | status';exit 1;;
+  *) echo 'Usage: hpc-patrol.sh start [LAUNCH_ARGUMENT:=value ...] | stop | status';exit 1;;
 esac

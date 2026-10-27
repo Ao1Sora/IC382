@@ -1,0 +1,7 @@
+# Correlation prevents a delayed acknowledgement releasing a different stop.
+string task_id
+string point_id
+bool success
+---
+bool accepted
+string message

@@ -1,0 +1,14 @@
+# One desk per request. The caller owns desk selection and outer patrol loops.
+string desk_id
+---
+bool success
+string task_id
+string message
+string[] visited_points
+float64 planned_path_length
+---
+string task_id
+string state
+string point_id
+string[] visit_order
+uint32 completed_points
