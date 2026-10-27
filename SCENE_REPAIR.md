@@ -22,6 +22,11 @@ the existing map and ROS coordinates while correcting free-fall time scaling.
 It is not a full calibration of real robot drive gains or contact friction.
 Robot spawn height and wheel geometry are unchanged.
 
+Wheel velocity damping now scales as `100 * scene_scale` (1000 in this scene)
+so low-speed wheel commands can track against the scaled gravity/contact loads.
+This was tested with the robot-ros2 table-side profile: a TABLE_04 goal completed
+and logged, with a sampled peak command of 0.3466 m/s and zero final command.
+
 Validation on HPC job 139704, h07g02, 2026-10-27:
 
 - Original floor material binding restored; global grey binding masked.

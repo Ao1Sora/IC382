@@ -88,7 +88,7 @@ try:
     from isaacsim.core.prims import SingleArticulation
     robot=SingleArticulation(prim_path=root,name='ic382_robot_probe')
     robot.initialize()
-    robot.get_articulation_controller().set_gains(kps=__import__('numpy').zeros(len(robot.dof_names)),kds=__import__('numpy').full(len(robot.dof_names),100.))
+    robot.get_articulation_controller().set_gains(kps=__import__('numpy').zeros(len(robot.dof_names)),kds=__import__('numpy').full(len(robot.dof_names),100.*setup['scene_scale']))
     from tf2_msgs.msg import TFMessage
     from geometry_msgs.msg import TransformStamped
     from rclpy.qos import QoSProfile,DurabilityPolicy
