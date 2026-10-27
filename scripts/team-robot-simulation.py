@@ -18,6 +18,8 @@ try:
     root='/World/senior_diff_robot_scaled/senior_diff_robot'
     base=root+'/senior_diff_robot/Geometry/base_link'
     overlay=folder/'final_wheeltec_hpc45_clean.usdc'
+    import runpy
+    overlay=runpy.run_path('/workspace/scripts/repair-course-scene.py')['repair_scene'](overlay,Path('/workspace/cache/course-scene-repaired.usda'),folder)
     import omni.usd,omni.timeline,omni.graph.core as og
     context=omni.usd.get_context()
     from isaacsim.core.api import World
@@ -34,6 +36,11 @@ try:
     setup=runpy.run_path('/workspace/scripts/team-robot-loader.py')['install_team_robot'](stage,root,base)
     root=setup['root'];base=setup['base']
     wheel_radius=setup['wheel_radius'];wheel_track=setup['wheel_track']
+    # Coordinates and inertias are baked at scene_scale; preserve real-world
+    # free-fall acceleration while keeping the existing map/ROS coordinates.
+    for prim in stage.Traverse():
+        if prim.IsA(UsdPhysics.Scene):
+            UsdPhysics.Scene(prim).CreateGravityMagnitudeAttr(9.81*setup['scene_scale'])
     sensor_layer=Sdf.Layer.FindOrOpen('/workspace/dev/Collected_final_wheeltec_with_scene/course-original-lidar.usda')
     Sdf.CreatePrimInLayer(stage.GetRootLayer(),base+'/laser_link/Lidar')
     Sdf.CopySpec(sensor_layer,original_base+'/laser_link/Lidar',stage.GetRootLayer(),base+'/laser_link/Lidar')
