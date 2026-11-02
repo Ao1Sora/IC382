@@ -1,0 +1,33 @@
+encoder: {base_height: 0.63, turn_blend_speed: 0.5, turn_track: 3.611644, wheel_radius: 0.630835,
+  wheel_track: 3.611644}
+inflation_enabled: false
+initial_pose: {x: 15.0, y: -30.0, yaw: 0.0, z: 0.0}
+inspection:
+  desks:
+  - id: T04
+    polygon:
+    - [47.200124799264586, 28.857406934967777]
+    - [52.629809499192994, 34.235101972261994]
+    - [35.74107958379524, 51.28710618353044]
+    - [30.31139488386683, 45.90941114623622]
+  parking_distance_m: 0.5
+  points_per_desk: 3
+live_obstacles: false
+log_directory: /workspace/robot-ros2/results/isaac-20261102/journal
+map: /workspace/robot-ros2/simulation/maps/localization.yaml
+max_angular: 0.4
+max_linear_mps: 0.2
+minimum_dwell_seconds: 1.0
+navigation_map: /workspace/robot-ros2/simulation/maps/navigation.yaml
+overrides: /workspace/robot-ros2/simulation/config/course_overrides.yaml
+params_file: /workspace/robot-ros2/simulation/config/teacher_nav2.yaml
+robot_footprint_scene:
+- [-1.3, -2.6]
+- [-1.3, 2.1]
+- [5.05, 2.1]
+- [5.05, -2.6]
+scene_scale: 10.0
+schema_version: 1
+start_hardware: false
+use_sim_time: true
+work_timeout_seconds: 120.0

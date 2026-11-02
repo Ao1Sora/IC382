@@ -1,10 +1,11 @@
-"""Persist mission events before acknowledging them; never treat stubs as real results."""
+"""Persist inspection events before acknowledging them to the action server."""
 import json
 import os
 from pathlib import Path
 import re
 import rclpy
 from rclpy.node import Node
+from rclpy.executors import ExternalShutdownException
 from rclpy.clock import Clock, ClockType
 from std_msgs.msg import Bool, String
 
@@ -54,7 +55,7 @@ def main(args=None):
     node = Journal()
     try:
         rclpy.spin(node)
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
     finally:
         node.destroy_node()

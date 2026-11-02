@@ -7,7 +7,7 @@ from sensor_msgs.msg import JointState
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
 from tf2_ros import TransformBroadcaster
-from .inspection import WheelIntegrator
+from .simulation_integrator import WheelIntegrator
 
 
 class WheelOdometry(Node):

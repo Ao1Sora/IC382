@@ -1,8 +1,9 @@
-"""The sole final cmd_vel publisher in patrol.launch.py; independent wall-clock watchdog."""
+"""Final cmd_vel publisher for teacher navigation; independent wall-clock watchdog."""
 import math
 import time
 import rclpy
 from rclpy.node import Node
+from rclpy.executors import ExternalShutdownException
 from rclpy.clock import Clock, ClockType
 from rclpy.qos import qos_profile_sensor_data
 from geometry_msgs.msg import Twist
@@ -52,7 +53,7 @@ def main(args=None):
     node = VelocityGate()
     try:
         rclpy.spin(node)
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
     finally:
         if rclpy.ok():

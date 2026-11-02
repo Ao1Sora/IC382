@@ -2,7 +2,7 @@
 <package format="3">
   <name>ic382_interfaces</name>
   <version>0.1.0</version>
-  <description>IC382 custom ROS2 messages for object classification</description>
+  <description>Desk inspection action and explicit work-completion service</description>
   <maintainer email="maintainers@example.com">IC382 team</maintainer>
   <license>LicenseRef-Proprietary</license>
   <buildtool_depend>ament_cmake</buildtool_depend>

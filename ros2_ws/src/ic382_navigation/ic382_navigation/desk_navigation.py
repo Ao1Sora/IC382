@@ -10,7 +10,7 @@ import rclpy
 from rclpy.action import ActionClient, ActionServer, CancelResponse, GoalResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.clock import Clock, ClockType
-from rclpy.executors import MultiThreadedExecutor
+from rclpy.executors import MultiThreadedExecutor, ExternalShutdownException
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from rclpy.task import Future
@@ -43,6 +43,7 @@ class DeskNavigation(Node):
         self.minimum_dwell = float(self.declare_parameter('minimum_dwell_seconds', 1.).value)
         self.work_timeout = float(self.declare_parameter('work_timeout_seconds', 120.).value)
         self.nav_timeout = float(self.declare_parameter('navigation_timeout', 600.).value)
+        self.localization = self.declare_parameter('localization', 'wheeltec_amcl').value
         if self.sensor_timeout <= 0 or self.work_timeout <= 0 or self.minimum_dwell < 0 or self.minimum_dwell >= self.work_timeout:
             raise ValueError('Invalid timing parameters')
         self.tf = Buffer(); self.listener = TransformListener(self.tf, self)
@@ -197,7 +198,7 @@ class DeskNavigation(Node):
         for start in points:
             for goal in points:
                 if start['id']!=goal['id']:costs[(start['id'],goal['id'])]=await self.path_length(start,goal)
-        order,length=shortest_visit_order(points,costs)
+        order,length=shortest_visit_order(points,costs, min(3, len(points)))
         self.order=list(self.visited)+[p['id'] for p in order]
         self.events.emit('inspection_route_planned',{'desk_id':self.desk_id,'visit_order':self.order,
             'remaining_path_length':length,'costs':[{'from':a or 'CURRENT','to':b,'length':v if math.isfinite(v) else None} for (a,b),v in costs.items()]})
@@ -221,10 +222,13 @@ class DeskNavigation(Node):
         try:
             self.state='PREPARING'
             await self.wait(lambda:not self.health() and self.nav.client.server_is_ready(),90,healthy=False,label='navigation_ready')
-            self.events.emit('desk_inspection_started',{'desk_id':self.desk_id,'localization':'wheel_dead_reckoning'})
+            self.events.emit('desk_inspection_started',{'desk_id':self.desk_id,'localization':self.localization})
             remaining=list(self.desks[self.desk_id])
             while remaining:
                 order,length=await self.plan(remaining)
+                # Initial candidate pool may have more than three edge viewpoints.
+                # Freeze the selected three; subsequent legs replan their order.
+                remaining=list(order)
                 if not self.visited:self.planned_length=length
                 point=order[0];self.point_id=point['id'];self.state='NAVIGATING'
                 self.events.emit('inspection_navigation_requested',point)
@@ -270,7 +274,8 @@ class DeskNavigation(Node):
 def main(args=None):
     rclpy.init(args=args);node=DeskNavigation();executor=MultiThreadedExecutor(num_threads=4);executor.add_node(node)
     try:executor.spin()
-    except KeyboardInterrupt:pass
+    except (KeyboardInterrupt, ExternalShutdownException):pass
     finally:
-        node.allow.publish(Bool(data=False));executor.shutdown();node.destroy_node()
+        if rclpy.ok():node.allow.publish(Bool(data=False))
+        executor.shutdown();node.destroy_node()
         if rclpy.ok():rclpy.shutdown()

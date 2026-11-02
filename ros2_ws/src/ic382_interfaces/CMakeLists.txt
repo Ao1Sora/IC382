@@ -12,8 +12,6 @@ find_package(builtin_interfaces REQUIRED)
 find_package(action_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/TaggingCommand.msg"
-  "msg/PorterRequest.msg"
   "action/InspectDesk.action"
   "srv/CompleteInspection.srv"
   DEPENDENCIES geometry_msgs builtin_interfaces

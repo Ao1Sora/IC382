@@ -1,1 +1,1 @@
-"""IC382 navigation; perception and tagging are timed placeholders."""
+"""Three-point desk inspection on the course Wheeltec navigation stack."""
