@@ -1,6 +1,7 @@
 # IC382 HPC 仿真环境
 
 当前版本：**Isaac Sim 6.0.1 + ROS2 Humble + 原始 RTX OmniLidar + 团队 CAD 机器人**。
+新机器部署、机器人代码、资产校验和依赖重建步骤参见 [DEPLOYMENT.md](DEPLOYMENT.md)。精确旧版 ROS 包可能需要额外的软件源快照；尚未完成干净机器的端到端部署验收。
 本分支 `hpc-isaac-sim-env` 保存 2026-10-21 从 HPC 实际运行目录导出的环境文件。
 机器人导航、视觉和任务代码在独立的 `robot-ros2` 分支维护。
 

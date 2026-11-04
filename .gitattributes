@@ -38,3 +38,5 @@
 "dev/Collected_final_wheeltec_with_scene/updated 3D wheelbase and the scene/IC382_scene_Sep_v3/omniverse-content-production.s3.us-west-2.amazonaws.com/Materials/2023_1/Automotive/Surfacing/ov_metal_a_01/ov_metal_a_01_orm.png" filter=lfs diff=lfs merge=lfs -text
 "robots/team_robot_20261013/team_robot.usdc" filter=lfs diff=lfs merge=lfs -text
 "robots/team_robot_20261013/team_robot_scene.usdc" filter=lfs diff=lfs merge=lfs -text
+
+dev/Collected_final_wheeltec_with_scene/course-original-lidar.usda text eol=lf
