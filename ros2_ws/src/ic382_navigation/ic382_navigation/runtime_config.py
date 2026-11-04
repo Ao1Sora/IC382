@@ -9,7 +9,8 @@ def resolve_runtime(document, path):
     if document.get('schema_version') != 1:
         raise ValueError('Unsupported runtime schema_version')
     result = dict(document)
-    for key in ('map', 'navigation_map', 'params_file', 'points', 'log_directory'):
+    for key in ('map', 'navigation_map', 'params_file', 'points', 'log_directory',
+                'perception_config'):
         value = result.get(key, '')
         if value:
             target = Path(value).expanduser()

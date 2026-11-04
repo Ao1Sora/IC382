@@ -1,0 +1,22 @@
+# Expected synthetic-generation settings. Paths are supplied on the command line.
+scene_usd: /path/to/IC382_scene_Sep_v3.usd
+output: datasets/sim/sep_v3
+images: 1000
+seed: 0
+image_width: 640
+image_height: 480
+camera_hfov_deg: 60.0          # nominal Astra Pro; record as uncalibrated
+desk_viewpoints: 3
+camera_jitter_m: 0.10
+camera_jitter_deg: 5.0
+object_yaw_min_deg: 0.0
+object_yaw_max_deg: 360.0
+occlusion_max: 0.40
+empty_desk_fraction: 0.10
+min_instances_per_class: 300
+classes:
+  - ic_material
+  - personal
+  - disposables
+  - person
+  - reserved_card

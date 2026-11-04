@@ -13,6 +13,12 @@ max_angular: 0.3
 minimum_dwell_seconds: 1.0
 work_timeout_seconds: 120.0
 log_directory: ~/.local/state/ic382/missions
+start_perception: true
+model_profile: coco_bootstrap   # steward_v1 once the five-class weights pass gates
+model_path: ""                  # /home/student/dev/models/yolo26n.pt on the Jetson
+tagging_enabled: false
+perception_required: false
+require_safety: true
 
 inspection:
   parking_distance_m: 0.5  # Net gap from robot FRONT outline to tabletop edge

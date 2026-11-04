@@ -18,6 +18,11 @@ class ContractTests(unittest.TestCase):
         node = dict(name="mission", package="ic382_mission", executable="mission_node")
         self.assertEqual(self.load({"nodes": [node]}), [node])
 
+    def test_parameters_are_optional_and_validated(self):
+        node = dict(name="mission", package="ic382_mission", executable="mission_node",
+                    parameters={"enabled_flag": True, "roi": [0.0, 1.0], "name": "x"})
+        self.assertEqual(self.load({"nodes": [node]}), [node])
+
     def test_invalid_manifest_rejected(self):
         node = dict(name="mission", package="ic382_mission", executable="mission_node")
         for config in [
@@ -26,6 +31,10 @@ class ContractTests(unittest.TestCase):
             {"nodes": [dict(node, executable="../bad")]},
             {"nodes": [dict(node, enabled="false")]},
             {"nodes": [dict(node, typo=True)]},
+            {"nodes": [dict(node, parameters="bad")]},
+            {"nodes": [dict(node, parameters={"bad-key": 1})]},
+            {"nodes": [dict(node, parameters={"nested": {"a": 1}})]},
+            {"nodes": [dict(node, parameters={"mixed": [1, {"a": 1}]})]},
         ]:
             with self.subTest(config=config), self.assertRaises(ValueError):
                 self.load(config)

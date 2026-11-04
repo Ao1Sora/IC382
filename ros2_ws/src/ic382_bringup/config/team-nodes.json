@@ -1,11 +1,35 @@
 {
   "nodes": [
     {
+      "name": "safety_monitor",
+      "package": "ic382_perception",
+      "executable": "safety_monitor",
+      "enabled": true,
+      "parameters": {
+        "model_profile": "coco_bootstrap",
+        "model_path": "",
+        "fail_safe_on_stale": false
+      }
+    },
+    {
       "name": "object_classifier",
       "package": "ic382_perception",
       "executable": "object_classifier",
       "enabled": true,
-      "arguments": []
+      "parameters": {
+        "tagging_enabled": false
+      }
+    },
+    {
+      "name": "fair_chance_manager",
+      "package": "ic382_perception",
+      "executable": "fair_chance_manager",
+      "enabled": true,
+      "parameters": {
+        "desks": [],
+        "tagging_enabled": false,
+        "perception_required": false
+      }
     }
   ]
 }

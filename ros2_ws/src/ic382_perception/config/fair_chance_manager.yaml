@@ -1,0 +1,31 @@
+fair_chance_manager:
+  ros__parameters:
+    use_sim_time: false
+    desks: []                      # e.g. [T01, T02, T03, T04]; empty means idle
+    auto_start: true
+    mission_id: ""
+    round2_delay_seconds: 60.0
+    observation_window_seconds: 8.0
+    min_frames: 5
+    action_timeout_seconds: 900.0
+    work_timeout_seconds: 120.0
+    perception_required: false     # false for the COCO bootstrap profile
+    tagging_enabled: false         # true only after the five-class model passes gates
+    tag_settle_seconds: 0.0
+    spec_log_path: /home/student/dev/decision_log.json
+    jsonl_path: ""
+    porter_topic: /porter_cmd
+    tagging_topic: /tagging_cmd
+    target_pose_topic: /target_tag_pose
+    context_topic: /ic382/perception/context
+    classified_topic: /ic382/perception/classified
+    anomalies_topic: /ic382/perception/anomalies
+    safety_state_topic: /ic382/safety_state
+    status_topic: /ic382/perception/status
+    person_desk_limit_m: 1.5
+    reserved_card_conf: 0.5
+    safety_timeout: 2.0
+    base_frame: base_link
+    map_frame: map
+    use_tf: true
+    tf_timeout: 0.1

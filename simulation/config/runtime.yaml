@@ -14,6 +14,20 @@ inspection:
   points_per_desk: 3
 live_obstacles: false
 log_directory: /workspace/robot-ros2/results/isaac-20261102/journal
+start_perception: false
+# model_path: /workspace/robot-ros2/models/yolo26n.pt
+# model_profile: coco_bootstrap
+# tagging_enabled: false
+# perception_required: false
+perception_config: perception_sim.yaml
+perception_log_path: /workspace/robot-ros2/results/perception/decision_log.json
+camera_color_topic: /camera/color/image_raw
+camera_depth_topic: /camera/depth/image_raw
+camera_info_topic: /camera/color/camera_info
+camera_depth_scale: 1.0
+camera_base_frame: base_link
+camera_frame: camera_link
+map_frame: map
 map: /workspace/robot-ros2/simulation/maps/localization.yaml
 max_angular: 0.4
 max_linear_mps: 0.2

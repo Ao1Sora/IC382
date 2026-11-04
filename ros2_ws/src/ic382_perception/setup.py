@@ -20,5 +20,7 @@ setup(
     tests_require=["pytest"],
     entry_points={"console_scripts": [
         "object_classifier = ic382_perception.object_classifier:main",
+        "safety_monitor = ic382_perception.safety_monitor:main",
+        "fair_chance_manager = ic382_perception.fair_chance_manager:main",
     ]},
 )
