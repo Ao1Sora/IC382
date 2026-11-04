@@ -62,3 +62,9 @@ def shortest_visit_order(points, costs, count=None):
     if best is None:
         raise ValueError('No obstacle-aware route visits all remaining inspection points')
     return best
+
+
+def next_inspection_point(points, current):
+    """Select just the next stop from the current pose; never predict later legs."""
+    if not points:raise ValueError('No remaining inspection points')
+    return min(points,key=lambda p:(math.hypot(p['x']-current['x'],p['y']-current['y']),p['id']))

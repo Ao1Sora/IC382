@@ -1,0 +1,8 @@
+<library path="ic382_clearance_lattice">
+  <class name="ic382_planners/ClearanceLattice" type="ic382_planners::ClearanceLattice" base_class_type="nav2_core::GlobalPlanner">
+    <description>Humble lattice planner with a separate recovery planning clearance.</description>
+  </class>
+  <class name="ic382_planners/StagedGoalController" type="ic382_planners::StagedGoalController" base_class_type="nav2_core::Controller">
+    <description>Approach position, then latch translation and align exact final heading.</description>
+  </class>
+</library>

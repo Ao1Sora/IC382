@@ -1,37 +1,39 @@
-# All distances are real metres; all angles are radians.
-# Relative paths resolve against THIS file, not the terminal working directory.
 schema_version: 1
-map: ""                    # Measured lidar SLAM map YAML (AMCL)
-navigation_map: ""         # Same-frame map with complete tabletop keepout occupancy
-params_file: ""            # Empty: use installed Wheeltec car-mode profile
-points: ""                 # Optional manually measured points; empty: generate from desks
-start_hardware: false      # Set true only when ready to start the physical drivers
-live_obstacles: true       # false: saved maps only in both planning/control costmaps; AMCL still uses lidar
-inflation_enabled: false   # No extra obstacle buffers; preserve footprint collision checks
-max_linear: 0.1
-max_angular: 0.3
+map: /home/wheeltec/ic382-robot/maps/20261104-184000/map.yaml
+navigation_map: /home/wheeltec/ic382-robot/maps/20261104-184000/navigation_map.yaml
+params_file: ''
+points: ''
+start_hardware: false
+max_linear: 0.05
+max_angular: 0.15
 minimum_dwell_seconds: 1.0
 work_timeout_seconds: 120.0
-log_directory: ~/.local/state/ic382/missions
-start_perception: true
-model_profile: coco_bootstrap   # steward_v1 once the five-class weights pass gates
-model_path: ""                  # /home/student/dev/models/yolo26n.pt on the Jetson
-tagging_enabled: false
-perception_required: false
-require_safety: true
-
+log_directory: /home/wheeltec/.local/state/ic382/missions
 inspection:
-  parking_distance_m: 0.5  # Net gap from robot FRONT outline to tabletop edge
+  parking_distance_m: 0.4
   points_per_desk: 3
-  # null: inherit the real robot footprint from the installed teacher parameters.
-  # Update this polygon after fitting upper-body mechanisms. Coordinates in base_footprint.
   robot_footprint: null
-  # Measured convex tabletop polygons in map coordinates; corners in perimeter order.
-  # Each edge yields one desk-facing candidate. Nav2 chooses a feasible three-point route.
-  # Example structure only (no invented scene coordinates):
-  # - id: T04
-  #   polygon: [[x1,y1], [x2,y2], [x3,y3], [x4,y4]]
-  desks: []
-
-# Camera height/FOV/range are deliberately not guessed. Candidate poses face the
-# desk, but camera coverage must be calibrated/verified before operational use.
+  desks:
+  - id: T01
+    polygon:
+    - - 1.1088
+      - -0.2003
+    - - 0.705
+      - -0.1167
+    - - 0.7816
+      - 0.2537
+    - - 1.1855
+      - 0.1701
+  parking_reference: laser
+  laser_body_bounds:
+    front: 0.1
+    back: 0.3
+    left: 0.2
+    right: 0.2
+live_obstacles: true
+inflation_enabled: false
+scene_name: 20261104-184000
+localization:
+  mode: laser_primary
+  use_imu: true
+  local_scan_match: true

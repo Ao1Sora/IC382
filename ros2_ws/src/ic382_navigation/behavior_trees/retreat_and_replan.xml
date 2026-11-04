@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="NavigateWithBoundedRetreat">
+      <SetBlackboard output_key="selected_planner" value="GridBased"/>
+      <RecoveryNode number_of_retries="2" name="NavigateRecovery">
+        <Sequence name="FreshPlanThenFollow">
+          <ComputePathToPose goal="{goal}" path="{path}" planner_id="{selected_planner}"/>
+          <FollowPath path="{path}" controller_id="FollowPath" goal_checker_id="goal_checker"/>
+        </Sequence>
+        <ReactiveFallback name="RecoverOrAcceptNewGoal">
+          <GoalUpdated/>
+          <Sequence name="RetreatThenWiderRoute">
+            <BackUp backup_dist="0.10" backup_speed="0.05" time_allowance="12.0"/>
+            <SetBlackboard output_key="selected_planner" value="GridBasedWide"/>
+            <ClearEntireCostmap service_name="local_costmap/clear_entirely_local_costmap"/>
+            <ClearEntireCostmap service_name="global_costmap/clear_entirely_global_costmap"/>
+          </Sequence>
+        </ReactiveFallback>
+      </RecoveryNode>
+    </Sequence>
+  </BehaviorTree>
+</root>

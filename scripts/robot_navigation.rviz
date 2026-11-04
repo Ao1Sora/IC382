@@ -1,0 +1,104 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: nav2_rviz_plugins/Navigation 2
+    Name: Navigation 2
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Fixed Frame: map
+    Background Color: 35; 35; 35
+    Frame Rate: 20
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 30
+    - Class: rviz_default_plugins/Map
+      Name: Live map
+      Enabled: true
+      Alpha: 0.85
+      Topic:
+        Value: /map
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/RobotModel
+      Name: Robot
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/LaserScan
+      Name: Live lidar
+      Enabled: true
+      Size (m): 0.035
+      Topic:
+        Value: /scan
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+    - Class: rviz_default_plugins/Path
+      Name: Global planned path
+      Enabled: true
+      Color: 30; 255; 80
+      Topic:
+        Value: /plan
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Path
+      Name: Local controller path
+      Enabled: true
+      Color: 255; 100; 20
+      Topic:
+        Value: /local_plan
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Desks - yellow is selected
+      Enabled: true
+      Topic:
+        Value: /ic382/desks
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+    - Class: rviz_default_plugins/Polygon
+      Name: Actual collision footprint
+      Enabled: true
+      Color: 0; 255; 80
+      Alpha: 0.8
+      Topic:
+        Value: /ic382/body_footprint
+        Reliability Policy: Reliable
+    - Class: nav2_rviz_plugins/ParticleCloud
+      Name: AMCL candidate positions
+      Enabled: true
+      Topic:
+        Value: /particle_cloud
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+  Enabled: true
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Value: /clicked_point
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /goal_pose
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Map view
+      Target Frame: map
+      Scale: 40
+      X: 1
+      Y: 0
+      Angle: 0
+Window Geometry:
+  Width: 1350
+  Height: 880
+  X: 20
+  Y: 30

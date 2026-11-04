@@ -1,6 +1,17 @@
 from copy import deepcopy
 import pytest
-from ic382_navigation.teacher_profile import teacher_profile, validate_physical_points
+from ic382_navigation.teacher_profile import teacher_profile, validate_physical_points, laser_primary_amcl
+
+
+def test_laser_primary_retains_motion_trigger_and_does_not_reset_initial_pose():
+    source={'update_min_a':.1,'update_min_d':.05,'set_initial_pose':True,'max_beams':60}
+    result=laser_primary_amcl(source)
+    assert source['set_initial_pose'] is True
+    assert 0<result['update_min_d']<source['update_min_d']
+    assert 0<result['update_min_a']<source['update_min_a']
+    assert result['max_beams']>source['max_beams']
+    assert result['set_initial_pose'] is False
+    assert result['z_hit']+result['z_rand']==1
 
 
 def baseline():

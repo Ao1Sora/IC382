@@ -7,7 +7,7 @@ import time
 import uuid
 import yaml
 import rclpy
-from rclpy.action import ActionClient, ActionServer, CancelResponse, GoalResponse
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.clock import Clock, ClockType
 from rclpy.executors import MultiThreadedExecutor, ExternalShutdownException
@@ -15,17 +15,16 @@ from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from rclpy.task import Future
 from action_msgs.msg import GoalStatus
-from geometry_msgs.msg import PoseStamped, Twist
+from geometry_msgs.msg import Twist
 from lifecycle_msgs.srv import GetState
-from nav_msgs.msg import Odometry
-from nav2_msgs.action import ComputePathToPose
+from nav_msgs.msg import Odometry, Path as NavPath
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Bool, String
 from tf2_ros import Buffer, TransformException, TransformListener
 from ic382_interfaces.action import InspectDesk
 from ic382_interfaces.srv import CompleteInspection
 from .events import Events
-from .inspection import canonical_desk, load_desks, shortest_visit_order
+from .inspection import canonical_desk, load_desks, next_inspection_point
 from .navigation import Navigator
 
 
@@ -44,16 +43,22 @@ class DeskNavigation(Node):
         self.work_timeout = float(self.declare_parameter('work_timeout_seconds', 120.).value)
         self.nav_timeout = float(self.declare_parameter('navigation_timeout', 600.).value)
         self.localization = self.declare_parameter('localization', 'wheeltec_amcl').value
+        self.require_alignment=self.declare_parameter('require_local_alignment',False).value
+        self.alignment_ok=False;self.alignment_at=-math.inf
+        self.create_subscription(String,'/ic382/local_alignment',self.alignment,10,callback_group=self.group)
         if self.sensor_timeout <= 0 or self.work_timeout <= 0 or self.minimum_dwell < 0 or self.minimum_dwell >= self.work_timeout:
             raise ValueError('Invalid timing parameters')
         self.tf = Buffer(); self.listener = TransformListener(self.tf, self)
         self.scan_at = self.odom_at = self.logger_at = -math.inf
         self.logger_ok = False; self.nav2_active = False
         self.lifecycle_at = -math.inf; self.lifecycle_pending = False
-        self.log_ack = 0; self.last_ack_at = time.monotonic()
+        self.log_ack = 0
         self.state = 'IDLE'; self.task_id = ''; self.desk_id = ''; self.point_id = ''
+        self.direct_active = False; self.direct_at = -math.inf
+        self.create_subscription(Bool, '/ic382/direct_navigation_active', self.direct_status, 10)
         self.order = []; self.visited = []; self.work_result = None
         self.planned_length = 0.; self.odom_speed = (math.inf, math.inf)
+        self.leg_target=None;self.leg_length=None
         self.final_command = (math.inf, math.inf)
         self.reserved = False; self.lock = threading.Lock(); self.task_handle = None
         self.events = Events(self, uuid.uuid4().hex)
@@ -63,10 +68,10 @@ class DeskNavigation(Node):
         self.create_subscription(LaserScan, 'scan_nav', self.scan, qos_profile_sensor_data, callback_group=self.group)
         self.create_subscription(Odometry, 'odom', self.odom, qos_profile_sensor_data, callback_group=self.group)
         self.create_subscription(Twist, 'cmd_vel', self.command, 10, callback_group=self.group)
+        self.create_subscription(NavPath,'/plan',self.record_leg_path,10,callback_group=self.group)
         self.create_subscription(Bool, '/ic382/logger_ready', self.logger, 10, callback_group=self.group)
         self.create_subscription(String, '/ic382/log_ack', self.ack, 100, callback_group=self.group)
         self.lifecycle = self.create_client(GetState, '/bt_navigator/get_state', callback_group=self.group)
-        self.planner = ActionClient(self, ComputePathToPose, 'compute_path_to_pose', callback_group=self.group)
         self.create_service(CompleteInspection, '/ic382/complete_inspection', self.complete_work, callback_group=self.group)
         self.server = ActionServer(self, InspectDesk, '/ic382/inspect_desk', self.execute,
                                   goal_callback=self.accept, cancel_callback=self.cancel, callback_group=self.group)
@@ -75,12 +80,26 @@ class DeskNavigation(Node):
     def scan(self, msg):
         if msg.ranges:self.scan_at = time.monotonic()
 
+    def alignment(self,msg):
+        try:
+            self.alignment_ok=bool(json.loads(msg.data).get('healthy',False));self.alignment_at=time.monotonic()
+        except ValueError:pass
+
     def odom(self, msg):
         self.odom_at = time.monotonic()
         self.odom_speed = (msg.twist.twist.linear.x, msg.twist.twist.angular.z)
 
     def command(self, msg):
         self.final_command = (msg.linear.x, msg.angular.z)
+
+    def record_leg_path(self,msg):
+        # Observe the path Nav2 actually generates for this leg; never request
+        # hypothetical future paths just to calculate a trip-length metric.
+        if self.state!='NAVIGATING' or self.leg_target is None or self.leg_length is not None or not msg.poses:return
+        p=msg.poses[-1].pose.position
+        if math.hypot(p.x-self.leg_target['x'],p.y-self.leg_target['y'])>.01:return
+        self.leg_length=sum(math.hypot(b.pose.position.x-a.pose.position.x,b.pose.position.y-a.pose.position.y)
+            for a,b in zip(msg.poses,msg.poses[1:]))
 
     def logger(self, msg):
         self.logger_ok, self.logger_at = msg.data, time.monotonic()
@@ -89,15 +108,17 @@ class DeskNavigation(Node):
         try:
             d = json.loads(msg.data)
             if d.get('run_id') == self.events.run_id and d.get('source') == self.get_name() and isinstance(d.get('seq'), int):
-                self.log_ack = max(self.log_ack, d['seq']); self.last_ack_at = time.monotonic()
+                self.log_ack = max(self.log_ack, d['seq'])
         except (ValueError, TypeError):pass
 
     def health(self):
         now = time.monotonic()
+        if self.require_alignment and (not self.alignment_ok or now-self.alignment_at>3.):
+            return 'local_scan_map_alignment_unavailable'
         for name, stamp in [('scan', self.scan_at), ('odometry', self.odom_at)]:
             if now-stamp > self.sensor_timeout:return name+'_stale'
         if not self.logger_ok or now-self.logger_at > self.sensor_timeout:return 'logger_unavailable'
-        if self.events.seq > self.log_ack and now-self.last_ack_at > 5:return 'journal_ack_timeout'
+        if self.events.pending_age(self.log_ack,now)>5:return 'journal_ack_timeout'
         if not self.nav2_active or now-self.lifecycle_at > 10:return 'nav2_inactive'
         if not self.tf.can_transform('map', 'base_footprint', rclpy.time.Time()):return 'map_pose_unavailable'
         try:transform = self.tf.lookup_transform('map', 'base_footprint', rclpy.time.Time())
@@ -130,9 +151,13 @@ class DeskNavigation(Node):
         try:self.nav2_active = future.result().current_state.id == 3
         except Exception:self.nav2_active = False
 
+    def direct_status(self, message):
+        self.direct_active = message.data; self.direct_at = time.monotonic()
+
     def accept(self, request):
         with self.lock:
-            if canonical_desk(request.desk_id) not in self.desks or self.reserved or self.nav.pending:
+            if (canonical_desk(request.desk_id) not in self.desks or self.reserved or self.nav.pending
+                    or (self.direct_active and time.monotonic()-self.direct_at < 1.)):
                 return GoalResponse.REJECT
             self.reserved = True
         return GoalResponse.ACCEPT
@@ -165,44 +190,16 @@ class DeskNavigation(Node):
         return {'x':tf.translation.x,'y':tf.translation.y,
                 'yaw':math.atan2(2*(q.w*q.z+q.x*q.y),1-2*(q.y*q.y+q.z*q.z))}
 
-    def stamped(self, p):
-        msg=PoseStamped();msg.header.frame_id='map';msg.header.stamp=self.get_clock().now().to_msg()
-        msg.pose.position.x=float(p['x']);msg.pose.position.y=float(p['y'])
-        msg.pose.orientation.z=math.sin(p['yaw']/2);msg.pose.orientation.w=math.cos(p['yaw']/2)
-        return msg
-
-    async def path_length(self, start, goal):
-        request=ComputePathToPose.Goal();request.start=self.stamped(start);request.goal=self.stamped(goal)
-        request.use_start=True;request.planner_id='GridBased'
-        future=self.planner.send_goal_async(request)
-        await self.wait(future.done,20,label='planner_acceptance')
-        handle=future.result()
-        if not handle.accepted:return math.inf
-        result=handle.get_result_async()
-        try:await self.wait(result.done,20,label='planner_result')
-        except Exception:
-            handle.cancel_goal_async();raise
-        response=result.result()
-        if response.status!=GoalStatus.STATUS_SUCCEEDED:return math.inf
-        poses=response.result.path.poses
-        if not poses:return math.inf
-        return sum(math.hypot(b.pose.position.x-a.pose.position.x,b.pose.position.y-a.pose.position.y)
-                   for a,b in zip(poses,poses[1:]))
-
-    async def plan(self, points):
+    def select_next(self, points):
         self.state='PLANNING';self.allow.publish(Bool(data=False))
-        await self.wait(self.planner.server_is_ready,15,label='planner_ready')
-        current=self.pose();costs={}
-        for goal in points:
-            costs[(None,goal['id'])]=await self.path_length(current,goal)
-        for start in points:
-            for goal in points:
-                if start['id']!=goal['id']:costs[(start['id'],goal['id'])]=await self.path_length(start,goal)
-        order,length=shortest_visit_order(points,costs, min(3, len(points)))
-        self.order=list(self.visited)+[p['id'] for p in order]
-        self.events.emit('inspection_route_planned',{'desk_id':self.desk_id,'visit_order':self.order,
-            'remaining_path_length':length,'costs':[{'from':a or 'CURRENT','to':b,'length':v if math.isfinite(v) else None} for (a,b),v in costs.items()]})
-        return order,length
+        current=self.pose()
+        point=next_inspection_point(points,current)
+        self.order=list(self.visited)+[point['id']]
+        self.events.emit('inspection_next_point_selected',dict(
+            desk_id=self.desk_id,point_id=point['id'],start=current,target=point,
+            visited_points=list(self.visited),selection='nearest_unvisited_from_current_pose',
+            planning='Nav2 plans only this leg, with its normal recovery behavior'))
+        return point
 
     def complete_work(self, request, response):
         with self.lock:
@@ -217,24 +214,25 @@ class DeskNavigation(Node):
     async def execute(self, handle):
         self.task_handle=handle;self.task_id=uuid.uuid4().hex;self.desk_id=canonical_desk(handle.request.desk_id)
         self.point_id='';self.visited=[];self.order=[];self.planned_length=0.
-        self.events.run_id=self.task_id;self.events.seq=0;self.log_ack=0;self.last_ack_at=time.monotonic()
+        self.events.begin(self.task_id);self.log_ack=0
         result=InspectDesk.Result();result.task_id=self.task_id
         try:
             self.state='PREPARING'
             await self.wait(lambda:not self.health() and self.nav.client.server_is_ready(),90,healthy=False,label='navigation_ready')
             self.events.emit('desk_inspection_started',{'desk_id':self.desk_id,'localization':self.localization})
             remaining=list(self.desks[self.desk_id])
-            while remaining:
-                order,length=await self.plan(remaining)
-                # Initial candidate pool may have more than three edge viewpoints.
-                # Freeze the selected three; subsequent legs replan their order.
-                remaining=list(order)
-                if not self.visited:self.planned_length=length
-                point=order[0];self.point_id=point['id'];self.state='NAVIGATING'
+            count=min(3,len(remaining))
+            while len(self.visited)<count:
+                # Only after the previous stop and work acknowledgement do we
+                # read the actual pose and submit one fresh Nav2 target.
+                point=self.select_next(remaining)
+                self.leg_target=point;self.leg_length=None
+                self.point_id=point['id'];self.state='NAVIGATING'
                 self.events.emit('inspection_navigation_requested',point)
                 self.nav.start(point,time.monotonic())
                 await self.wait(lambda:self.nav.poll(time.monotonic()) is not None,self.nav_timeout+1,label='navigation')
                 outcome=self.nav.poll(time.monotonic())
+                if self.leg_length is not None:self.planned_length+=self.leg_length
                 if outcome!='SUCCEEDED':raise TaskFailure(str(outcome))
                 self.state='STOPPING';self.allow.publish(Bool(data=False))
                 stopped_since=[None]

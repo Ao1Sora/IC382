@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-28",
+  "jetson_workspace": "/home/wheeltec/ic382-robot",
+  "teacher_packages_built": [
+    "turn_on_wheeltec_robot",
+    "wheeltec_robot_keyboard",
+    "wheeltec_slam_toolbox",
+    "wheeltec_nav2",
+    "wheeltec_robot_urdf",
+    "wheeltec_rviz2",
+    "wheeltec_radar"
+  ],
+  "team_packages_built": [
+    "ic382_interfaces",
+    "ic382_navigation"
+  ],
+  "unit_tests_passed": 23,
+  "retired_code_tests_removed": true,
+  "isolated_graph_gate_only_final_cmd_vel": true,
+  "four_candidates_three_stops_and_handshakes_passed": true,
+  "physical_motion_test": false,
+  "limitations": [
+    "No actual movement, map alignment or parking precision acceptance.",
+    "Teacher source emitted compiler warnings including integer conversions and shift precedence; originals preserved.",
+    "Sensor-less Nav2 launch teardown still has upstream errors; shutdown while active on physical hardware remains unverified.",
+    "Large model/data assets excluded from source bundle are recorded in teacher/PROVENANCE.json."
+  ]
+}

@@ -13,9 +13,9 @@ from rclpy.action import ActionClient, ActionServer
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
-from geometry_msgs.msg import TransformStamped, Twist
+from geometry_msgs.msg import TransformStamped, Twist, PoseStamped
 from lifecycle_msgs.srv import GetState
-from nav_msgs.msg import Odometry
+from nav_msgs.msg import Odometry, Path as NavPath
 from nav2_msgs.action import ComputePathToPose, NavigateToPose
 from sensor_msgs.msg import LaserScan
 from tf2_ros import TransformBroadcaster
@@ -31,10 +31,12 @@ class FakeNav2(Node):
         super().__init__('fake_nav2_interface_test')
         group = ReentrantCallbackGroup()
         self.xy = [0., 0.]
+        self.plan_requests=[];self.nav_starts=[];self.nav_goals=[]
         self.tf = TransformBroadcaster(self)
         self.scan = self.create_publisher(LaserScan, '/scan_nav', 10)
         self.odom = self.create_publisher(Odometry, '/odom', 10)
         self.twist = self.create_publisher(Twist, '/nav2_cmd_vel', 10)
+        self.paths=self.create_publisher(NavPath,'/plan',10)
         self.create_service(GetState, '/bt_navigator/get_state', self.lifecycle, callback_group=group)
         self.planner = ActionServer(self, ComputePathToPose, '/compute_path_to_pose', self.plan, callback_group=group)
         self.navigator = ActionServer(self, NavigateToPose, '/navigate_to_pose', self.navigate, callback_group=group)
@@ -45,15 +47,21 @@ class FakeNav2(Node):
         return response
 
     def plan(self, handle):
+        self.plan_requests.append(handle.request)
         result = ComputePathToPose.Result()
-        result.path.header.frame_id = 'map'
-        result.path.poses = [handle.request.start, handle.request.goal]
-        handle.succeed()
+        # Outer inspection planning is forbidden; only NavigateToPose owns the
+        # actual per-leg plan and recovery. This endpoint deliberately fails.
+        handle.abort()
         return result
 
     def navigate(self, handle):
         p = handle.request.pose.pose.position
+        self.nav_starts.append(list(self.xy));self.nav_goals.append([p.x,p.y])
+        path=NavPath();path.header.frame_id='map'
+        start=PoseStamped();start.pose.position.x,start.pose.position.y=self.xy
+        path.poses=[start,handle.request.pose];self.paths.publish(path)
         self.xy = [p.x, p.y]
+        time.sleep(.1)
         handle.succeed()
         return NavigateToPose.Result()
 
@@ -122,6 +130,8 @@ def main():
         for _ in range(3):
             wait(lambda: server.state == 'WAITING_FOR_WORK' and server.point_id not in visited)
             point = server.point_id
+            assert len(fake.nav_goals)==len(visited)+1,'Submitted a later goal before work acknowledgement'
+            assert not fake.plan_requests,'P action precomputed a route outside Nav2 navigation'
             assert not result.done(), 'Navigation must wait for main-program work'
             assert not acknowledge('wrong', point)
             assert not acknowledge(server.task_id, 'wrong-point')
@@ -129,12 +139,26 @@ def main():
             time.sleep(.4)
             samples = [s for s in commands if s[0] >= stopped_at + .15]
             assert samples and all(abs(v) < .001 and abs(w) < .001 for _, v, w in samples)
+            if not visited:
+                # Reproduce the real failure: operator waits longer than the
+                # 5-second ACK deadline before generating the NEXT new event.
+                time.sleep(6.)
+                # Mimic changed localization while parked. The next stop must
+                # use this measured pose, not the original first-stop target.
+                remaining=[p for p in server.desks['T04'] if p['id']!=point]
+                expected_next=max(remaining,key=lambda p:p['x'])
+                fake.xy=[expected_next['x'],expected_next['y']+.1]
+                wait(lambda:abs(server.pose()['x']-fake.xy[0])<.001)
             assert acknowledge(server.task_id, point)
             assert not acknowledge(server.task_id, point), 'Duplicate work acknowledgement accepted'
             visited.append(point)
         response = resolved(result)
         assert response.status == 4 and response.result.success
         assert list(response.result.visited_points) == visited and len(set(visited)) == 3
+        assert visited[1]==expected_next['id'],'Next point ignored updated parking pose'
+        assert len(fake.nav_goals)==3 and not fake.plan_requests
+        assert response.result.planned_path_length>0.,'Generated leg paths were not recorded'
+        assert abs(fake.nav_starts[1][0]-expected_next['x'])<.001
         wait(lambda: server.log_ack >= server.events.seq)
         # A second task can be canceled while safely waiting for work.
         second = resolved(action.send_goal_async(InspectDesk.Goal(desk_id='T01')))
@@ -144,9 +168,22 @@ def main():
         resolved(second.cancel_goal_async())
         canceled = resolved(second_result)
         assert canceled.status == 5 and not canceled.result.success
+        # Keep the journal heartbeat alive but deliberately stop acknowledging
+        # new events. The real outstanding-event deadline must still stop work.
+        third=resolved(action.send_goal_async(InspectDesk.Goal(desk_id='T01')))
+        assert third.accepted
+        third_result=third.get_result_async()
+        wait(lambda:server.state=='WAITING_FOR_WORK')
+        for sub in list(journal.subscriptions):
+            if sub.topic_name=='/ic382/events':journal.destroy_subscription(sub)
+        server.events.emit('test_unacknowledged_event',{})
+        failed=resolved(third_result)
+        assert failed.status==6 and failed.result.message=='journal_ack_timeout'
         print(json.dumps({'passed': True, 'physical_navigation_test': False, 'visited_points': visited,
                           'invalid_desk_rejected': True, 'busy_rejected': True, 'wrong_and_duplicate_ack_rejected': True,
                           'zero_motion_while_waiting': True, 'cancel_status': canceled.status}))
+        print('PASS: three sequential targets, no outer path queries, updated parked pose controls next selection')
+        print('PASS: C after 6 seconds idle continues; genuinely missing journal ACK still fails after its own deadline')
     finally:
         executor.shutdown()
         thread.join(timeout=3)

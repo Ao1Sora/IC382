@@ -8,6 +8,7 @@ setup(
         ('share/ic382_navigation', ['package.xml']),
         ('share/ic382_navigation/launch', glob('launch/*.launch.py')),
         ('share/ic382_navigation/config', glob('config/*.yaml')),
+        ('share/ic382_navigation/behavior_trees', glob('behavior_trees/*.xml')),
     ],
     install_requires=['setuptools'], zip_safe=True,
     maintainer='IC382 team', maintainer_email='maintainers@example.com',
@@ -16,6 +17,7 @@ setup(
     entry_points={'console_scripts': [
         'journal = ic382_navigation.journal_node:main',
         'velocity_gate = ic382_navigation.velocity_gate:main',
+        'local_alignment = ic382_navigation.local_alignment:main',
         'record_waypoint = ic382_navigation.record_waypoint:main',
         'desk_navigation = ic382_navigation.desk_navigation:main',
         'simulation_encoder = ic382_navigation.simulation_encoder:main',

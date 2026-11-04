@@ -21,15 +21,15 @@ jobs:
           apt-get update
           apt-get install -y python3-colcon-common-extensions python3-rosdep python3-pytest
           rosdep update --rosdistro humble
-          rosdep install --from-paths ros2_ws/src --ignore-src -r -y --rosdistro humble
+          rosdep install --from-paths ros2_ws/src/ic382_interfaces ros2_ws/src/ic382_navigation --ignore-src -r -y --rosdistro humble --skip-keys 'wheeltec_nav2 wheeltec_slam_toolbox wheeltec_robot_keyboard turn_on_wheeltec_robot'
       - name: Build and test
         shell: bash
         run: |
           source /opt/ros/humble/setup.bash
           cd ros2_ws
-          colcon build
+          colcon build --packages-select ic382_interfaces ic382_navigation
           source install/setup.bash
-          colcon test --return-code-on-test-failure
+          colcon test --packages-select ic382_interfaces ic382_navigation --return-code-on-test-failure
           colcon test-result --verbose
       - name: Save test results
         if: always()

@@ -21,16 +21,8 @@ class MotionGuard:
     scan_at: float = -math.inf
     odom_at: float = -math.inf
     allow: bool = False
-    safety_stop: bool = False
-    safety_at: float = -math.inf
-    require_safety: bool = False
-    safety_timeout: float = 0.5
 
     def reason(self, now):
-        if self.safety_stop:
-            return 'safety_stop'
-        if self.require_safety and now - self.safety_at > self.safety_timeout:
-            return 'safety_stale'
         if not self.allow or now - self.allowed_at > self.timeout:
             return 'motion_not_authorized'
         for name in ('command', 'scan', 'odom'):

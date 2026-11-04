@@ -1,5 +1,0 @@
-# Training host only (RTX 3080). Install a CUDA torch build separately.
-ultralytics>=8.3.222
-numpy<2.0
-onnx
-onnxslim

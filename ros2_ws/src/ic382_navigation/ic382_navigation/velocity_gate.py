@@ -19,14 +19,13 @@ class VelocityGate(Node):
         self.guard = MotionGuard(
             positive(self.declare_parameter('max_linear', 0.2).value, 'max_linear'),
             positive(self.declare_parameter('max_angular', 0.3).value, 'max_angular'),
-            positive(self.declare_parameter('watchdog_timeout', 3.0).value, 'watchdog_timeout'),
-            require_safety=bool(self.declare_parameter('require_safety', False).value),
-            safety_timeout=float(self.declare_parameter('safety_timeout', 0.5).value))
+            positive(self.declare_parameter('watchdog_timeout', 3.0).value, 'watchdog_timeout'))
         self.v = self.w = 0.0
+        self.permissions = {}
         self.output = self.create_publisher(Twist, 'cmd_vel', 10)
         self.create_subscription(Twist, 'nav2_cmd_vel', self.command, 10)
         self.create_subscription(Bool, '/ic382/allow_motion', self.allow, 10)
-        self.create_subscription(Bool, '/ic382/safety_stop', self.safety, 10)
+        self.create_subscription(Bool, '/ic382/direct_navigation_active', self.direct, 10)
         self.create_subscription(LaserScan, 'scan_nav', self.scan, qos_profile_sensor_data)
         self.create_subscription(Odometry, 'odom', self.odom, qos_profile_sensor_data)
         self.create_timer(0.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))
@@ -36,11 +35,10 @@ class VelocityGate(Node):
         self.guard.command_at = time.monotonic()
 
     def allow(self, msg):
-        self.guard.allow, self.guard.allowed_at = msg.data, time.monotonic()
+        self.permissions['mission'] = (msg.data, time.monotonic())
 
-    def safety(self, msg):
-        self.guard.safety_stop = bool(msg.data)
-        self.guard.safety_at = time.monotonic()
+    def direct(self, msg):
+        self.permissions['direct'] = (msg.data, time.monotonic())
 
     def scan(self, msg):
         if msg.ranges:
@@ -50,6 +48,10 @@ class VelocityGate(Node):
         self.guard.odom_at = time.monotonic()
 
     def tick(self):
+        now = time.monotonic()
+        allowed = [stamp for value,stamp in self.permissions.values() if value and now-stamp <= self.guard.timeout]
+        self.guard.allow = bool(allowed)
+        self.guard.allowed_at = max(allowed, default=-math.inf)
         out = Twist()
         out.linear.x, out.angular.z = self.guard.command(time.monotonic(), self.v, self.w)
         self.output.publish(out)

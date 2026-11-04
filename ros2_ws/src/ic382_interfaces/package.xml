@@ -2,7 +2,7 @@
 <package format="3">
   <name>ic382_interfaces</name>
   <version>0.1.0</version>
-  <description>Desk inspection action, work-completion service, and perception interfaces</description>
+  <description>Desk inspection action and explicit work-completion service</description>
   <maintainer email="maintainers@example.com">IC382 team</maintainer>
   <license>LicenseRef-Proprietary</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -10,7 +10,6 @@
   <exec_depend>rosidl_default_runtime</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>builtin_interfaces</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
   <depend>action_msgs</depend>
   <member_of_group>rosidl_interface_packages</member_of_group>
   <export>

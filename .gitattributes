@@ -1,5 +1,0 @@
-* text=auto
-*.sh text eol=lf
-teacher/ros2/config/*.yaml -text -whitespace
-teacher/ros2/scripts/*.sh -text -whitespace
-

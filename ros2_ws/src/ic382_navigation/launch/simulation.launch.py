@@ -48,33 +48,7 @@ def setup(context):
              parameters=[common,{'points':candidates, 'localization':'isaac_amcl',
                                  'minimum_dwell_seconds':config['minimum_dwell_seconds'],
                                  'work_timeout_seconds':config['work_timeout_seconds']}]),
-    ] + perception_actions(config)
-
-
-def perception_actions(config):
-    if not config.get('start_perception', False):
-        return []
-    perception = Path(get_package_share_directory('ic382_perception'))/'launch/perception.launch.py'
-    return [IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(str(perception)),
-        launch_arguments={
-            'use_sim_time':'true',
-            'config_file':str(config.get('perception_config', '')),
-            'model_path':str(config.get('model_path', '')),
-            'model_profile':str(config.get('model_profile', '')),
-            'tagging_enabled':str(config.get('tagging_enabled', '')),
-            'perception_required':str(config.get('perception_required', '')),
-            'fail_safe_on_stale':'false',
-            'image_topic':str(config.get('camera_color_topic', '/camera/color/image_raw')),
-            'depth_topic':str(config.get('camera_depth_topic', '/camera/depth/image_raw')),
-            'camera_info_topic':str(config.get('camera_info_topic', '/camera/color/camera_info')),
-            'depth_scale':str(config.get('camera_depth_scale', 1.0)),
-            'base_frame':str(config.get('camera_base_frame', 'base_link')),
-            'camera_frame':str(config.get('camera_frame', 'camera_color_optical_frame')),
-            'map_frame':str(config.get('map_frame', 'map')),
-            'spec_log_path':str(config.get('perception_log_path',
-                                           '/workspace/robot-ros2/results/perception/decision_log.json')),
-        }.items())]
+    ]
 
 
 def generate_launch_description():

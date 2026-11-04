@@ -1,6 +1,6 @@
 import math
 import pytest
-from ic382_navigation.runtime_config import generate_candidates, resolve_runtime
+from ic382_navigation.runtime_config import generate_candidates, resolve_runtime, laser_body_footprint
 from ic382_navigation.inspection import shortest_visit_order
 
 FOOTPRINT=[[-.2,-.2],[.35,-.2],[.35,.2],[-.2,.2]]
@@ -44,3 +44,19 @@ def test_relative_paths_resolve_from_config_and_boolean_is_validated(tmp_path):
     result=resolve_runtime({'schema_version':1,'map':'maps/test.yaml','start_hardware':False},tmp_path/'runtime.yaml')
     assert result['map']==str(tmp_path/'maps/test.yaml')
     with pytest.raises(ValueError):resolve_runtime({'schema_version':1,'start_hardware':'false'},tmp_path/'runtime.yaml')
+
+
+@pytest.mark.parametrize('gap',[.3,.4])
+def test_laser_referenced_viewpoints_keep_configured_gap_and_transform_whole_body(gap):
+    offset=[.05911,.00016,0.]
+    body=laser_body_footprint(dict(front=.1,back=.3,left=.2,right=.2),offset)
+    assert min(x for x,y in body)==pytest.approx(-.24089)
+    assert max(x for x,y in body)==pytest.approx(.15911)
+    config=settings();config.update(parking_reference='laser',parking_distance_m=gap,laser_in_base=offset)
+    for p in generate_candidates(config,body)['waypoints']:
+        laser=(p['x']+math.cos(p['yaw'])*offset[0]-math.sin(p['yaw'])*offset[1],
+               p['y']+math.sin(p['yaw'])*offset[0]+math.cos(p['yaw'])*offset[1])
+        assert min(abs(laser[0]),abs(laser[0]-2),abs(laser[1]),abs(laser[1]-1))==pytest.approx(gap)
+    config['parking_distance_m']=.05
+    with pytest.raises(ValueError,match='body inside'):
+        generate_candidates(config,body)
